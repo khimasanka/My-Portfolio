@@ -1,6 +1,6 @@
 ## **This Is My MyProfile**
 
-Institute of Software Engineering
+Personal Portfolio WebSite
 
 ![slow](assets/images/logo.png)
 

@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/css/fonts/css/all.css">
     <style>
         body{
             background-color: #333646;
@@ -17,6 +18,7 @@
             box-shadow: 9px -8px 7px 8px whitesmoke;
 
         }
+
 
         header>img{
             height: 49px;
@@ -39,10 +41,13 @@
         header>ul>li{
             padding: 0 10px 0 10px;
             display: inline-block;
+            font-size:18px;
         }
 
         header>ul>li:hover{
             cursor: pointer;
+            color: #8fafbb;
+            font-size: 20px;
         }
 
         main{
@@ -53,7 +58,7 @@
         main>nav{
             position: absolute;
             background-color:#242633;
-            width: 15vw;
+            width: 250px;
             top: 5px;
             bottom: 0;
             margin: auto;
@@ -65,7 +70,7 @@
         }
 
         main>nav>section>ul{
-            color: #B9BCCB;
+            /*color: #B9BCCB;
             list-style: none;
             position: absolute;
             left: 0;
@@ -74,21 +79,42 @@
             bottom: 0;
             margin:auto ;
             padding-top: 30px;
-            font-family: 'Righteous', cursive;
+            font-family: 'Righteous', cursive;*/
+            list-style: none;
+            font-size: 22px;
+            margin-top: 39px;
         }
         main>nav>section>ul>li{
-            padding: 20px 35px 0 20px;
+            /*padding: 20px 35px 0 20px;
             align-content: center;
             cursor: pointer;
-            display: inline-block;
+            display: inline-block;*/
+            padding-bottom: 20px;
+        }
+
+        main>nav>section>ul>li>a{
+            text-decoration: none;
+            color: #ffffff;
+            padding-bottom:40px;
+        }
+
+        main>nav>section>ul>li>a:hover{
+            color: #efb208;
+            font-weight: bold;
+        }
+
+        main>nav>section>ul>li>i{
+            color: white;
+            margin-right:15px;
         }
 
         main>section{
-            position: relative;
-            left: 250px;
+            margin-left: 255px;
+            padding: 10px;
             width: 81vw;
-            padding-bottom: 0;
+            /*padding-bottom: 0;*/
         }
+
         footer{
             position:relative;
             bottom:0;
@@ -130,10 +156,10 @@
     <nav>
         <section>
             <ul>
-                <li>Home</li>
-                <li>Service</li>
-                <li>Contact</li>
-                <li>About Us</li>
+                <li><i class="fas fa-home"></i><a href="index.html">Home</a> </li>
+                <li><i class="fas fa-globe-europe"></i><a href="index.html">Service</a></li>
+                <li><i class="fas fa-phone-alt"></i><a href="index.html">Contact</a></li>
+                <li><i class="fas fa-info-circle"></i><a href="#">About Us</a></li>
             </ul>
         </section>
     </nav>

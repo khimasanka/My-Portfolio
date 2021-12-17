@@ -111,10 +111,36 @@
         main>section{
             margin-left: 255px;
             padding: 10px;
-            width: 81vw;
+            /*width: 81vw;*/
             /*padding-bottom: 0;*/
         }
 
+        main>section>section{
+            border: 1px solid white;
+            height:300px;
+            position:relative;
+        }
+        main>section>section>div{
+            border: 1px solid red;
+            position: absolute;
+            height: 100%;
+            width:calc(100%/3);
+        }
+
+        main>section>section>div:first-child{
+            left: 0;
+            /*background-image: url("../../../assets/images/freelancer.png");*/
+            /*background-size:cover;*/
+
+        }
+
+        main>section>section>div:nth-child(2){
+            left:calc(100%/3);
+        }
+
+        main>section>section>div:nth-child(3){
+            left:calc((100%/3)*2);
+        }
         footer{
             position:relative;
             bottom:0;
@@ -123,7 +149,7 @@
             background:#6cf;
             margin-top: -40px;
         }
-        main>section>section:nth-child(2)>p{
+        main>section>p{
             color: #B9BCCB;
             font-family: 'Bakbak One', cursive;
         }
@@ -165,44 +191,49 @@
     </nav>
     <section>
         <section>
-            <dev>
+            <div>
                 <img src="../../../assets/images/freelancer.png" alt="image" width="300">
-            </dev>
+            </div>
 
-            <dev>
+            <div>
                 <img src="../../../assets/images/freelancer.png" alt="image" width="300">
-            </dev>
+            </div>
 
-            <dev>
+            <div>
                 <img src="../../../assets/images/freelancer.png" alt="image" width="300">
-            </dev>
+            </div>
 
         </section>
-        <section>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad aliquam, cumque dicta dignissimos et ipsa
-                laboriosam laborum obcaecati officia provident quidem quis soluta? Ad distinctio iusto nisi non
-                quisquam?</p>
-            <p>Architecto dicta doloribus eos facere impedit necessitatibus repellendus! Ad adipisci at autem commodi
-                est expedita magni minima suscipit? Ea fuga hic illum impedit inventore magni minus natus nihil nisi
-                reiciendis!</p>
-            <p>Aspernatur at, cum distinctio eligendi est eum expedita facere hic minima molestiae necessitatibus qui
-                reiciendis repudiandae sapiente soluta, tenetur veniam. Accusantium architecto aut commodi expedita,
-                facere molestiae perferendis qui totam!</p>
-            <p>Earum, hic, praesentium? Aliquam aperiam dignissimos distinctio dolor ducimus earum error fuga id ipsa
-                iure libero maiores nam, nemo nesciunt nihil nobis nostrum nulla optio possimus reprehenderit sit,
-                soluta vitae.</p>
-            <p>Accusantium aliquam aliquid architecto culpa cum deleniti dolores enim est facilis hic inventore magni,
-                maiores molestiae nisi praesentium, qui quibusdam quo reiciendis reprehenderit similique suscipit
-                tempora voluptates? Explicabo, perspiciatis, vero!</p>
-            <p>Adipisci architecto aut culpa deserunt dignissimos dolor dolore dolorum earum, eum excepturi illo iste
-                itaque iusto laborum nemo, nisi nulla optio quae qui rem similique temporibus totam unde, ut veniam!</p>
-            <p>Corporis deleniti dicta ea eum excepturi illo porro? Ab architecto aspernatur beatae commodi culpa cum,
-                dicta illo iusto labore magni maxime provident quam quisquam, sapiente similique ullam velit veniam
-                veritatis!</p>
-            <p>Amet animi architecto atque, beatae et eum, facere fugiat ipsam mollitia optio quis ratione recusandae
-                sequi sunt suscipit velit veniam. Dolor eos itaque necessitatibus odio omnis perferendis ut vero,
-                vitae.</p>
-        </section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur deserunt distinctio error
+            facere, nam tempore velit. Architecto ducimus eaque ex labore numquam quam recusandae veniam voluptas. Ipsa,
+            quas similique.</p>
+        <p>Architecto asperiores atque, corporis cupiditate doloremque error exercitationem magni nam praesentium
+            tenetur! Animi assumenda consectetur, cumque eveniet ex facere id magni natus neque porro quam quos
+            recusandae soluta tenetur voluptatem.</p>
+        <p>A aliquid aut cupiditate debitis dolorem dolorum eos error, est exercitationem ipsam labore magnam maiores
+            minima molestiae natus nemo nobis obcaecati qui, quidem quis quisquam quos, reiciendis ut voluptas
+            voluptates.</p>
+        <p>Atque corporis delectus dicta dignissimos dolor doloremque, eum fugit id laborum maxime minus non obcaecati
+            odio odit officia possimus praesentium provident quas quasi qui quos ratione saepe soluta tenetur
+            veniam?</p>
+        <p>Architecto beatae ex expedita ipsa libero omnis quae quos repudiandae, rerum vel. Adipisci asperiores enim
+            expedita facere incidunt, maiores perferendis. Ipsam quam, repellat. Eligendi eum, harum impedit iusto nobis
+            tenetur!</p>
+        <p>Blanditiis fugiat ipsa laboriosam quaerat ratione! Atque aut delectus ducimus enim, est expedita illum in
+            iusto natus nostrum odio officia possimus praesentium quam, sunt suscipit tempore! Dolore nisi optio
+            sint.</p>
+        <p>Dolores ipsum itaque minus natus, quis tenetur? Delectus, explicabo incidunt omnis quas soluta suscipit?
+            Accusamus, adipisci, corporis deserunt eum necessitatibus nostrum omnis perferendis porro quaerat quos
+            sapiente sint vero voluptate.</p>
+        <p>Architecto at, consectetur cum delectus dignissimos distinctio eligendi eum, eveniet, exercitationem impedit
+            incidunt inventore itaque magnam minus modi nam nobis numquam quae quia quidem quis ratione sed sunt vel
+            voluptas?</p>
+        <p>Consectetur cupiditate dicta fugit harum illo in incidunt libero modi praesentium quisquam quod veniam,
+            voluptates? Aut harum libero minima modi nostrum, rerum voluptatem. Autem consectetur deleniti in itaque
+            laudantium mollitia?</p>
+        <p>Aliquid consequuntur cumque doloremque eum fuga obcaecati vitae. Ad alias architecto commodi ducimus enim
+            facere facilis fugit in ipsa labore maiores nam natus nostrum obcaecati, quae repellat reprehenderit sed
+            suscipit!</p>
     </section>
 </main>
 <footer>

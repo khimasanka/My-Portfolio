@@ -1,5 +1,5 @@
 ###   My Portfolio :yellow_heart:
-<img src="E:\gdse57\web\WorkArea\MyProfile\assets\images\logo.png"  align="right"/>
+![slow](assets/images/logo.png)
 <hr>
 
 ## Links :computer:
@@ -11,11 +11,12 @@
 
 <hr>
 
+## **This is the basic look**
 
 <p>
 GitHub Page__ <a href="https://khimasanka.github.io/My-Portfolio/"><img src="https://cdn3.iconfinder.com/data/icons/inficons/512/github.png" width="50"/>
 
-<img src="E:\gdse57\web\WorkArea\MyProfile\assets\images\mockup-longshot.png"/>
+![slow](assets/images/mockup-longshot.png)
 </p>
 
 -----

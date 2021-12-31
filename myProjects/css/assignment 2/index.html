@@ -2,23 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Simple web Layout</title>
     <link rel="stylesheet" href="../../../assets/css/normalize.css">
+    <meta name="keywords" content="IJSE, CMJD , Kaveesha , Software Development">
+    <meta name="description" content="This Is for demonstrate how to make a simple web page using css positioning">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../assets/css/fonts/css/all.css">
-    <style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<style>
         body{
             background-color: #333646;
         }
-        header{
+        header {
             position: relative;
-            height: 60px;
-            box-shadow: 9px -8px 7px 8px whitesmoke;
-
+            height: 80px;
+            width:100vw;
+            box-shadow: -7px 4px 9px -4px #917a7a;
         }
-
 
         header>img{
             height: 49px;
@@ -174,9 +176,107 @@
             padding:20px;
             color:white;
         }
+    </style>-->
+    <style>
+        body{
+            background-color: #333646 ;
+        }
+        header{
+            position:relative;
+            height: 70px;
+            box-shadow: -4px 9px 22px -5px black;
+        }
+
+        header>img{
+            width:60px;
+            margin-left: 15px;
+            margin-top: 7px;
+        }
+
+        header>ul{
+            color: white;
+            position:absolute;
+            right: 30px;
+            bottom:6px;
+            list-style: none;
+            font-size: 18px;
+            font-family: 'Righteous', cursive;
+
+        }
+
+        header>ul>li{
+            padding: 0 3px 0 10px;
+            display:inline;
+        }
+
+        header>ul>li:hover{
+            cursor: pointer;
+            color: #fdc625;
+            font-weight: bold;
+        }
+
+        p{
+            color: #B9BCCB;
+            font-family: 'Bakbak One', cursive;
+        }
     </style>
 </head>
 <body>
+<header>
+    <img src="../../../assets/images/logo.png" alt="logo">
+
+    <ul>
+        <li>Home</li>
+        <li>Service</li>
+        <li>Contacts</li>
+        <li>About us</li>
+    </ul>
+</header>
+<main>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Service</li>
+            <li>Contacts</li>
+            <li>About us</li>
+        </ul>
+    </nav>
+    <section>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eveniet itaque, maxime necessitatibus
+            perspiciatis sequi soluta! Atque aut blanditiis dolore eos fuga, necessitatibus non officiis optio provident
+            tempora tempore veniam.</p>
+        <p>Adipisci beatae corporis debitis distinctio doloremque doloribus eius eos, facilis illo ipsam labore magnam
+            molestiae, mollitia natus nemo neque nihil nisi odio perferendis quam, quis quo rem repellendus similique
+            soluta!</p>
+        <p>A architecto beatae exercitationem illo ipsa minima obcaecati pariatur rem tenetur. Accusantium assumenda at
+            cumque deleniti, dolorum ea enim est facere facilis, iure minima minus molestiae quia quis sequi
+            tempora.</p>
+        <p>Accusantium consequuntur iusto modi veritatis? Accusantium aut beatae dignissimos dolore dolorum et, facere
+            iusto laudantium modi nam omnis optio provident quae saepe sint totam voluptatem. Deserunt earum eligendi
+            itaque temporibus.</p>
+        <p>Cumque deleniti doloremque error hic laborum maxime molestias porro possimus reiciendis, repellendus sunt
+            vero! Dicta dolore eaque ipsum iure laboriosam necessitatibus nisi perferendis quisquam similique? Culpa
+            fuga ipsum vitae voluptate!</p>
+        <p>Adipisci amet assumenda autem delectus eligendi est facilis illo molestias quidem totam? Adipisci autem hic
+            iste labore, laborum magnam minus natus nemo neque nesciunt nihil quo rem suscipit, tenetur veritatis!</p>
+        <p>Ad aliquid architecto aspernatur commodi delectus eligendi et eum fugit harum illo illum incidunt ipsam
+            ipsum, natus nisi odio, optio praesentium quia quos rerum tempora ut veritatis vero. Animi, quibusdam.</p>
+        <p>Accusamus asperiores at dolor ducimus eaque, eius eveniet expedita explicabo illum magnam mollitia nesciunt
+            perferendis, quasi quidem recusandae repellendus ut veniam, vitae! Ipsum nesciunt perferendis quis sed sit
+            vero, voluptatibus.</p>
+    </section>
+</main>
+<footer>
+    <p><small>All Right Reserved By Kaveesha</small ></p>
+</footer>
+</body>
+<!--<body>
 <header>
     <img src="../../../assets/images/logo.png" alt="logo" >
 
@@ -248,5 +348,5 @@
 <footer>
     <p><small>All Right Reserved By Kaveesha</small></p>
 </footer>
-</body>
+</body>-->
 </html>

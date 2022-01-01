@@ -5,3 +5,13 @@ strong{
 h2{
     color: white
 }
+ body{
+     background-color: #333646 ;
+ }
+
+header>nav>strong:first-child{
+    position: absolute;
+    left:40px;
+    top:10px;
+
+}

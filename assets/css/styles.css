@@ -1,3 +1,7 @@
+body{
+    background-color: #333646 ;
+}
+
 strong{
     color: white;
 }
@@ -5,13 +9,24 @@ strong{
 h2{
     color: white
 }
- body{
-     background-color: #333646 ;
- }
 
-header>nav>strong:first-child{
-    position: absolute;
-    left:40px;
-    top:10px;
-
+/*header     */
+nav{
+    border: 1px solid white;
 }
+
+div{
+    border: 1px solid white;
+    position: relative;
+    display:inline;
+    top: 100px;
+    right: 20px;
+}
+
+#headerLogo{
+    width: 60px;
+    position: relative;
+    left:15px;
+    top: 5px;
+}
+

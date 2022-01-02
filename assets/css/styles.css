@@ -11,16 +11,12 @@ h2{
 }
 
 /*header     */
-nav{
-    border: 1px solid white;
+header{
+    border-top: 1px solid red;
 }
 
-div{
+nav{
     border: 1px solid white;
-    position: relative;
-    display:inline;
-    top: 100px;
-    right: 20px;
 }
 
 #headerLogo{
@@ -28,5 +24,15 @@ div{
     position: relative;
     left:15px;
     top: 5px;
+}
+
+#br1{
+    width:600px;
+}
+
+#dp1{
+    width:400px;
+    position: absolute;
+    left: 0;
 }
 

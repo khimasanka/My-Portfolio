@@ -26,6 +26,8 @@ nav{
     top: 5px;
 }
 
+/*page 1*/
+
 #br1{
     width:600px;
 }
@@ -34,5 +36,15 @@ nav{
     width:400px;
     position: absolute;
     left: 0;
+}
+
+/*page 2*/
+
+#br2{
+    width:600px;
+}
+
+#dp2{
+    width:400px;
 }
 

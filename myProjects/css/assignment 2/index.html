@@ -350,3 +350,239 @@
 </footer>
 </body>-->
 </html>
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Web Layout</title>
+    <meta content="IJSE, CMJD, Basic Web Layout, RWAD" name="keywords">
+    <meta content="This is for demonstrate how to make a simple web page using css positions" name="description">
+    <meta content="Institute of Software Engineering" name="author">
+    <meta content="Institute of Software Engineering" name="owner">
+    &lt;!&ndash;<link href="assets/css/stlye.css" rel="stylesheet">&ndash;&gt;
+    <meta name="viewport" content="width=device-width initial scale=1">
+    &lt;!&ndash;
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">&ndash;&gt;
+    <style>
+        header{
+            position: relative;
+            height: 100px;
+            border-bottom: 4px solid black;
+            box-shadow: -2px 6px 9px -4px black;
+        }
+
+        header>img{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 250px;
+        }
+        header>ul>li{
+            display: inline-block;
+            padding: 0 10px 0 10px;
+        }
+
+        header>ul>li:hover{
+            cursor: pointer;
+            color: blue;
+        }
+
+        header>ul{
+            position: absolute;
+            right: 30px;
+            top: 0;
+            bottom: 0;
+            font-size: 24px;
+            list-style: none;
+        }
+
+        /*-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/
+
+        /*main>section:nth-child(1){
+            position: absolute;
+            background-color:rebeccapurple;
+            width: 50px;
+            height: 300px;
+            top: 0;
+            right: 0;
+        }*/
+
+        body>main>nav{
+            position: absolute;
+            background-color: rebeccapurple;
+            top: 108px;
+            bottom:0;
+            width: 20vw;
+            height: 100vh;
+
+        }
+        body>main>nav>ul{
+            /*  position: relative;*/
+            /*  top: 0;*/
+            /* bottom: 0;*/
+            font-size: 24px;
+            color: white;
+            list-style: none;
+        }
+
+        body>main>nav>ul>li{
+            display: block;
+            padding: 10px;
+        }
+        body>main>nav>ul>li:hover {
+            cursor: pointer;
+        }
+        /*&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/
+
+
+        body>main>section{
+            position: absolute;
+            right:15px;
+        }
+
+
+
+        body>main>section>img:nth-child(1){
+            position: relative;
+            width: 25vw;
+            border: 1px solid black;
+            box-shadow: -2px 6px 9px -4px black;
+        }
+        body>main>section>img:nth-child(2){
+            position: relative;
+            width: 25vw;
+            border: 1px solid black;
+            box-shadow: -2px 6px 9px -4px black;
+
+        }
+        body>main>section>img:nth-child(3){
+            position: relative;
+            width: 25vw;
+            border: 1px solid black;
+            box-shadow: -2px 6px 9px -4px black;
+
+        }
+
+        /*-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/
+        body>main>section>section{
+            text-align: center;
+            padding-top: 10px;
+            position: absolute;
+            right: 8px;
+        }
+
+        body>main>section>section{
+            padding-top: 20px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 15px;
+        }
+
+        body>main>section>section>p{
+            padding-bottom: 15px;
+            font-size: 15px;
+        }
+
+        body>footer{
+            background-color: thistle;
+            text-align: center;
+            bottom: -150px;
+            width: 98vw;
+            height: 10vh;
+            position: absolute;
+        }
+    </style>
+
+</head>
+<body>
+<header>
+    <img alt="" src="../../../assets/images/logo.png">
+    <ul>
+        <li>Home</li>
+        <li>Service</li>
+        <li>Contacts</li>
+        <li>About Us</li>
+
+    </ul>
+</header>
+<main>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Service</li>
+            <li>Contacts</li>
+            <li>About Us</li>
+        </ul>
+    </nav>
+
+    <section>
+
+        <img alt="" src="../../../assets/images/stack-overflow.png">
+        <img alt="" src="../../../assets/images/stack-overflow.png">
+        <img alt="" src="../../../assets/images/stack-overflow.png ">
+        <section>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. A cum
+                atque tenetur consectetur sed inventore eius hic voluptatibus nemo
+                voluptate quo, dignissimos exercitationem dolorem unde, similique
+                cupiditate eum ad fuga!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+                in quae facere nobis laboriosam, voluptatibus sequi placeat odit,
+                vero ut culpa magnam necessitatibus? Tempore iste numquam iusto
+                animi suscipit illum?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+                in quae facere nobis laboriosam, voluptatibus sequi placeat odit,
+                vero ut culpa magnam necessitatibus? Tempore iste numquam iusto
+                animi suscipit illum?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+                in quae facere nobis laboriosam, voluptatibus sequi placeat odit,
+                vero ut culpa magnam necessitatibus? Tempore iste numquam iusto
+                animi suscipit illum?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. A cum
+                atque tenetur consectetur sed inventore eius hic voluptatibus nemo
+                voluptate quo, dignissimos exercitationem dolorem unde, similique
+                cupiditate eum ad fuga!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+                in quae facere nobis laboriosam, voluptatibus sequi placeat odit,
+                vero ut culpa magnam necessitatibus? Tempore iste numquam iusto
+                animi suscipit illum?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+                in quae facere nobis laboriosam, voluptatibus sequi placeat odit,
+                vero ut culpa magnam necessitatibus? Tempore iste numquam iusto
+                animi suscipit illum?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+                in quae facere nobis laboriosam, voluptatibus sequi placeat odit,
+                vero ut culpa magnam necessitatibus? Tempore iste numquam iusto
+                animi suscipit illum?
+            </p>
+
+        </section>
+    </section>
+</main>
+<footer>
+    <p>Developed By IJSE</p>
+</footer>
+</body>
+</html>
+-->

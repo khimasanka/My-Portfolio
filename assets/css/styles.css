@@ -1,15 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
-
 body{
     background-color: #333646 ;
-}
-
-strong{
-    color: white;
-}
-
-h2{
-    color: white
 }
 
 /*header     */
@@ -78,15 +69,18 @@ header > nav{
 
 /*page 1*/
 
-/*main > section:nth-child(1) >section{
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}*/
+#p1{
+    position: sticky;
+}
+
+#p1 p span:nth-child(1){
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
 
 #br1{
     width: 605px;

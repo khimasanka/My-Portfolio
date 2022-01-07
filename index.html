@@ -20,6 +20,18 @@
             var header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 0);
         })
+
+        document.addEventListener("mousemove" , parallax);
+        function parallax(e){
+            this.querySelectorAll('.layer').forEach(layer =>{
+                const speed =layer.getAttribute('data-speed')
+
+                const  x =(window.innerWidth - e.pageX*speed)/100
+                const  y =(window.innerHeight - e.pageY*speed)/100
+
+                layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+            })
+        }
     </script>
 </head>
 <body>
@@ -58,8 +70,10 @@
 <main>
     <!-- view one / Home-->
     <section>
-        <img alt="Back Round" class="layer" id="br1" src="assets/images/back-Round.png">
-        <img alt="profile image" class="layer" id="dp1" src="assets/images/1%20image.png">
+        <section>
+        <img alt="Back Round" data-speed="-1" class="layer" id="br1" src="assets/images/back-Round.png">
+        <img alt="profile image" data-speed="1"class="layer" id="dp1" src="assets/images/1%20image.png">
+        </section>
         <p>
         <span>Hello, I am</span>
         <span>Kaveesha Himasanka.</span>

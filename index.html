@@ -12,20 +12,28 @@
     <link href="assets/css/styles.css" rel="stylesheet">
     <link href="assets/css/fonts/css/all.css" rel="stylesheet">
     <link href="assets/css/normalize.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <!--<script type="text/javascript">
+        window.addEventListener("scroll",function (){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>-->
 </head>
 <body>
 <dfn id="homeNav"></dfn>
-<header>
+<header class="sticky">
     <img alt="logo" id="headerLogo" src="assets/images/logo.png">
     <nav>
         <ul>
-            <li><a href="#homeNav"> Home</a></li>
-            <li><a href="#aboutNav">About Me</a></li>
-            <li><a href="#servicesNav">Service</a></li>
-            <li><a href="#skillsNav">Skills</a></li>
-            <li><a href="#projectsNav">Projects</a></li>
-            <li><a href="#contactNav">Contact</a></li>
+            <li><a class="navigation" href="#homeNav"> Home</a></li>
+            <li><a class="navigation" href="#aboutNav">About Me</a></li>
+            <li><a class="navigation" href="#servicesNav">Service</a></li>
+            <li><a class="navigation" href="#skillsNav">Skills</a></li>
+            <li><a class="navigation" href="#projectsNav">Projects</a></li>
+            <li><a class="navigation" href="#contactNav">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -181,6 +189,7 @@
 
     <!--last page  /  contact me-->
 
+
     <section>
         <dfn id="contactNav"></dfn>
         <div>
@@ -204,23 +213,27 @@
                     <li><a href="https://www.fiverr.com/khimasanka456" target="_blank"><img alt="fiverr" src="assets/images/fiverr.png"></a></li>
                     <li><a href="https://www.freelancer.com/u/khimasanka456" target="_blank"> <img alt="freelancer" src="assets/images/freelancer.png"></a></li>
                     <li><a href="https://www.upwork.com/freelancers/~0174b3140a1167e019" target="_blank"> <img alt="upwork" src="assets/images/upwork.png"></a></li>
-                    <li><a href="https://www.peopleperhour.com/freelancer/video-photo-audio/kaveesha-himasanka-the-most-trustworthy-and-creative-wqjjmmy" target="_blank"> <img alt="peopleperhour" src="assets/images/peopleperhour.png"></a></li>
+                    <li><a href="https://www.peopleperhour.com/freelancer/video-photo-audio/kaveesha-himasanka-the-most-trustworthy-and-creative-wqjjmmy" target="_blank"> <img alt="peopleperhour" src="assets/images/peopleperhour.png" width="100"></a></li>
                 </ul>
             </div>
         </div>
         <div>
             <h1>Tell me about your project.</h1>
-            <label for="name">What is your name ?</label>
-            <input id="name" maxlength="30" minlength="3" name="name" required size="20" type="text">
+            <form>
+                <fieldset>
+                    <label for="name">What is your name ?</label>
+                    <input id="name" maxlength="30" minlength="3" name="name" required size="20" type="text">
 
-            <label for="email">Your E-mail</label>
-            <input id="email" maxlength="30" minlength="3" name="name" required size="20" type="text">
+                    <label for="email">Your E-mail</label>
+                    <input id="email" maxlength="30" minlength="3" name="name" required size="20" type="text">
 
-            <label for="subject">Subject</label>
-            <input id="subject" maxlength="30" minlength="3" name="name" required size="20" type="text">
+                    <label for="subject">Subject</label>
+                    <input id="subject" maxlength="30" minlength="3" name="name" required size="20" type="text">
 
-            <label for="message">Tell me your need</label>
-            <textarea cols="33" id="message" name="message" rows="5">Message here.....</textarea>
+                    <label for="message">Tell me your need</label>
+                    <textarea cols="33" id="message" name="message" rows="5">Message here.....</textarea>
+                </fieldset>
+            </form>
 
             <img alt="attachment" src="assets/images/attacher.png">
             <img alt="send" src="assets/images/send-mail.png">
@@ -230,7 +243,7 @@
 
 <footer>
     <address>
-        <img alt="logo" src="assets/images/logo.png">
+        <img alt="logo" src="assets/images/logo.png" width="70">
         <p>Thanks for scrolling.</p>
     </address>
 </footer>

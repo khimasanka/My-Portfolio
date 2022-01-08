@@ -271,12 +271,64 @@ header > nav{
     position: relative;
 }
 
+#content{
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    height: 79vh;
+    width: 100vh;
+    flex-direction: column;
+    align-content: space-between;
+    top: 107px;
+    left: 22%;
+}
+
+#content div{
+    background-color: #424657;
+    position: relative;
+    margin: 25px;
+    padding: 12px;
+    width: 29%;
+    height: 30%;
+}
+
+#content img{
+    width: 50px;
+    position: absolute;
+    top: 30px;
+}
+
+#content p{
+    font-family: 'Rubik', sans-serif;
+    color: #ECECEE;
+    bottom: 20px;
+    position: absolute;
+    display: inline-block;
+    width: 112px;
+    top: 89px;
+    left: 62px;
+    font-size: 19px;
+}
+
+#service h1{
+    position: absolute;
+    top: 7%;
+    left: 44%;
+    margin: auto;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 #service #sec1{
+    position: relative;
     height: 60vh;
+
 }
 
 #service #sec2{
+    position: relative;
     height: 33vh;
+
 }
 
 

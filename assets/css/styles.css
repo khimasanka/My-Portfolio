@@ -213,6 +213,7 @@ header > nav{
     left: 10vw;
     font-family: 'Saira', sans-serif;
     top: 7vw;
+    display: inline-block;
 }
 
 #about article h3{

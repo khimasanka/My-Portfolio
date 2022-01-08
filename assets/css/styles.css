@@ -412,8 +412,53 @@ header > nav{
     width: 10px;
 }
 
-#bigDiv section{
+ #skillFlex{
+     display: flex;
+     position: relative;
+     flex-wrap: wrap;
+     height: 48vh;
+     width: 52vh;
+     flex-direction: column;
+     align-content: space-between;
+     top: -181px;
+     left: 59%;
+}
 
+#skillFlex figure{
+    position: relative;
+    margin: 18px;
+    padding: 14px;
+    width: 29%;
+    height: 30%;
+}
+
+#skillFlex figure:hover{
+    background-color: #424657;
+    transition: 0.2s;
+    transform: scale(1.1);
+}
+
+#skillFlex figure figcaption{
+    color: #B9B9B9;
+    position: absolute;
+    font-family: 'Righteous', cursive;
+    left: 0;
+    bottom: 0px;
+    top: 94px;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+#skillFlex img{
+    width: 70px;
+    margin-left: 18px;
+}
+
+#mysql{
+    width: 85px!important;
+    margin-left: 10px!important;
 }
 
 

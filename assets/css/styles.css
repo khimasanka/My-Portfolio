@@ -461,6 +461,48 @@ header > nav{
     margin-left: 10px!important;
 }
 
+/*progects*/
+
+#projects section{
+    position: relative;
+    width: 25%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    left: 100px;
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 41%;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
 
 
 

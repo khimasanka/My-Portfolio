@@ -14,7 +14,7 @@
     <link href="assets/css/normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <script type="text/javascript">
         window.addEventListener("scroll", function () {
             var header = document.querySelector("header");
@@ -206,16 +206,55 @@
     </section>
 
     <!--view five  / projects-->
-    <section>
+    <section id="projects">
         <dfn id="projectsNav"></dfn>
+        <section>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src=" assets/images/java.png" alt="" />
+                        <a href="myProjects/css/assignment%201/index.html">Assignment 1</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/send-mail.png" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/logo.png" alt="" />
 
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/stack-overflow.png" alt="" />
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+            });
+        </script>
         <h1>Assignments</h1>
-        <section style="background-color: #333646"></section>
+               <!--<section style="background-color: #333646"></section>
         <section style="background-color: #252734"></section>
         <div><a href="myProjects/css/assignment%201/index.html">Assignment 1</a></div>
         <div><a href="myProjects/css/assignment%202/index.html">Assignment 2</a></div>
         <div><a href="myProjects/css/assignment%203/index.html">Assignment 3</a></div>
-        <div><a href="myProjects/css/assignment%204/index.html">Assignment 4</a></div>
+        <div><a href="myProjects/css/assignment%204/index.html">Assignment 4</a></div>-->
     </section>
 
     <!--last page  /  contact me-->

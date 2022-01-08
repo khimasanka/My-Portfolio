@@ -288,14 +288,21 @@ header > nav{
     position: relative;
     margin: 25px;
     padding: 12px;
-    width: 29%;
+    width: 27%;
     height: 30%;
+    box-shadow: -9px 11px 41px -6px black;
+}
+
+#content div:hover{
+    transition: 0.2s;
+    transform: scale(1.1);
 }
 
 #content img{
-    width: 50px;
+    width: 35px;
     position: absolute;
-    top: 30px;
+    top: 69px;
+    left: 28px;
 }
 
 #content p{
@@ -321,14 +328,13 @@ header > nav{
 
 #service #sec1{
     position: relative;
-    height: 60vh;
+    height: 67vh;
 
 }
 
 #service #sec2{
     position: relative;
-    height: 33vh;
-
+    height: 26vh;
 }
 
 

@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Salsa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@700&family=Josefin+Sans:wght@500&family=Red+Rose:wght@600&family=Roboto+Condensed:wght@700&family=Roboto+Mono:wght@500&family=Roboto:wght@500&family=Rubik:wght@700&family=Saira:wght@500&family=Scada:wght@700&family=Source+Sans+Pro&display=swap');
 body{
     background-color: #333646 ;
 }
@@ -69,17 +70,119 @@ header > nav{
 
 /*page 1*/
 
-#p1{
-    position: sticky;
+#home{
+    display: flex;
+    height:100vh;
+    bottom: 0;
+
 }
 
-#p1 p span:nth-child(1){
+
+/*#home div:nth-child(3){
+    margin: auto 0 auto 40px;
+    position: relative;
+    border: white solid 2px;
+    width: 100%;
+}*/
+
+#home #span1{
     position: absolute;
-    top: 30px;
-    right: 30px;
-    left: 0;
-    bottom: 0;
+    top: 22vh;
+    left: 50vw;
+    text-shadow: -6px 5px 5px black;
+    color: #EBEBEC;
+    font-family: 'Salsa', cursive;
+    font-size: 37px;
+}
+
+#home #span2{
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    top: 29vh;
+    left: 40vw;
+    position: absolute;
+    text-shadow: -6px 5px 5px black;
+    color: #FFC25C;
+    font-size: 75px;
+}
+
+#home #span3{
+    font-family: 'Source Sans Pro', sans-serif;
+    top: 41vh;
+    left: 72vw;
+    text-shadow: -6px 5px 5px black;
+    position: absolute;
+    color: #94969E;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#home ul{
+    position: absolute;
+    top: 42vh;
+    font-family: 'Rubik', sans-serif;
+    text-shadow: -6px 5px 5px black;
+    right: 13vw;
+    font-size: 30px;
+    list-style: none;
+}
+
+#home ul li{
+    margin-top: 6px;
+    color: white;
+}
+
+#home button {
+    position: absolute;
+    bottom: 20vh;
+    right: 20vw;
+    left: 50vw;
+    top: 35vw;
     margin: auto;
+    width: 160px;
+    height: 52px;
+    border: white solid 4px;
+    border-radius: 25px;
+    background-color: #FFC25C;
+    font-size: 25px;
+    font-family: 'Roboto Condensed', sans-serif;
+    box-shadow: -10px 9px 18px -4px black;
+
+}
+
+#home button:hover{
+    width: 170px;
+    height: 55px;
+    font-size: 27px;
+    transition: 0.4s;
+}
+
+#socialLinks{
+    position: absolute;
+    bottom: 65px;
+    right: 340px;
+    width: 26%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.6s;
+
+}
+
+#socialLinks .sLink{
+    width: 60px;
+    padding-left: 20px;
+}
+
+#socialLinks img{
+    display: block;
+    width: 100%;
+    transition: 0.2s;
+    filter: drop-shadow(-6px 6px 3px black);
+}
+
+#socialLinks img:hover{
+    transform: scale(1.2);
 }
 
 #br1{
@@ -92,8 +195,8 @@ header > nav{
 
 #dp1{
     width: 570px;
-    position: relative;
-    bottom: 47px;
+    position: absolute;
+    bottom: 0;
     left: -12px;
 }
 

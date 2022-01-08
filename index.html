@@ -12,22 +12,23 @@
     <link href="assets/css/styles.css" rel="stylesheet">
     <link href="assets/css/fonts/css/all.css" rel="stylesheet">
     <link href="assets/css/normalize.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
 
     <script type="text/javascript">
-        window.addEventListener("scroll",function (){
+        window.addEventListener("scroll", function () {
             var header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 0);
         })
 
-        document.addEventListener("mousemove" , parallax);
-        function parallax(e){
-            this.querySelectorAll('.layer').forEach(layer =>{
-                const speed =layer.getAttribute('data-speed')
+        document.addEventListener("mousemove", parallax);
 
-                const  x =(window.innerWidth - e.pageX*speed)/100
-                const  y =(window.innerHeight - e.pageY*speed)/100
+        function parallax(e) {
+            this.querySelectorAll('.layer').forEach(layer => {
+                const speed = layer.getAttribute('data-speed')
+
+                const x = (window.innerWidth - e.pageX * speed) / 100
+                const y = (window.innerHeight - e.pageY * speed) / 100
 
                 layer.style.transform = `translateX(${x}px) translateY(${y}px)`
             })
@@ -50,14 +51,16 @@
 </header>
 <main>
     <!-- view one / Home-->
-    <section id="p1">
-        <img alt="Back Round" data-speed="-1" class="layer" id="br1" src="assets/images/back-Round.png">
-        <img alt="profile image" data-speed="1"class="layer" id="dp1" src="assets/images/1%20image.png">
-        <p>
-        <span>Hello, I am</span>
-        <span>Kaveesha Himasanka.</span>
-        <span>And I’am a</span>
-        </p>
+    <section id="home">
+        <img alt="Back Round" class="layer" data-speed="-1" id="br1" src="assets/images/back-Round.png">
+        <img alt="profile image" class="layer" data-speed="1" id="dp1" src="assets/images/1%20image.png">
+        <div>
+            <p>
+            <span id="span1">Hello, I am</span>
+            <span id="span2">Kaveesha Himasanka.</span>
+            <span id="span3">And I’am a</span>
+            </p>
+        </div>
         <ul>
             <li>Software Developer,</li>
             <li>Web Developer,</li>
@@ -65,13 +68,15 @@
             <li>Graphic Designer .</li>
         </ul>
         <button type="button">Hire me</button>
-        <div>
-            <a href="https://github.com/khimasanka/"><img alt="github" src="assets/images/github.png"></a>
-            <a href="https://www.linkedin.com/in/kaveesha-himasanka-5152971b2/"><img alt="linkedin" src="assets/images/linkedin.png"></a>
-            <a href="https://www.facebook.com/kavee.ya.3/"><img alt="facebook" src="assets/images/facebook.png"></a>
-            <a href="https://twitter.com/Avvox3"><img alt="twitter" src="assets/images/twitter.png"></a>
-            <a href="https://www.instagram.com/kaveee2/"><img alt="instagram" src="assets/images/instagram.png"></a>
-            <a href="https://stackoverflow.com/users/16481921/avvox"><img alt="stack-overflow" src="assets/images/stack-overflow.png"></a>
+        <div id="socialLinks">
+            <a class="sLink" href="https://github.com/khimasanka/" target="_blank"><img alt="github" src="assets/images/github.png"></a>
+            <a class="sLink" href="https://www.linkedin.com/in/kaveesha-himasanka-5152971b2/" target="_blank"><img alt="linkedin"
+                                                                                     src="assets/images/linkedin.png"></a>
+            <a class="sLink" href="https://www.facebook.com/kavee.ya.3/" target="_blank"><img alt="facebook" src="assets/images/facebook.png"></a>
+            <a class="sLink" href="https://twitter.com/Avvox3" target="_blank"><img alt="twitter" src="assets/images/twitter.png"></a>
+            <a class="sLink" href="https://www.instagram.com/kaveee2/" target="_blank"><img alt="instagram" src="assets/images/instagram.png"></a>
+            <a class="sLink" href="https://stackoverflow.com/users/16481921/avvox" target="_blank"><img alt="stack-overflow"
+                                                                          src="assets/images/stack-overflow.png"> </a>
 
         </div>
     </section>
@@ -93,7 +98,9 @@
                 Also, if you want to receive services in a
                 very friendly manner, please contact me.</p>
         </article>
-        <a href="assets/images/download%20cv.png" download="assets/images/download%20cv.png"><button type="button">Download CV</button></a>
+        <a download="assets/images/download%20cv.png" href="assets/images/download%20cv.png">
+            <button type="button">Download CV</button>
+        </a>
         <img alt="Back Round 2" id="br2" src="assets/images/back-Round-2.png">
         <img alt="profile 2 pic" id="dp2" src="assets/images/2%20image.png">
     </section>
@@ -214,17 +221,30 @@
             </p>
             <ul>
                 <li><img alt="person" src="assets/images/person.png">Kaveesha Himasanka</li>
-                <li><a href="mailto:khimasanka456@gmail.com>"><abbr title="Click to send me an E-mail"><img alt="email" src="assets/images/email.png">khimasanka456@gmail.com</abbr></a></li>
-                <li><a href="tel:+94761064277"><abbr title="Click to Call me"> <img alt="phone" src="assets/images/phone.png">+94 7610 64 277</abbr></a></li>
-                <li><a href="https://www.google.com/maps/place/Dankotuwa/"><abbr title="Click to find my location"><img alt="location" src="assets/images/location.png">Dankotuwa , Sri Lanka</abbr></a></li>
+                <li><a href="mailto:khimasanka456@gmail.com>"><abbr title="Click to send me an E-mail"><img alt="email"
+                                                                                                            src="assets/images/email.png">khimasanka456@gmail.com</abbr></a>
+                </li>
+                <li><a href="tel:+94761064277"><abbr title="Click to Call me"> <img alt="phone"
+                                                                                    src="assets/images/phone.png">+94
+                    7610 64 277</abbr></a></li>
+                <li><a href="https://www.google.com/maps/place/Dankotuwa/"><abbr title="Click to find my location"><img
+                        alt="location" src="assets/images/location.png">Dankotuwa , Sri Lanka</abbr></a></li>
             </ul>
             <div>
                 <h1>You can also contact me from these websites</h1>
                 <ul>
-                    <li><a href="https://www.fiverr.com/khimasanka456" target="_blank"><img alt="fiverr" src="assets/images/fiverr.png"></a></li>
-                    <li><a href="https://www.freelancer.com/u/khimasanka456" target="_blank"> <img alt="freelancer" src="assets/images/freelancer.png"></a></li>
-                    <li><a href="https://www.upwork.com/freelancers/~0174b3140a1167e019" target="_blank"> <img alt="upwork" src="assets/images/upwork.png"></a></li>
-                    <li><a href="https://www.peopleperhour.com/freelancer/video-photo-audio/kaveesha-himasanka-the-most-trustworthy-and-creative-wqjjmmy" target="_blank"> <img alt="peopleperhour" src="assets/images/peopleperhour.png" width="100"></a></li>
+                    <li><a href="https://www.fiverr.com/khimasanka456" target="_blank"><img alt="fiverr"
+                                                                                            src="assets/images/fiverr.png"></a>
+                    </li>
+                    <li><a href="https://www.freelancer.com/u/khimasanka456" target="_blank"> <img alt="freelancer"
+                                                                                                   src="assets/images/freelancer.png"></a>
+                    </li>
+                    <li><a href="https://www.upwork.com/freelancers/~0174b3140a1167e019" target="_blank"> <img
+                            alt="upwork" src="assets/images/upwork.png"></a></li>
+                    <li>
+                        <a href="https://www.peopleperhour.com/freelancer/video-photo-audio/kaveesha-himasanka-the-most-trustworthy-and-creative-wqjjmmy"
+                           target="_blank"> <img alt="peopleperhour" src="assets/images/peopleperhour.png" width="100"></a>
+                    </li>
                 </ul>
             </div>
         </div>

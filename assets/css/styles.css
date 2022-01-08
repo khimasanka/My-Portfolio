@@ -77,14 +77,6 @@ header > nav{
 
 }
 
-
-/*#home div:nth-child(3){
-    margin: auto 0 auto 40px;
-    position: relative;
-    border: white solid 2px;
-    width: 100%;
-}*/
-
 #home #span1{
     position: absolute;
     top: 22vh;
@@ -233,17 +225,18 @@ header > nav{
 }
 
 #br2{
-    width: 617px;
+    width: 604px;
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 36px;
+    bottom: -32px;
+
 }
 
 #dp2{
-    width: 409px;
+    width: 400px;
     position: absolute;
-    right: 91px;
-    bottom: 0;
+    right: 150px;
+    bottom: -8px;
 }
 
 #about button{
@@ -271,3 +264,19 @@ header > nav{
     font-size: 21px;
     transition: 0.4s;
 }
+
+/*services 3*/
+
+#service{
+    position: relative;
+}
+
+#service #sec1{
+    height: 60vh;
+}
+
+#service #sec2{
+    height: 33vh;
+}
+
+

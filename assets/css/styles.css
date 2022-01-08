@@ -200,13 +200,73 @@ header > nav{
     left: -12px;
 }
 
-/*page 2*/
+/*about 2*/
+
+
+#about{
+    position: relative;
+    height: 90vh;
+}
+
+#about article{
+    position: relative;
+    left: 10vw;
+    font-family: 'Saira', sans-serif;
+    top: 7vw;
+}
+
+#about article h3{
+    color: #919298;
+    font-size: 20px;
+}
+
+#about article h1{
+    color: #E7E7E7;
+    font-size: 30px;
+}
+
+#about article p{
+    color: #B9BCCB;
+    font-size: 22px;
+    width: 500px;
+}
 
 #br2{
-    width:600px;
+    width: 617px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 #dp2{
-    width:400px;
+    width: 409px;
+    position: absolute;
+    right: 91px;
+    bottom: 0;
 }
 
+#about button{
+    position: absolute;
+    bottom: 20vh;
+    right: 100vw;
+    left: 40vw;
+    top: 36vw;
+    margin: auto;
+    width: 165px;
+    height: 40px;
+    border: white solid 2px;
+    border-radius: 25px;
+    background-color: #5E81F4;
+    font-size: 20px;
+    color: #FFC25C;
+    font-family: 'Roboto Condensed', sans-serif;
+    box-shadow: -10px 9px 18px -4px black;
+    text-shadow: -2px 1px 10px black;
+}
+
+#about button:hover{
+    width: 168px;
+    height: 43px;
+    font-size: 21px;
+    transition: 0.4s;
+}

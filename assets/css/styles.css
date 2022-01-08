@@ -340,3 +340,82 @@ header > nav{
 }
 
 
+/*skills 4*/
+
+#skills{
+    position: relative;
+    background-color: #252734;
+}
+
+#skills aside{
+    position: relative;
+    left: 12%;
+    padding-top:5% ;
+    font-family: 'Saira', sans-serif;
+    width: 25%;
+}
+
+#skills h3{
+    display: inline;
+    color: #919298;
+    font-size: 20px;
+}
+
+#skills h1{
+    color: white;
+}
+
+#skills p{
+    color: #D2CECE;
+}
+
+#skills .big{
+    color: #E9B258;
+    font-size: 100px;
+    display: flex;
+    /*margin-top: 40px;*/
+}
+
+#bigDiv{
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    height: 79vh;
+    width: 100vh;
+    flex-direction: row;
+    align-content: space-between;
+    top: 32vh;
+    left: -11%;
+}
+
+#bigDiv div{
+    position: relative;
+    margin: 22px;
+    padding: 14px;
+    width: 23%;
+    height: 30%;
+}
+
+#bigDiv div:nth-child(1) h4{
+    color: white;
+    position: relative;
+    left: 5vw;
+    top: -17vh;
+    width: 70px;
+}
+
+#bigDiv div:nth-child(2) h4{
+    color: white;
+    position: relative;
+    left: 5vw;
+    top: -17vh;
+    width: 10px;
+}
+
+#bigDiv section{
+
+}
+
+
+
+

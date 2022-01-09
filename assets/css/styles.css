@@ -531,7 +531,7 @@ header > nav{
     background-position: center;
     background-size: cover;
     height: 300px;
-    box-shadow: -6px 6px 47px -5px black;
+    /*box-shadow: -6px 6px 47px -5px black;*/
 }
 
 .content{
@@ -572,13 +572,41 @@ header > nav{
 
 #contact > div:nth-child(2) > p{
     color: #D2CECE;
+    font-size: 17px;
 }
 
 #contact #detailsUl{
     list-style: none;
+    color: #E4E4E4;
+    font-family:'Roboto Condensed', sans-serif;
 }
 
-#contact #detailsUl li{
+#contact #detailsUl li a{
+    text-decoration: none;
+    color: #E4E4E4;
+}
 
+#contact #detailsUl li  h5{
+    display: inline;
+    margin-left: 24px;
+    position: relative;
+    bottom: 5px;
+    font-size: 15px;
+}
+
+#contact abbr{
+    text-decoration: none;
+}
+
+#contact #detailsUl img{
+    width: 30px;
+    margin-top: 15px;
+}
+
+#contact div div h1{
+    color: #9A9A9A;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    margin-top: 30px;
 }
 

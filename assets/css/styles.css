@@ -345,6 +345,7 @@ header > nav{
 #skills{
     position: relative;
     background-color: #252734;
+    height: 75vh;
 }
 
 #skills aside{
@@ -443,7 +444,7 @@ header > nav{
     position: absolute;
     font-family: 'Righteous', cursive;
     left: 0;
-    bottom: 0px;
+    bottom: 0;
     top: 94px;
     right: 0;
     margin: auto;
@@ -463,16 +464,15 @@ header > nav{
 
 /*progects*/
 
+#projects{
+    position: relative;
+}
+
 #projects section{
     position: relative;
     width: 25%;
     min-height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+
 }
 
 .card{
@@ -481,12 +481,19 @@ header > nav{
     width: 400px;
     height: 500px;
     margin: 0 auto;
+    display: block;
 }
 
 .card .content{
     width: 400px;
     padding: 30px;
     box-sizing: border-box;
+}
+
+.swiper-container{
+    width: 800px;
+    display: block;
+    top: 130px;
 }
 
 .card .sliderText{
@@ -499,9 +506,16 @@ header > nav{
     background: #000;
 }
 
-.card .sliderText h3{
+#assignments{
     color: #ffffff;
-    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: 0;
+    margin: auto;
+
 }
 
 
@@ -509,7 +523,18 @@ header > nav{
     width: 400px;
     background-position: center;
     background-size: cover;
+    height: 300px;
+
 }
+
+/*
+#service h1{
+    color: #F1F1F1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+*/
 
 
 

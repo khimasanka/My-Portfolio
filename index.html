@@ -9,12 +9,13 @@
     <meta content="Kaveesha Himasanka personal Portfolio" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="black" name="theme-color">
+    <link href="assets/css/swiper.min.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
     <link href="assets/css/fonts/css/all.css" rel="stylesheet">
     <link href="assets/css/normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/swiper@7/swiper-bundle.min.css" rel="stylesheet"/>
     <script type="text/javascript">
         window.addEventListener("scroll", function () {
             var header = document.querySelector("header");
@@ -179,7 +180,7 @@
             </figure>
 
             <figure>
-                <img id="mysql" alt="mysql" src="assets/images/mysql.png">
+                <img alt="mysql" id="mysql" src="assets/images/mysql.png">
                 <figcaption>Data Bases</figcaption>
             </figure>
 
@@ -208,38 +209,68 @@
     <!--view five  / projects-->
     <section id="projects">
         <dfn id="projectsNav"></dfn>
-        <section>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src=" assets/images/java.png" alt="" />
-                        <a href="myProjects/css/assignment%201/index.html">Assignment 1</a>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/images/send-mail.png" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/images/logo.png" alt="" />
 
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/images/stack-overflow.png" alt="" />
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="sliderText">
+                            <h3>Slider one</h3>
+                        </div>
+                        <div class="content">
+                            <p> Lorem ipsum dolor sit amet, consectetur </p>
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
+
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="sliderText">
+                            <h3>Slider two</h3>
+                        </div>
+                        <div class="content">
+                            <p> Lorem ipsum dolor sit amet, consectetur </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="sliderText">
+                            <h3>Slider three</h3>
+                        </div>
+                        <div class="content">
+                            <p> Lorem ipsum dolor sit amet, consectetur </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="sliderText">
+                            <h3>Slider four</h3>
+                        </div>
+                        <div class="content">
+                            <p> Lorem ipsum dolor sit amet, consectetur </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <script src="assets/js/swiper.min.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script>
-            var swiper = new Swiper(".mySwiper", {
+            var swiper = new Swiper(".swiper-container", {
                 effect: "coverflow",
                 grabCursor: true,
                 centeredSlides: true,
                 slidesPerView: "auto",
                 coverflowEffect: {
-                    rotate: 50,
+                    rotate: 30,
                     stretch: 0,
-                    depth: 100,
+                    depth: 500,
                     modifier: 1,
                     slideShadows: true,
                 },
@@ -249,12 +280,12 @@
             });
         </script>
         <h1>Assignments</h1>
-               <!--<section style="background-color: #333646"></section>
-        <section style="background-color: #252734"></section>
-        <div><a href="myProjects/css/assignment%201/index.html">Assignment 1</a></div>
-        <div><a href="myProjects/css/assignment%202/index.html">Assignment 2</a></div>
-        <div><a href="myProjects/css/assignment%203/index.html">Assignment 3</a></div>
-        <div><a href="myProjects/css/assignment%204/index.html">Assignment 4</a></div>-->
+        <!--<section style="background-color: #333646"></section>
+ <section style="background-color: #252734"></section>
+ <div><a href="myProjects/css/assignment%201/index.html">Assignment 1</a></div>
+ <div><a href="myProjects/css/assignment%202/index.html">Assignment 2</a></div>
+ <div><a href="myProjects/css/assignment%203/index.html">Assignment 3</a></div>
+ <div><a href="myProjects/css/assignment%204/index.html">Assignment 4</a></div>-->
     </section>
 
     <!--last page  /  contact me-->

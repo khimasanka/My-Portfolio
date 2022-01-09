@@ -565,6 +565,12 @@ header > nav{
     font-family: 'Saira', sans-serif;
 }
 
+#contact div:nth-child(2){
+    position: relative;
+    left: 12vw;
+    display: inline-block;
+}
+
 #contact > div:nth-child(2)> h1{
     display: inline;
     color: white;
@@ -603,10 +609,37 @@ header > nav{
     margin-top: 15px;
 }
 
+#contact #fiverr{
+    width: 40px;
+}
+
+#contact #upwork{
+    width: 28px;
+    position: relative;
+    top: -3px;
+}
+
+#contact #pph{
+    width: 20px;
+    position: relative;
+    top: -1px;
+}
+
 #contact div div h1{
     color: #9A9A9A;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 14px;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
+#contact div div ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 2px;
+}
+
+#contact div div ul li img{
+    width: 30px;
+    margin-right: 20px;
+}

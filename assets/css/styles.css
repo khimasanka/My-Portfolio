@@ -295,7 +295,10 @@ header > nav{
 #content div:hover{
     transition: 0.2s;
     transform: scale(1.1);
+    background-color: #FFC25C;
 }
+
+
 
 #content img{
     width: 35px;
@@ -347,6 +350,7 @@ header > nav{
     background-color: #252734;
     height: 75vh;
 }
+
 
 #skills aside{
     position: relative;
@@ -462,6 +466,7 @@ header > nav{
     margin-left: 10px!important;
 }
 
+
 /*projects*/
 
 #projects{
@@ -514,6 +519,7 @@ header > nav{
     display: flex;
     justify-content: center;
     position: absolute;
+    font-family: 'Saira', sans-serif;
     top: 40px;
     right: 0;
     left: 0;

@@ -500,6 +500,7 @@ main{
     height: 300px;
     margin: 0 auto;
     display: block;
+    border-radius: 16px;
 }
 
 .card .content{
@@ -514,6 +515,15 @@ main{
     top: 122px;
     height: 380px;
 
+}
+
+#assignment6{
+    width: 211px;
+}
+
+#assignment7,#assignment8{
+    width: 400px;
+    padding-top: 3px;
 }
 
 .card .sliderText{

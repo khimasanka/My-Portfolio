@@ -965,6 +965,13 @@ responsive*/
         right: 381px;
         width: 25%;
     }
+
+    /*service*/
+
+    #content {
+        left: 26%;
+    }
+
    /* skils*/
 
     #skillFlex figure {
@@ -981,6 +988,15 @@ responsive*/
 
     #skills aside{
         padding-top: 10%;
+    }
+
+    /*projects*/
+
+    .swiper-container {
+        width: 800px;
+        display: block;
+        top: 181px;
+        height: 380px;
     }
 
 }

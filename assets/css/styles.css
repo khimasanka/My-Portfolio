@@ -928,29 +928,59 @@ responsive*/
 
 @media all and(max-width: 1440px){
 
+    /*home*/
+
+    #dp1 {
+        width: 457px;
+        bottom: -18px;
+        left: -10px;
+    }
+
+    #br1 {
+        width: 492px;
+        top: 89px;
+    }
+
+    #home #span1 {
+        top: 23vh;
+        font-size: 33px;
+    }
+
+    #home #span2 {
+        font-size: 70px;
+    }
+
+    #home ul {
+        right: 19vw;
+        font-size: 26px;
+    }
+
+    #home button {
+        left: 43vw;
+        top: 32vw;
+    }
+
+    #socialLinks {
+        bottom: 28px;
+        right: 381px;
+        width: 25%;
+    }
    /* skils*/
 
     #skillFlex figure {
-        position: relative;
-        margin: 18px;
-        padding: 10px;
-        width: 29%;
-        height: 30%;
+        padding: 8px;
     }
 
     #skillFlex {
-        display: flex;
-        position: relative;
-        height: 48vh;
-        width: 20vh;
-        top: -181px;
-        left: 56%;
-        flex-wrap: wrap;
-        flex-direction: column;
+        top: -226px;
     }
 
     h1{
         color: red!important;
+    }
+
+    #skills aside{
+        padding-top: 10%;
     }
 
 }

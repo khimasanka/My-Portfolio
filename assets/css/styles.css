@@ -93,6 +93,7 @@ main{
     font-size: 37px;
 }
 
+/*
 @media all and (max-width: 425px){
     #headerLogo {
         display: flex;
@@ -128,7 +129,7 @@ main{
         width: 160px;
     }
 
-    /*service*/
+    !*service*!
 
     #service {
         height: 75vh;
@@ -174,6 +175,7 @@ main{
     }
 }
 
+*/
 
 
 
@@ -913,5 +915,42 @@ footer >address > img{
 footer>address>img:hover{
     transition: 1s;
     transform: rotate(-20deg);
+
+}
+
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{
+    display: none;
+}
+
+
+/*
+responsive*/
+
+@media all and(max-width: 1440px){
+
+   /* skils*/
+
+    #skillFlex figure {
+        position: relative;
+        margin: 18px;
+        padding: 10px;
+        width: 29%;
+        height: 30%;
+    }
+
+    #skillFlex {
+        display: flex;
+        position: relative;
+        height: 48vh;
+        width: 20vh;
+        top: -181px;
+        left: 56%;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    h1{
+        color: red!important;
+    }
 
 }

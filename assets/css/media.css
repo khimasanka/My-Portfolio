@@ -291,17 +291,19 @@
 
     /*about*/
     #dp2 {
-        width: 344px;
-        right: 70px;
+        width: 312px;
+        right: 38px;
     }
 
     #br2 {
-        width: 429px;
+        width: 387px;
+        right: 2vw;
+        top: 191px;
     }
 
     #about article p {
         font-size: 18px;
-        width: 376px;
+        width: 352px;
     }
 
     #about button {
@@ -438,17 +440,33 @@
     /*header*/
 
     #headerLogo {
-        width: 86px;
+        width: 61px;
         left: 0;
         right: 0;
         margin: auto;
     }
+
+    /*home*/
 
     .box {
         display: none;
     }
 
     #dp1 {
-        width: 387px;
+        width: 363px;
+        left: 7px;
+        right: 0;
+        margin: auto;
+        position: relative;
+        top: 118px;
+    }
+
+    #br1{
+        display: none;
+    }
+
+    #dp2 {
+        width: 312px;
+        right: 38px;
     }
 }

@@ -1,4 +1,4 @@
-@media (max-width: 1440px){
+@media (max-width: 1440px) {
     #dp1 {
         width: 442px;
         bottom: -13px;
@@ -37,7 +37,6 @@
 
 
     /*about*/
-
     #about article {
         top: 5vw;
     }
@@ -51,11 +50,13 @@
     }
 
 
+    #content p {
+        width: 112px;
+        top: 71px;
+        left: 30px;
+    }
 
     /*service*/
-
-
-
     /* skils*/
     #skillFlex figure {
         padding: 6px;
@@ -68,7 +69,6 @@
     }
 
     /*projects*/
-
     .swiper-container {
         width: 800px;
         display: block;
@@ -78,7 +78,21 @@
 
 }
 
-@media all and (min-width: 1192px) and (max-width: 1440px){
+@media all and (min-width: 1192px) and (max-width: 1440px) {
+    header {
+        height: 77px;
+    }
+
+    #headerLogo {
+        width: 57px;
+    }
+
+
+    header > nav {
+        padding: 21px;
+    }
+
+    /*skill*/
     #skillFlex figure {
         padding: 8px;
     }
@@ -100,10 +114,13 @@
         left: 33vw;
     }
 
-    #content p {
-        width: 112px;
-        top: 73px;
-        left: 39px;
+
+    #bigDiv div:nth-child(1) h4 {
+        top: -21vh;
+    }
+
+    #bigDiv div:nth-child(2) h4 {
+        top: -21vh;
     }
 
     #content img {
@@ -114,15 +131,36 @@
 
     #content p {
         width: 112px;
-        top: 89px;
-        left: 62px;
-        font-size: 19px;
+        top: 71px;
+        left: 30px;
+    }
 
+    #socialLinks {
+        right: 26vw;
+        width: 342px;
+    }
+
+    #home button {
+        top: 437px;
+        width: 149px;
+        left: 55vw;
     }
 }
 
+@media all and (min-width: 1024px) and (max-width: 1192px) {
+    header {
+        height: 69px;
+    }
 
-@media all and (min-width: 1024px) and (max-width: 1192px){
+    #headerLogo {
+        width: 52px;
+    }
+
+    header > nav {
+        padding: 16px;
+    }
+
+    /*home*/
     #home #span2 {
         font-size: 58px;
     }
@@ -174,14 +212,37 @@
         left: 38vw;
     }
 
+    #content {
+        height: 79vh;
+        width: 100vh;
+        top: 170px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
     #content p {
         width: 112px;
-        top: 76px;
-        left: 26px;
+        top: 80px;
+        left: 30px;
+        font-size: 19px;
+    }
+
+    /*skills*/
+    #bigDiv div:nth-child(1) h4 {
+        left: 7vw;
+        top: -21vh;
+        font-size: 14px;
+    }
+
+    #bigDiv div:nth-child(2) h4 {
+        left: 7vw;
+        top: -21vh;
+        font-size: 14px;
     }
 }
 
-@media all and (min-width: 768px) and (max-width: 1024px){
+@media all and (min-width: 768px) and (max-width: 1024px) {
     header {
         height: 66px;
     }
@@ -193,6 +254,7 @@
     header > nav {
         padding: 17px;
     }
+
     /*home*/
     #home #span1 {
         font-size: 24px;
@@ -228,7 +290,6 @@
     }
 
     /*about*/
-
     #dp2 {
         width: 344px;
         right: 70px;
@@ -255,4 +316,120 @@
     #about article h3 {
         font-size: 16px;
     }
+
+    /*service*/
+    #content {
+        height: 70vh;
+        top: 170px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    #content p {
+        top: 66px;
+        left: 14px;
+        font-size: 18px;
+    }
+
+    #content div {
+        width: 23%;
+    }
+
+    #content img {
+        top: 37px;
+    }
+
+    /*service*/
+    #skills h3 {
+        font-size: 17px;
+    }
+
+    #skills h1 {
+        font-size: 23px;
+    }
+
+    #skills p {
+        font-size: 15px;
+    }
+
+    #skills aside {
+        padding-top: 8%;
+        left: 67px;
+    }
+
+    #bigDiv {
+        top: 207px;
+        left: -20%;
+    }
+
+    #bigDiv div:nth-child(1) h4 {
+        left: 9vw;
+        top: -122px;
+    }
+
+    #bigDiv div:nth-child(2) h4 {
+        position: absolute;
+        left: 11vw;
+        top: 121px;
+    }
+
+    #skillFlex {
+        height: 44vh;
+        width: 36vh;
+        top: -242px;
+        left: 54%;
+    }
+
+    #skillFlex img {
+        width: 60px;
+    }
+
+    #mysql {
+        width: 77px !important;
+    }
+
+    #skillFlex figure figcaption {
+        width: 113px;
+    }
+
+    /*projects*/
+    .assignment {
+        position: relative;
+        width: 100%;
+    }
+
+    .swiper-container {
+        width: 700px;
+    }
+
+
+    .card {
+        width: 300px;
+    }
+
+    .content h2 {
+        left: -88px;
+    }
+
+    .content p{
+        width: 240px;
+    }
+
+    #assignment7, #assignment8 {
+        width: 100%;
+    }
+
+    #assignments {
+        top: 104px;
+        font-size: 28px;
+
+    }
+
+    /*contact*/
+
+    #contact div:nth-child(2) {
+        left: 9vw;
+    }
+
 }

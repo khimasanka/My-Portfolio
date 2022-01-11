@@ -435,7 +435,7 @@
 
 }
 
-@media all and (min-width: 425px) and (max-width: 767px) {
+@media all and (min-width: 425px) and (max-width: 768px) {
     /*header*/
     #headerLogo {
         width: 61px;
@@ -630,5 +630,91 @@
 
     #service #sec2 {
         height: 41vh;
+    }
+
+    /*skills*/
+    #skills aside {
+        padding: 0;
+        width: 76vw;
+        bottom: 150px;
+    }
+
+    #skillFlex {
+        height: 44vh;
+        flex-direction: row;
+        top: 170px;
+    }
+
+    #bigDiv div {
+        margin: 20px;
+        padding: 13px;
+        width: 23%;
+        height: 21%;
+    }
+
+    #bigDiv {
+        height: 16vh;
+        top: 26vh;
+    }
+
+    #skillFlex img {
+        width: 49px;
+        margin-left: 24px;
+    }
+
+    #skillFlex figure figcaption {
+        font-size: 14px;
+        top: 65px;
+    }
+
+    #bigDiv div:nth-child(2) h4 {
+        left: 6vw;
+        top: -17vh;
+        width: 8px;
+        font-size: 13px;
+    }
+
+    #skills h1 {
+        font-size: 23px;
+    }
+
+    #skills .big {
+        font-size: 77px;
+        display: flex;
+        margin-top: 52px;
+        margin-left: -32px;
+    }
+
+    #bigDiv div:nth-child(1) h4 {
+        top: -17vh;
+        font-size: 14px;
+    }
+
+    /*projects*/
+
+    #assignments {
+        top: 20px;
+        font-size: 20px;
+    }
+
+    .swiper-container {
+        width: 100vw;
+        display: block;
+        top: 27px;
+        height: 242px;
+    }
+
+
+
+    /*contact*/
+
+    #contact div:nth-child(2) {
+        top: -36px;
+        left: 6vw;
+    }
+
+
+    #contact > div:nth-child(2)> h1 {
+        font-size: 20px;
     }
 }

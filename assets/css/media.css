@@ -414,7 +414,7 @@
         left: -88px;
     }
 
-    .content p{
+    .content p {
         width: 240px;
     }
 
@@ -429,16 +429,14 @@
     }
 
     /*contact*/
-
     #contact div:nth-child(2) {
         left: 9vw;
     }
 
 }
 
-@media all and (min-width: 425px) and (max-width: 768px){
+@media all and (min-width: 425px) and (max-width: 767px) {
     /*header*/
-
     #headerLogo {
         width: 61px;
         left: 0;
@@ -447,7 +445,6 @@
     }
 
     /*home*/
-
     .box {
         display: none;
     }
@@ -461,12 +458,87 @@
         top: 118px;
     }
 
-    #br1{
+    #br1 {
         display: none;
     }
 
     #dp2 {
         width: 312px;
         right: 38px;
+    }
+}
+
+@media all and (min-width: 320px) and (max-width: 375px) {
+
+    #headerLogo {
+        width: 43px;
+        left: 0;
+        margin: auto;
+        right: 0;
+    }
+
+    header {
+        height: 37px;
+    }
+
+    header > nav {
+        display: none;
+    }
+
+    /*home*/
+    #br1 {
+        display: none;
+    }
+
+    #dp1 {
+        width: 226px;
+        bottom: 277px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    #home #span1 {
+        top: 45vh;
+        font-size: 19px;
+        left: 8vh;
+    }
+
+    #home #span2 {
+        font-size: 28px;
+        left: 12px;
+        top: 283px;
+    }
+
+    #home #span3 {
+        top: 55vh;
+        left: 58vw;
+        font-size: 16px;
+    }
+
+    #home ul {
+        right: 22vw;
+        top: 329px;
+        font-size: 18px;
+    }
+
+    #home button {
+        top: 475px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        width: 120px;
+        font-size: 21px;
+        height: 43px;
+        margin: auto;
+    }
+
+    #socialLinks {
+        position: absolute;
+        top: 31px;
+        padding: 10px;
+        width: 29px;
+        right: 0;
+        margin: 3px;
     }
 }

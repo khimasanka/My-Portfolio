@@ -4,7 +4,10 @@ body{
     background-color: #333646 ;
 }
 
-/*header     */
+
+
+
+/*-----------------------------header-----------------------------     */
 header{
     position: fixed;
     top: 0;
@@ -74,7 +77,7 @@ main{
 }
 
 
-/*page 1*/
+/*--------------------------------------------home---------------------- 1*/
 
 #home{
     display: flex;
@@ -92,90 +95,6 @@ main{
     font-family: 'Salsa', cursive;
     font-size: 37px;
 }
-
-/*
-@media all and (max-width: 425px){
-    #headerLogo {
-        display: flex;
-        justify-content: center;
-    }
-
-        #home #span1{
-        position: absolute;
-        top: 17vh;
-        left: 30vw;
-        color: #EBEBEC;
-        font-family: 'Salsa', cursive;
-        font-size: 31px;
-
-    }
-
-    #home #span2 {
-        top: 21vh;
-        left: 17vw;
-        font-size: 55px;
-    }
-    #home ul li {
-        margin-top: 6px;
-        position: relative;
-        bottom: -179px;
-        left: 20px;
-        text-shadow: -8px 9px 8px black;
-    }
-
-    #home button {
-        bottom: -69vh;
-        left: 30vw;
-        width: 160px;
-    }
-
-    !*service*!
-
-    #service {
-        height: 75vh;
-    }
-
-    #service h1 {
-        top: 10%;
-        left: 31%;
-    }
-
-    #content {
-        height: 71vh;
-        width: 95vh;
-        flex-direction: column;
-        align-content: baseline;
-        top: 126px;
-        left: 6%;
-    }
-
-    #content div {
-        margin: 25px;
-        padding: 7px;
-        width: 14%;
-        height: 17%;
-    }
-
-    #content img {
-        width: 35px;
-        top: 13px;
-        left: 28px;
-    }
-
-    #content p {
-        bottom: 20px;
-        width: 114px;
-        top: 39px;
-        left: 12px;
-        font-size: 17px;
-    }
-
-    #br2 {
-        display: none;
-    }
-}
-
-*/
 
 
 
@@ -215,11 +134,8 @@ main{
 
 #home button {
     position: absolute;
-    bottom: 20vh;
-    right: 20vw;
-    left: 50vw;
-    top: 35vw;
-    margin: auto;
+    left: 910px;
+    top: 523px;
     width: 160px;
     height: 52px;
     border: white solid 4px;
@@ -920,83 +836,4 @@ footer>address>img:hover{
 
 img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{
     display: none;
-}
-
-
-/*
-responsive*/
-
-@media all and(max-width:1440px){
-
-    /*home*/
-
-    #dp1 {
-        width: 457px;
-        bottom: -18px;
-        left: -10px;
-    }
-
-    #br1 {
-        width: 492px;
-        top: 89px;
-    }
-
-    #home #span1 {
-        top: 23vh;
-        font-size: 33px;
-    }
-
-    #home #span2 {
-        font-size: 70px;
-    }
-
-    #home ul {
-        right: 19vw;
-        font-size: 26px;
-    }
-
-    #home button {
-        left: 43vw;
-        top: 32vw;
-    }
-
-    #socialLinks {
-        bottom: 28px;
-        right: 381px;
-        width: 25%;
-    }
-
-    /*service*/
-
-    #content {
-        left: 26%;
-    }
-
-   /* skils*/
-
-    #skillFlex figure {
-        padding: 7px;
-    }
-
-    #skillFlex {
-        top: -230px;
-    }
-
-    h1{
-        color: red!important;
-    }
-
-    #skills aside{
-        padding-top: 10%;
-    }
-
-    /*projects*/
-
-    .swiper-container {
-        width: 800px;
-        display: block;
-        top: 181px;
-        height: 380px;
-    }
-
 }

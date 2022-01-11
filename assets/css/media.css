@@ -1,0 +1,258 @@
+@media (max-width: 1440px){
+    #dp1 {
+        width: 442px;
+        bottom: -13px;
+        left: -12px;
+    }
+
+    #br1 {
+        width: 492px;
+        top: 89px;
+    }
+
+    #home #span1 {
+        top: 23vh;
+        font-size: 33px;
+    }
+
+    #home #span2 {
+        font-size: 70px;
+    }
+
+    #home ul {
+        right: 19vw;
+        font-size: 26px;
+    }
+
+    #home button {
+        left: 54vw;;
+        top: 432px;
+    }
+
+    #socialLinks {
+        bottom: 28px;
+        right: 381px;
+        width: 25%;
+    }
+
+
+    /*about*/
+
+    #about article {
+        top: 5vw;
+    }
+
+    #br2 {
+        width: 590px;
+    }
+
+    #about button {
+        top: 37vw;
+    }
+
+
+
+    /*service*/
+
+
+
+    /* skils*/
+    #skillFlex figure {
+        padding: 6px;
+
+    }
+
+
+    #skills aside {
+        padding-top: 8%;
+    }
+
+    /*projects*/
+
+    .swiper-container {
+        width: 800px;
+        display: block;
+        top: 181px;
+        height: 380px;
+    }
+
+}
+
+@media all and (min-width: 1192px) and (max-width: 1440px){
+    #skillFlex figure {
+        padding: 8px;
+    }
+
+    #home button {
+        top: 444px;
+        width: 155px;
+    }
+
+    #content {
+        height: 77vh;
+        width: 95vh;
+        top: 150px;
+        left: 26%;
+    }
+
+    #about button {
+        top: 516px;
+        left: 33vw;
+    }
+
+    #content p {
+        width: 112px;
+        top: 73px;
+        left: 39px;
+    }
+
+    #content img {
+        top: 41px;
+
+    }
+
+
+    #content p {
+        width: 112px;
+        top: 89px;
+        left: 62px;
+        font-size: 19px;
+
+    }
+}
+
+
+@media all and (min-width: 1024px) and (max-width: 1192px){
+    #home #span2 {
+        font-size: 58px;
+    }
+
+    #content img {
+        width: 35px;
+        top: 46px;
+
+    }
+
+    #socialLinks {
+        bottom: 29px;
+        right: 253px;
+        width: 30%;
+    }
+
+    #socialLinks {
+        bottom: 29px;
+        right: 25vw;
+        width: 349px;
+    }
+
+    #home ul {
+        right: 20vw;
+        font-size: 24px;
+    }
+
+    #home button {
+        top: 431px;
+        width: 155px;
+    }
+
+    #br2 {
+        width: 476px;
+    }
+
+    #dp2 {
+        width: 332px;
+        right: 112px;
+    }
+
+    #about article p {
+        font-size: 19px;
+        width: 454px;
+    }
+
+    #about button {
+        top: 426px;
+        left: 38vw;
+    }
+
+    #content p {
+        width: 112px;
+        top: 76px;
+        left: 26px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px){
+    header {
+        height: 66px;
+    }
+
+    #headerLogo {
+        width: 53px;
+    }
+
+    header > nav {
+        padding: 17px;
+    }
+    /*home*/
+    #home #span1 {
+        font-size: 24px;
+    }
+
+    #home #span2 {
+        font-size: 46px;
+    }
+
+    #home #span3 {
+        top: 38vh;
+        font-size: 18px;
+    }
+
+    #home ul {
+        right: 8vw;
+        font-size: 23px;
+    }
+
+    #dp1 {
+        width: 415px;
+    }
+
+    #br1 {
+        width: 454px;
+        top: 144px;
+    }
+
+    #socialLinks {
+        bottom: 31px;
+        right: 21vw;
+        width: 305px;
+    }
+
+    /*about*/
+
+    #dp2 {
+        width: 344px;
+        right: 70px;
+    }
+
+    #br2 {
+        width: 429px;
+    }
+
+    #about article p {
+        font-size: 18px;
+        width: 376px;
+    }
+
+    #about button {
+        top: 430px;
+        left: 27vw;
+    }
+
+    #about article h1 {
+        font-size: 28px;
+    }
+
+    #about article h3 {
+        font-size: 16px;
+    }
+}

@@ -900,9 +900,12 @@
 
     /*about*/
     #br2 {
+        position: absolute;
         width: 169px;
-        top: 19px;
-        left: 23vw;
+        top: -402px;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
 
     #dp2 {
@@ -922,7 +925,7 @@
 
     #about article h1 {
         font-size: 15px;
-        width: 230px;
+        width: 88vw;
         text-align: center;
         top: 188px;
         position: relative;
@@ -931,17 +934,24 @@
     #about article p {
         position: relative;
         font-size: 13px;
-        width: 267px;
+        width: 83vw;
         top: 200px;
     }
 
     #about button {
-        top: 187vw;
+        bottom: -351px;
         left: 0;
         right: 0;
         width: 132px;
         font-size: 17px;
         height: 35px;
+    }
+
+    /*service*/
+
+    #service {
+        position: relative;
+        height: 76vh;
     }
 
     #service h1 {
@@ -992,15 +1002,26 @@
 
     /*skills*/
     #skills aside {
-        padding: 0;
-        width: 76vw;
-        bottom: 150px;
+        position: absolute;
+        left: -80%;
+    }
+
+    #skills h3 {
+        position: absolute;
+        font-size: 15px;
+        left: 94vw;
+        top: 0;
+        width: 107px;
     }
 
     #skillFlex {
-        height: 44vh;
-        flex-direction: row;
-        top: 170px;
+        position: absolute;
+        height: 42vh;
+        width: 26vh;
+        top: 313px;
+        left: -135px;
+        right: 0;
+        margin: auto;
     }
 
     #bigDiv div {
@@ -1012,12 +1033,25 @@
 
     #bigDiv {
         height: 16vh;
-        top: 26vh;
+        width: 1px;
+        left: -6px;
+        top: 46px;
     }
 
     #skillFlex img {
-        width: 49px;
-        margin-left: 24px;
+        width: 38px;
+        margin-left: 19px;
+    }
+
+    #mysql {
+        width: 60px!important;
+    }
+
+    #skillFlex figure {
+        margin: 3px;
+        padding: 10px;
+        width: 51%;
+        height: 30%;
     }
 
     #skillFlex figure figcaption {
@@ -1026,26 +1060,30 @@
     }
 
     #bigDiv div:nth-child(2) h4 {
-        left: 6vw;
-        top: -17vh;
-        width: 8px;
-        font-size: 13px;
+        left: 103vw;
+        top: -19vh;
+        font-size: 14px;
     }
 
     #skills h1 {
-        font-size: 23px;
+        font-size: 20px;
+        position: relative;
+        left: 95vw;
+        width: 216px;
+        top: -11px;
     }
 
     #skills .big {
         font-size: 77px;
         display: flex;
         margin-top: 52px;
-        margin-left: -32px;
+        margin-left: -9vw;
     }
 
     #bigDiv div:nth-child(1) h4 {
-        top: -17vh;
+        top: -19vh;
         font-size: 14px;
+        left: 103vw;
     }
 
     /*projects*/
@@ -1057,9 +1095,8 @@
 
     .swiper-container {
         width: 100vw;
-        display: block;
-        top: 27px;
-        height: 242px;
+        top: 76px;
+        height: 381px;
     }
 
 
@@ -1079,24 +1116,13 @@
 
     /*commented*/
     #skills aside {
-        position: relative;
-        left: -62%;
+        position: absolute;
+        left: -80%;
         padding-top: 13%;
         font-family: 'Saira', sans-serif;
         width: 25%;
     }
 
-    #skillFlex {
-        display: flex;
-        position: relative;
-        flex-wrap: wrap;
-        height: 48vh;
-        width: 52vh;
-        flex-direction: column;
-        align-content: space-between;
-        top: -181px;
-        left: 2%;
-    }
 
     #contact #send {
         position: relative;
@@ -1107,48 +1133,7 @@
     }
 
     #contact div:nth-child(3) {
-        position: absolute;
-        right: 10vw;
-        display: inline-block;
-        width: 40%;
-        font-family: 'Saira', sans-serif;
-        color: #EBEBEC;
-        top: -13vh;
-    }
-
-    #skills aside {
-        position: relative;
-        left: -80%;
-        padding-top: 13%;
-        font-family: 'Saira', sans-serif;
-        width: 25%;
-    }
-
-    #skillFlex {
-        display: flex;
-        position: relative;
-        flex-wrap: wrap;
-        height: 48vh;
-        width: 29vh;
-        flex-direction: column;
-        align-content: space-between;
-        top: -181px;
-        left: 2%;
+        display: none;
     }
 
 }
-
-/*@media all and (min-width: 200px)and (max-width: 320px){
-
-
-
-
-
-    !*about*!
-
-
-
-    !*commented*!
-
-
-}*/

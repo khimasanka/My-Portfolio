@@ -575,7 +575,7 @@ main{
     background-position: center;
     background-size: cover;
     height: 300px;
-    /*box-shadow: -6px 6px 47px -5px black;*/
+    box-shadow: -6px 6px 47px -5px black;
 }
 
 .content{

@@ -273,6 +273,16 @@ main{
     transition: 0.4s;
 }
 
+#ijse{
+    color: #dfe2ea;;
+}
+
+#ijse:hover{
+    transition: 0.4s;
+    transform: scale(1.1);
+    color: #FFC25C;
+}
+
 /*services 3*/
 
 #service{

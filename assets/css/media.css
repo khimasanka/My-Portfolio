@@ -750,7 +750,7 @@
     }
 
     #dp1 {
-        width: 363px;
+        width: 250px;
         left: 7px;
         right: 0;
         margin: auto;
@@ -758,46 +758,226 @@
         top: 118px;
     }
 
+    #home #span1 {
+        font-size: 23px;
+        left: 57vw;
+    }
+
+    #home #span2 {
+        font-size: 40px;
+        left: 49vw;
+    }
+
+    #home #span3 {
+        top: 48vh;
+        left: 72vw;
+        font-size: 20px;
+    }
+
+    #home ul {
+        top: 57vh;
+        right: 0;
+        left: 29vw;
+        margin: auto;
+        font-size: 21px;
+    }
+
+    #home button {
+        left: 0;
+        right: 0;
+        width: 125px;
+        top: 463px;
+        margin: auto;
+        height: 43px;
+        font-size: 21px;
+    }
+
     #br1 {
         display: none;
     }
 
-    #dp2 {
-        width: 312px;
-        right: 38px;
+    #socialLinks {
+        flex-direction: column;
+        bottom: 28px;
+        left: -133px;
+        width: 328px;
     }
 
-    #socialLinks {
-        bottom: 28px;
-        right: 381px;
-        width: 328px;
+    #socialLinks .sLink {
+        width: 28px;
+        padding-top: 20px;
+    }
+
+    /*about*/
+    #dp2 {
+        width: 209px;
+        right: 17px;
+    }
+
+
+    #br2 {
+        width: 273px;
+        right: 17px;
+    }
+
+    #about article h3 {
+        font-size: 17px;
+        width: 115px;
+        left: 34px;
+        position: relative;
+    }
+
+    #about article h1 {
+        color: #E7E7E7;
+        font-size: 18px;
+        width: 82vw;
+        position: relative;
+        left: 37px;
+    }
+
+    #about article p {
+        color: #B9BCCB;
+        font-size: 15px;
+        width: 290px;
+        left: 36px;
+        top: 90px;
+        position: absolute;
+    }
+    #about button {
+        bottom: -92px;
+        left: 34px;
+        width: 119px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+
+    #contact div:nth-child(3) {
+        display: none;
+    }
+
+    #contact div:nth-child(2) {
+        top: -24px;
+        left: 20vw;
+        right: 0;
+        margin: auto;
+    }
+
+
+    /*services*/
+
+    #service h1 {
+        position: absolute;
+        top: 4%;
+        left: 31%;
+        right: 0;
+        margin: auto;
+    }
+
+    #content {
+        height: 47vh;
+        width: 56vh;
+        flex-direction: row;
+        top: 68px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    #content img {
+        top: 11px;
+        left: 21px;
+    }
+
+    #content p {
+        top: 42px;
+        left: 9px;
+        font-size: 15px;
+    }
+
+    /*skills*/
+
+    #skills h3 {
+        position: relative;
+        font-size: 17px;
+        left: 198px;
+        top: -25px;
+    }
+
+    #skills h1 {
+        position: relative;
+        left: 198px;
+        font-size: 20px;
+        width: 154px;
+    }
+
+    #skillFlex {
+        left: -54px;
+        right: 0;
+        margin: auto;
+        top: -42px;
+        width: 55vw;
+        height: 56vh;
+    }
+
+    #bigDiv div:nth-child(2) h4 {
+        left: 21vw;
+        top: -118px;
+        font-size: 14px;
+    }
+
+    #bigDiv div:nth-child(1) h4 {
+        left: 450px;
+        top: -118px;
+        font-size: 15px;
+    }
+
+    #skillFlex figure {
+        position: relative;
+        margin: 18px;
+        padding: 0;
+        width: 35%;
+        height: 24%;
+    }
+
+    #skillFlex img {
+        width: 45px;
+    }
+    #mysql {
+        width: 59px!important;
+    }
+
+    #skillFlex figure figcaption {
+        top: 53px;
+        font-size: 12px;
+    }
+
+    #bigDiv {
+        top: 16vh;
+        left: -13%;
+    }
+
+    #bigDiv div {
+        width: 19%;
+        height: 30%;
+    }
+
+    /*assignments*/
+
+    #assignments {
+        top: 15px;
+        font-size: 21px;
+
     }
 
     /*comented*/
 
     .swiper-container {
-        display: none;
+        width: 400px;
+        top: 93px;
+        height: 421px;
     }
 
-    #content {
-        left: -66%;
-    }
-
-    #skillFlex {
-        left: -9%;
-    }
-
-    #about article p {
-        color: #B9BCCB;
-        font-size: 11px;
-        width: 329px;
-        left: 0;
-        position: absolute;
-    }
-
-    #home #span2 {
-        font-size: 44px;
-    }
 
     #skills aside {
         position: relative;

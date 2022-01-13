@@ -537,8 +537,9 @@ main{
     width: 211px;
 }
 
-#assignment7,#assignment8{
+#assignment7, #assignment8 {
     width: 400px;
+    height: 185px;
     padding-top: 3px;
 }
 

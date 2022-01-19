@@ -309,6 +309,7 @@ main{
     padding: 12px;
     width: 27%;
     height: 30%;
+    overflow: hidden;
     box-shadow: -9px 11px 41px -6px black;
 }
 
@@ -317,6 +318,19 @@ main{
     transform: scale(1.1);
     background-color: #FFC25C;
     text-shadow: -2px 1px 5px white;
+}
+
+#content div::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #ff8000;
+    transform: rotate(
+            45deg
+    );
+    left: -110%;
+    top: 90%;
 }
 
 #content div:hover img{

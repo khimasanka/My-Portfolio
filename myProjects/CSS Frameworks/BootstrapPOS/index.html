@@ -7,17 +7,19 @@
     <link href="Assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body style="background-color: #e3f2fd">
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"></a>
-        <img src="Assets/img/pos-logo.png" alt="" width="200" class="d-inline-block ">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <img alt="" class="d-inline-block " src="Assets/img/pos-logo.png" style="width: 200px">
+        <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+                data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse ms-5" id="navbarNav">
             <ul class="navbar-nav ">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Customer</a>
+                    <a aria-current="page" class="nav-link active" href="#">Customer</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Item</a>
@@ -33,6 +35,101 @@
     </div>
 </nav>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<div class="container bg-white">
+    <div class="row mt-5">
+
+        <!-------------------------------Heading------------------------------->
+
+        <div class="row mt-3">
+            <div class="col-1"><img alt="customer" src="../../../assets/css/fonts/svgs/solid/users.svg"
+                                    style="width: 50px"></div>
+            <h3 class="col">Customers</h3>
+
+            <form class="d-flex col-4">
+                <input aria-label="Search" class="form-control me-2" placeholder="Search" type="search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+
+        <!-------------------------------Title border------------------------------->
+
+
+        <div class="col-12 bg-dark mt-3">
+            <h1 class="text-light fs-5 text-center mt-2">Add/ Delete / Update Customer</h1>
+        </div>
+
+        <!-------------------------------Input text fields------------------------------->
+
+        <div class="mt-2 row">
+            <label for="id" class="col-sm-1 col-form-label fw-bold">Id</label>
+            <div class="col-sm-5">
+                <input class="form-control bg-light" id="id" type="text" placeholder="C-001" aria-label="default input example">
+            </div>
+
+            <label for="name" class="col-sm-1 col-form-label fw-bold">Name</label>
+            <div class="col-sm-5">
+                <input class="form-control bg-light" id="name" type="text" placeholder="Jesse Pinkman" aria-label="default input example">
+            </div>
+        </div>
+
+        <div class="mt-2 row">
+            <label for="address" class="col-sm-1 col-form-label fw-bold">Address</label>
+            <div class="col-sm-5">
+                <input class="form-control bg-light" id="address" type="text" placeholder="no.22, Panadura" aria-label="default input example">
+            </div>
+
+            <label for="salary" class="col-sm-1 col-form-label fw-bold">Salary</label>
+            <div class="col-sm-5">
+                <input class="form-control bg-light" id="salary" type="text" placeholder="no.22, Panadura" aria-label="default input example">
+            </div>
+        </div>
+
+        <!-------------------------------button group------------------------------->
+
+
+        <div class="btn-group mt-4" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-danger mx-5">Delete</button>
+            <button type="button" class="btn btn-warning mx-5">Update</button>
+            <button type="button" class="btn btn-success mx-5">Save</button>
+        </div>
+
+        <!-------------------------------Customer table start------------------------------->
+        <table class="table table-bordered mt-5 table-primary table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Salary</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">C-001</th>
+                <td>Supun Dananjaya</td>
+                <td>Negombo</td>
+                <td>50000</td>
+            </tr>
+            <tr>
+                <th scope="row">C-002</th>
+                <td>Nipun Udana</td>
+                <td>No.25, Dankotuwa</td>
+                <td>75000</td>
+            </tr>
+            <tr>
+                <th scope="row">C-003</th>
+                <td>Kavindu Theekshana</td>
+                <td>Gampaha</td>
+                <td>75000</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<script crossorigin="anonymous"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

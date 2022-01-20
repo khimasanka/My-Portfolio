@@ -8,7 +8,7 @@
 </head>
 <body style="background-color: #e3f2fd">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed top-0 w-100" style="z-index: 100">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"></a>
         <img alt="" class="d-inline-block " src="Assets/img/pos-logo.png" style="width: 200px">
@@ -19,10 +19,10 @@
         <div class="collapse navbar-collapse ms-5" id="navbarNav">
             <ul class="navbar-nav ">
                 <li class="nav-item">
-                    <a aria-current="page" class="nav-link active" href="#">Customer</a>
+                    <a aria-current="page" class="nav-link active" href="#customer">Customer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Item</a>
+                    <a class="nav-link" href="#item">Item</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Order</a>
@@ -35,98 +35,237 @@
     </div>
 </nav>
 
-<div class="container bg-white">
-    <div class="row mt-5">
+<!-------------------------------customer------------------------------->
 
-        <!-------------------------------Heading------------------------------->
+<section class="pt-5" id="customer" style="height: 95vh">
+    <div class="container bg-white">
+        <div class="row mt-5">
 
-        <div class="row mt-3">
-            <div class="col-1"><img alt="customer" src="../../../assets/css/fonts/svgs/solid/users.svg"
-                                    style="width: 50px"></div>
-            <h3 class="col">Customers</h3>
+            <!-------------------------------Heading------------------------------->
 
-            <form class="d-flex col-4">
-                <input aria-label="Search" class="form-control me-2" placeholder="Search" type="search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
+            <div class="row mt-3">
+                <div class="col-1"><img alt="customer" src="../../../assets/css/fonts/svgs/solid/users.svg"
+                                        style="width: 50px"></div>
+                <h3 class="col">Customers</h3>
 
-        <!-------------------------------Title border------------------------------->
-
-
-        <div class="col-12 bg-dark mt-3">
-            <h1 class="text-light fs-5 text-center mt-2">Add/ Delete / Update Customer</h1>
-        </div>
-
-        <!-------------------------------Input text fields------------------------------->
-
-        <div class="mt-2 row">
-            <label for="id" class="col-sm-1 col-form-label fw-bold">Id</label>
-            <div class="col-sm-5">
-                <input class="form-control bg-light" id="id" type="text" placeholder="C-001" aria-label="default input example">
+                <form class="d-flex col-4">
+                    <input aria-label="Search" class="form-control me-2" placeholder="Search" type="search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </div>
 
-            <label for="name" class="col-sm-1 col-form-label fw-bold">Name</label>
-            <div class="col-sm-5">
-                <input class="form-control bg-light" id="name" type="text" placeholder="Jesse Pinkman" aria-label="default input example">
-            </div>
-        </div>
+            <!-------------------------------Title border------------------------------->
 
-        <div class="mt-2 row">
-            <label for="address" class="col-sm-1 col-form-label fw-bold">Address</label>
-            <div class="col-sm-5">
-                <input class="form-control bg-light" id="address" type="text" placeholder="no.22, Panadura" aria-label="default input example">
+
+            <div class="col-12 bg-dark mt-3">
+                <h1 class="text-light fs-5 text-center mt-2">Add/ Delete / Update Customer</h1>
             </div>
 
-            <label for="salary" class="col-sm-1 col-form-label fw-bold">Salary</label>
-            <div class="col-sm-5">
-                <input class="form-control bg-light" id="salary" type="text" placeholder="no.22, Panadura" aria-label="default input example">
+            <!-------------------------------Input text fields------------------------------->
+
+            <div class="mt-5 row">
+                <label class="col-sm-1 col-form-label fw-bold" for="id">Id</label>
+                <div class="col-sm-5">
+                    <input aria-label="default input example" class="form-control bg-light" id="id" placeholder="C-001"
+                           type="text">
+                </div>
+
+                <label class="col-sm-1 col-form-label fw-bold" for="name">Name</label>
+                <div class="col-sm-5">
+                    <input aria-label="default input example" class="form-control bg-light" id="name"
+                           placeholder="Jesse Pinkman"
+                           type="text">
+                </div>
+            </div>
+
+            <div class="mt-2 row">
+                <label class="col-sm-1 col-form-label fw-bold" for="address">Address</label>
+                <div class="col-sm-5">
+                    <input aria-label="default input example" class="form-control bg-light" id="address"
+                           placeholder="no.22, Panadura"
+                           type="text">
+                </div>
+
+                <label class="col-sm-1 col-form-label fw-bold" for="salary">Salary</label>
+                <div class="col-sm-5">
+                    <input aria-label="default input example" class="form-control bg-light" id="salary"
+                           placeholder="no.22, Panadura"
+                           type="text">
+                </div>
+            </div>
+
+            <!-------------------------------button group------------------------------->
+
+
+            <div aria-label="Basic mixed styles example" class="btn-group mt-4" role="group">
+                <button class="btn btn-danger mx-5" type="button">Delete</button>
+                <button class="btn btn-warning mx-5" type="button">Update</button>
+                <button class="btn btn-success mx-5" type="button">Save</button>
+            </div>
+
+            <!-------------------------------Customer table start------------------------------->
+
+            <div class="mt-3" style="height: 270px; overflow: scroll">
+                <table class="table table-bordered table-primary table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Salary</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">C-001</th>
+                        <td>Supun Dananjaya</td>
+                        <td>Negombo</td>
+                        <td>50000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">C-002</th>
+                        <td>Nipun Udana</td>
+                        <td>No.25, Dankotuwa</td>
+                        <td>75000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">C-003</th>
+                        <td>Kavindu Theekshana</td>
+                        <td>Gampaha</td>
+                        <td>75000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">C-003</th>
+                        <td>Kavindu Theekshana</td>
+                        <td>Gampaha</td>
+                        <td>75000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">C-003</th>
+                        <td>Kavindu Theekshana</td>
+                        <td>Gampaha</td>
+                        <td>75000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">C-003</th>
+                        <td>Kavindu Theekshana</td>
+                        <td>Gampaha</td>
+                        <td>75000</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-
-        <!-------------------------------button group------------------------------->
-
-
-        <div class="btn-group mt-4" role="group" aria-label="Basic mixed styles example">
-            <button type="button" class="btn btn-danger mx-5">Delete</button>
-            <button type="button" class="btn btn-warning mx-5">Update</button>
-            <button type="button" class="btn btn-success mx-5">Save</button>
-        </div>
-
-        <!-------------------------------Customer table start------------------------------->
-        <table class="table table-bordered mt-5 table-primary table-hover">
-            <thead>
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Name</th>
-                <th scope="col">Address</th>
-                <th scope="col">Salary</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row">C-001</th>
-                <td>Supun Dananjaya</td>
-                <td>Negombo</td>
-                <td>50000</td>
-            </tr>
-            <tr>
-                <th scope="row">C-002</th>
-                <td>Nipun Udana</td>
-                <td>No.25, Dankotuwa</td>
-                <td>75000</td>
-            </tr>
-            <tr>
-                <th scope="row">C-003</th>
-                <td>Kavindu Theekshana</td>
-                <td>Gampaha</td>
-                <td>75000</td>
-            </tr>
-            </tbody>
-        </table>
-
     </div>
-</div>
+</section>
+
+<!-------------------------------Item------------------------------->
+
+<section id="item" style="height: 91vh">
+    <div class="container bg-white">
+        <div class="row mt-5">
+
+            <!-------------------------------Heading------------------------------->
+
+            <div class="row mt-3">
+                <div class="col-1"><img alt="customer" src="../../../assets/css/fonts/svgs/solid/shopping-cart.svg"
+                                        style="width: 50px"></div>
+                <h3 class="col">Items</h3>
+
+                <form class="d-flex col-4">
+                    <input aria-label="Search" class="form-control me-2" placeholder="Search items" type="search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+
+            <!-------------------------------Title border------------------------------->
+
+
+            <div class="col-12 bg-dark mt-3">
+                <h1 class="text-light fs-5 text-center mt-2">Add/ Delete / Update Item</h1>
+            </div>
+
+            <!-------------------------------Input text fields------------------------------->
+
+            <div class="mt-5 row">
+                <label class="col-sm-1 col-form-label fw-bold" for="code">Id</label>
+                <div class="col-sm-5">
+                    <input aria-label="default input example" class="form-control bg-light" id="code"
+                           placeholder="I-001"
+                           type="text">
+                </div>
+
+                <label class="col-sm-1 col-form-label fw-bold" for="iName">Item name</label>
+                <div class="col-sm-5">
+                    <input aria-label="default input example" class="form-control bg-light" id="iName"
+                           placeholder="Lemon puff"
+                           type="text">
+                </div>
+            </div>
+
+            <div class="mt-2 row">
+                <label class="col-sm-1 col-form-label fw-bold" for="price">Price</label>
+                <div class="col-sm-5">
+                    <input aria-label="default input example" class="form-control bg-light" id="price"
+                           placeholder="120.00"
+                           type="text">
+                </div>
+
+                <label class="col-sm-1 col-form-label fw-bold" for="qty">Qty</label>
+                <div class="col-sm-5">
+                    <input aria-label="default input example" class="form-control bg-light" id="qty"
+                           placeholder="45"
+                           type="text">
+                </div>
+            </div>
+
+            <!-------------------------------button group------------------------------->
+
+
+            <div aria-label="Basic mixed styles example" class="btn-group mt-4" role="group">
+                <button class="btn btn-danger mx-5" type="button">Delete</button>
+                <button class="btn btn-warning mx-5" type="button">Update</button>
+                <button class="btn btn-success mx-5" type="button">Save</button>
+            </div>
+
+            <!-------------------------------Item table start------------------------------->
+            <div class="mt-3" style="height: 270px; overflow: scroll">
+                <table class="table table-bordered table-primary table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Item name</th>
+                        <th scope="col">price</th>
+                        <th scope="col">qty</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">I-001</th>
+                        <td>Keeri samba 5kg</td>
+                        <td>1200</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">I-002</th>
+                        <td>Happy cow cheese</td>
+                        <td>375</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">I-003</th>
+                        <td>Candos Milk chocolate</td>
+                        <td>100</td>
+                        <td>20</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</section>
 
 <script crossorigin="anonymous"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

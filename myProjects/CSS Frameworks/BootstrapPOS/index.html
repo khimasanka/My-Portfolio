@@ -5,6 +5,7 @@
     <title>POS System</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="Assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body style="background-color: #e3f2fd">
 
@@ -268,32 +269,76 @@
 </section>
 
 
-<!-------------------------------order table start------------------------------->
+<!-------------------------------order page start------------------------------->
 
 <section id="order" style="height: 91vh">
     <div class="container bg-light">
         <div class="row">
             <div class="col">
                 <div class="bg-secondary">
-                    <h1>jhttjy</h1>
+                    <h4 class="text-center text-light py-1">Invoice details</h4>
                 </div>
+
+                <div class="container">
+                    <form class="row">
+                        <div class="mb-3 col">
+                            <label class="form-label" for="orderId">Order ID</label>
+                            <input class="form-control" id="orderId" placeholder="O-001"
+                                   type="text">
+                        </div>
+                        <div class="mb-3 col">
+                            <label class="form-label" for="cName">Customer name</label>
+                            <input class="form-control" id="cName" placeholder="Jesse Pinkman"
+                                   type="text">
+                        </div>
+
+                        <div class="dropdown show">
+                            <a aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle"
+                               data-toggle="dropdown" id="dropdownMenuLink" role="button">
+                                Customer IDS
+                            </a>
+
+                            <div aria-labelledby="Customer Ids" class="dropdown-menu">
+
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col">
+                            <label class="form-label" for="date">Date</label>
+                            <input class="form-control" id="date" placeholder="dd/mm/yyyy"
+                                   type="text">
+                        </div>
+
+
+
+                        <div class="mb-3 col">
+                            <label class="form-label" for="cAddress">Address</label>
+                            <input class="form-control" id="cAddress" placeholder="Colombo 7"
+                                   type="text">
+                        </div>
+
+                    </form>
+
+
+                </div>
+
             </div>
 
             <div class="col">
                 <div class="bg-secondary">
-                    <h1>jhttjy</h1>
+                    <h4 class="text-light text-center py-1">Items</h4>
                 </div>
             </div>
             <div class="col">
-                <div class="bg-secondary">
-                    <h1>jhttjy</h1>
+                <div>
+                    <h1></h1>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!------------------------------- Details table start------------------------------->
+<!------------------------------- Details page start------------------------------->
 
 <section id="details" style="height: 91vh">
 

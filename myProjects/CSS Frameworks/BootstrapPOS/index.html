@@ -38,7 +38,7 @@
 
 <!-------------------------------customer------------------------------->
 
-<section class="pt-5" id="customer" style="height: 95vh">
+<section class="pt-5" id="customer" style="height: 100vh">
     <div class="container bg-white">
         <div class="row mt-5">
 
@@ -162,7 +162,7 @@
 
 <!-------------------------------Item------------------------------->
 
-<section id="item" style="height: 91vh">
+<section class="pt-5" id="item" style="height: 100vh">
     <div class="container bg-white">
         <div class="row mt-5">
 
@@ -271,140 +271,154 @@
 
 <!-------------------------------order page start------------------------------->
 
-<section id="order" style="height: 91vh">
-    <div class="container bg-light">
-        <div class="row">
-            <div class="col">
-                <div class="bg-secondary">
-                    <h4 class="text-center text-light py-1">Invoice details</h4>
-                </div>
+<section class="pt-5" id="order" style="height: 100vh">
+    <div class="container bg-light mt-5">
+        <div class="mt-5">
+            <h3 class="text-center">Place Order</h3>
+            <div class="row ">
+                <div class="col ">
+                    <div class="bg-secondary">
+                        <h4 class="text-center text-light py-1">Invoice details</h4>
+                    </div>
 
-                <div class="container bg-secondary">
-                    <form class="row">
-                        <div class="mb-3 col">
-                            <label class="form-label" for="orderId">Order ID</label>
-                            <input class="form-control" id="orderId" placeholder="O-001"
-                                   type="text">
-                        </div>
-                        <div class="mb-3 col">
-                            <label class="form-label" for="cName">Customer name</label>
-                            <input class="form-control" id="cName" placeholder="Jesse Pinkman"
-                                   type="text">
-                        </div>
-
-                        <div class="dropdown show d-inline-flex">
-                            <a aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle"
-                               data-toggle="dropdown" id="dropdownMenuLink" role="button">
-                                Customer IDS
-                            </a>
-
-                            <div aria-labelledby="Customer Ids" class="dropdown-menu">
-
+                    <div class="container bg-secondary">
+                        <form class="row">
+                            <div class="mb-3 col">
+                                <label class="form-label" for="orderId">Order ID</label>
+                                <input class="form-control" id="orderId" placeholder="O-001"
+                                       type="text">
                             </div>
-                        </div>
-
-
-                        <div class="mb-3 col">
-                            <label class="form-label" for="date">Date</label>
-                            <input class="form-control" id="date" placeholder="dd/mm/yyyy"
-                                   type="text">
-                        </div>
-
-                        <div class="mb-3 col">
-                            <label class="form-label" for="cAddress">Address</label>
-                            <input class="form-control" id="cAddress" placeholder="Colombo 7"
-                                   type="text">
-                        </div>
-
-                    </form>
-
-
-                </div>
-
-            </div>
-
-            <div class="col">
-                <div class="bg-secondary">
-                    <h4 class="text-light text-center py-1">Items</h4>
-                </div>
-                <div class="container bg-secondary">
-                    <div class="row">
-
-                        <div class="dropdown show d-inline-flex">
-                            <a aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle"
-                               data-toggle="dropdown" id="ItemsList" role="button">
-                                Item IDS
-                            </a>
-
-                            <div aria-labelledby="Item Ids" class="dropdown-menu">
-
+                            <div class="mb-3 col">
+                                <label class="form-label" for="cName">Customer name</label>
+                                <input class="form-control" id="cName" placeholder="Jesse Pinkman"
+                                       type="text">
                             </div>
-                        </div>
 
+                            <div class="dropdown show d-inline-flex">
+                                <a aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle"
+                                   data-toggle="dropdown" id="dropdownMenuLink" role="button">
+                                    Customer IDS
+                                </a>
+
+                                <div aria-labelledby="Customer Ids" class="dropdown-menu">
+
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 col">
+                                <label class="form-label" for="date">Date</label>
+                                <input class="form-control" id="date" placeholder="dd/mm/yyyy"
+                                       type="text">
+                            </div>
+
+                            <div class="mb-3 col">
+                                <label class="form-label" for="cAddress">Address</label>
+                                <input class="form-control" id="cAddress" placeholder="Colombo 7"
+                                       type="text">
+                            </div>
+
+                        </form>
+
+
+                    </div>
+
+                </div>
+
+                <div class="col">
+                    <div class="bg-secondary">
+                        <h4 class="text-light text-center py-1">Items</h4>
+                    </div>
+                    <div class="container bg-secondary">
                         <div class="row">
 
-                            <div class="mb-3 col">
-                                <label class="form-label" for="ItemName">Item Name</label>
-                                <input class="form-control" id="ItemName" placeholder="Lemon puff"
-                                       type="text">
+                            <div class="dropdown show d-inline-flex">
+                                <a aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle"
+                                   data-toggle="dropdown" id="ItemsList" role="button">
+                                    Item IDS
+                                </a>
+
+                                <div aria-labelledby="Item Ids" class="dropdown-menu">
+
+                                </div>
                             </div>
 
-                            <div class="mb-3 col">
-                                <label class="form-label" for="itemPrice">Price </label>
-                                <input class="form-control" id="itemPrice" placeholder="120"
-                                       type="text">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="mb-3 col">
-                                <label class="form-label" for="qtyOnh">QTYonHand</label>
-                                <input class="form-control" id="qtyOnh" placeholder="200"
-                                       type="text">
-                            </div>
+                            <div class="row">
 
-                            <div class="mb-3 col">
-                                <label class="form-label" for="orderQty">Order Qty</label>
-                                <input class="form-control" id="orderQty" placeholder="2"
-                                       type="text">
+                                <div class="mb-3 col">
+                                    <label class="form-label" for="ItemName">Item Name</label>
+                                    <input class="form-control" id="ItemName" placeholder="Lemon puff"
+                                           type="text">
+                                </div>
+
+                                <div class="mb-3 col">
+                                    <label class="form-label" for="itemPrice">Price </label>
+                                    <input class="form-control" id="itemPrice" placeholder="120"
+                                           type="text">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label class="form-label" for="qtyOnh">QTYonHand</label>
+                                    <input class="form-control" id="qtyOnh" placeholder="200"
+                                           type="text">
+                                </div>
+
+                                <div class="mb-3 col">
+                                    <label class="form-label" for="orderQty">Order Qty</label>
+                                    <input class="form-control" id="orderQty" placeholder="2"
+                                           type="text">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col">
-                <div>
-                    <h4 class="text-primary">Total : 240RS/=</h4>
+                <div class="col">
+                    <div>
+                        <h4 class="text-primary">Total : 240RS/=</h4>
 
-                    <h4 class="text-danger">Sub Total : 220RS/=</h4>
-                    <div class="container">
-                        <div class="row">
-                            <div class="mb-3 col">
-                                <label class="form-label" for="cash">cash</label>
-                                <input class="form-control" id="cash" placeholder="500"
-                                       type="text">
+                        <h4 class="text-danger">Sub Total : 220RS/=</h4>
+                        <div class="container">
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label class="form-label" for="cash">cash</label>
+                                    <input class="form-control" id="cash" placeholder="500"
+                                           type="text">
+                                </div>
+
+                                <div class="mb-3 col">
+                                    <label class="form-label" for="Discount">Discount</label>
+                                    <input class="form-control" id="Discount" placeholder="20"
+                                           type="text">
+                                </div>
+
                             </div>
 
                             <div class="mb-3 col">
-                                <label class="form-label" for="Discount">Discount</label>
-                                <input class="form-control" id="Discount" placeholder="20"
+                                <label class="form-label" for="balance">Balance</label>
+                                <input class="form-control" id="balance" placeholder="280"
                                        type="text">
                             </div>
+                            <div>
+                                <div class="d-grid gap-2 d-md-flex ">
+                                    <button class="btn btn-danger me-md-2 " type="button">Add To Cart</button>
 
-                        </div>
+                                </div>
 
-                        <div class="mb-3 col">
-                            <label class="form-label" for="balance">Balance</label>
-                            <input class="form-control" id="balance" placeholder="280"
-                                   type="text">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button class="btn btn-success justify-content-md-end" type="button">Purchase
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <h4 class="text-center py-1">Cart</h4>
 
-
-        <div class="mt-3" style="height: 270px; overflow: scroll">
+        <div class="mt-3" style="height: 200px; overflow: scroll">
             <table class="table table-bordered table-primary table-hover">
                 <thead>
                 <tr>
@@ -433,8 +447,52 @@
 
 <!------------------------------- Details page start------------------------------->
 
-<section id="details" style="height: 91vh">
+<section class="mt-5" id="details" style="height: 91vh">
 
+    <div class="container">
+        <div class="row bg-light ">
+            <div class="row my-2">
+                <div class="col-1"><img alt="Details" src="../../../assets/css/fonts/svgs/solid/th-list.svg"
+                                        style="width: 50px"></div>
+                <h3 class="col">Details</h3>
+
+                <form class="d-flex col-4">
+                    <input aria-label="Search" class="form-control me-2" placeholder="Search" type="search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            <div class="mt-3" style="height: 70vh; overflow: scroll">
+                <table class="table table-bordered table-primary table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">order Id</th>
+                        <th scope="col">Item Id</th>
+                        <th scope="col">Customer Id</th>
+                        <th scope="col">Order Date</th>
+                        <th scope="col">Order Time</th>
+                        <th scope="col">QTY</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">O-001</th>
+                        <td>I-001</td>
+                        <td>C-001</td>
+                        <td>20-01-2022</td>
+                        <td>11.11AM</td>
+                        <td>2</td>
+                        <td>220</td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
 </section>
 
 <script crossorigin="anonymous"

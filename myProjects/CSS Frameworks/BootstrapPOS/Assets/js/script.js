@@ -1,3 +1,5 @@
+// ===============       navigation
+
 $("#customer").css("display","block");
 $("#item").css("display","none");
 $("#order").css("display","none");
@@ -8,6 +10,7 @@ $("#customerNav").click(function () {
     $("#item").css("display","none");
     $("#order").css("display","none");
     $("#details").css("display","none");
+
 });
 
 $("#itemNav").click(function () {
@@ -31,6 +34,8 @@ $("#detailsNav").click(function () {
     $("#details").css("display","block");
 });
 
+// ===================      add to table
+
 $("#btnSaveCustomer").click(function () {
     let customerId = $("#txtCustId").val();
     let customerName = $("#txtCustName").val();
@@ -41,7 +46,14 @@ $("#btnSaveCustomer").click(function () {
     $("#customerTable").append(row);
 
     $("#customerTable>tr").click(function () {
-        console.log(this);
+        let cusId = $(this).children(":eq(0)").text();
+        let cusName = $(this).children(":eq(1)").text();
+        let cusAddress = $(this).children(":eq(2)").text();
+        let cusSalary = $(this).children(":eq(3)").text();
+
+        console.log(cusId,cusName,cusAddress,cusSalary);
     });
 
 })
+
+

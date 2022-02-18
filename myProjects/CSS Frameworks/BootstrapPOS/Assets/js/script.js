@@ -37,6 +37,7 @@ $("#detailsNav").click(function () {
 // ===================      add to table
 
 $("#btnSaveCustomer").click(function () {
+    $("#customerTable>tr").off("click");
     let customerId = $("#txtCustId").val();
     let customerName = $("#txtCustName").val();
     let customerAddress = $("#txtCustAddress").val();
@@ -53,6 +54,8 @@ $("#btnSaveCustomer").click(function () {
 
         console.log(cusId,cusName,cusAddress,cusSalary);
     });
+
+
 
 })
 

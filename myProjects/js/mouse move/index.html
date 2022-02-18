@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Move</title>
+    <style>
+        body{
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+    </style>
+</head>
+<body>
+<h1>Hello Java Script</h1>
+<script src="../../CSS%20Frameworks/BootstrapPOS/Assets/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+    $(window).on("mousemove",function (e) {
+        $("h1").css("position","relative");
+        $("h1").css("left",e.pageX);
+        $("h1").css("top",e.pageY);
+    })
+</script>
+</body>
+</html>

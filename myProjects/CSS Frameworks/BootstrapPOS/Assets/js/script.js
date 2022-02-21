@@ -33,7 +33,6 @@ $("#detailsNav").click(function () {
     $("#order").css("display","none");
     $("#details").css("display","block");
 });
-
 // ===================      add to table
 
 $("#btnSaveCustomer").click(function () {
@@ -53,10 +52,30 @@ $("#btnSaveCustomer").click(function () {
         let cusSalary = $(this).children(":eq(3)").text();
 
         console.log(cusId,cusName,cusAddress,cusSalary);
+        $("#txtCustId").val(cusId);
+        $("#txtCustName").val(cusName);
+        $("#txtCustAddress").val(cusAddress);
+        $("#txtCustSalary").val(cusSalary);
+    });
+
+    $("#customerTable>tr").dblclick(function () {
+        $(this).remove();
     });
 
 
-
 })
+
+var regExCusId = /^(C00-)[0-9]{3,4}$/;
+
+$("#txtCustId").keyup(function () {
+    let input = $("#txtCustId").val();
+    if (regExCusId.test(input)){
+        $("#txtCustId").css('border','2px solid green');
+        $("#errorCusId").text("");
+    }else{
+        $("#txtCustId").css('border','2px solid red');
+        $("#errorCusId").text("Wrong format : C00-001");
+    }
+});
 
 

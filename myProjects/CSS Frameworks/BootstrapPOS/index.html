@@ -50,8 +50,8 @@
                 <h3 class="col">Customers</h3>
 
                 <form class="d-flex col-4">
-                    <input aria-label="Search" class="form-control me-2 rounded-pill" placeholder="Search" type="search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <input id="txtSearchCus" aria-label="Search" class="form-control me-2 rounded-pill" placeholder="Search" type="search">
+                    <button class="btn btn-outline-success" id="btnSearchCus" type="submit">Search</button>
                 </form>
             </div>
 
@@ -77,6 +77,7 @@
                     <input aria-label="default input example" class="form-control bg-light" id="txtCustName"
                            placeholder="Jesse Pinkman"
                            type="text">
+                    <small id="errorCusName" class="text-danger p-1" style="font-size: 12px"></small>
                 </div>
             </div>
 
@@ -87,6 +88,7 @@
                     <input aria-label="default input example" class="form-control bg-light" id="txtCustAddress"
                            placeholder="no.22, Panadura"
                            type="text">
+                    <small id="errorCusAddress" class="text-danger p-1" style="font-size: 12px"></small>
                 </div>
 
                 <label class="col-sm-1 col-form-label fw-bold" for="txtCustSalary">Salary</label>
@@ -94,6 +96,7 @@
                     <input aria-label="default input example" class="form-control bg-light" id="txtCustSalary"
                            placeholder="100000"
                            type="text">
+                    <small id="errorCusSallary" class="text-danger p-1" style="font-size: 12px"></small>
                 </div>
             </div>
 

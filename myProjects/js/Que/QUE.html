@@ -2,124 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Que-Assignment</title>
-</head>
-<style>
-    body{
-        background-color: #040d40;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    body h1{
-        position: relative;
-        color: white;
-        font-size: 20px;
-    }
-    #line1{
-        width: 900px;
-        height: 0;
-        top: 200px;
-        position: absolute;
-        border:2px solid white;
-    }
-    #line2{
-        width: 900px;
-        height: 0;
-        top: 400px;
-        position: absolute;
-        border:2px solid white;
-    }
-    #box1{
-        position: absolute;
-        background: #f60707;
-        height: 50px;
-        width: 100px;
-        border-radius: 10px;
-        top: 130px;
-        left: 250px;
-    }
-    #box2{
-        position: absolute;
-        background: #0f6f02;
-        height: 50px;
-        width: 100px;
-        border-radius: 10px;
-        top: 275px;
-        left: 390px;
-    }
-    #box3{
-        position: absolute;
-        background: #041e9a;
-        height: 50px;
-        width: 100px;
-        border-radius: 10px;
-        top: 275px;
-        left: 550px;
-    }
-    #box4{
-        position: absolute;
-        background: #ece700;
-        height: 50px;
-        width: 100px;
-        border-radius: 10px;
-        top: 275px;
-        left: 700px;
-    }
-    #box5{
-        position: absolute;
-        background: #ec9c9c;
-        height: 50px;
-        width: 100px;
-        border-radius: 10px;
-        top: 275px;
-        left: 850px;
-    }
-    #box6{
-        position: absolute;
-        background: #9105c6;
-        height: 50px;
-        width: 100px;
-        border-radius: 10px;
-        top: 430px;
-        left: 950px;
-    }
-</style>
-<body>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que Process</title>
+    <link rel="stylesheet" href="../../../assets/css/normalize.css">
+    <style>
+        .title-div{
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
 
-<h1>Java Script Queue</h1>
-<div id="line1"></div>
-<div id="line2"></div>
-<div id="box1"></div>
-<div id="box2"></div>
-<div id="box3"></div>
-<div id="box4"></div>
-<div id="box5"></div>
-<div id="box6"></div>
+        h1{
+            position: absolute;
+            color: whitesmoke;
+            text-transform: uppercase;
+            font-family: "Readex Pro", sans-serif;
+        }
+        section{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #2B2B2B;
+        }
+
+        .box{
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: whitesmoke;
+            margin: 30px;
+        }
+
+        .start-div{
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .center-div{
+            display: flex;
+            justify-content: center;
+        }
+
+        .end-div{
+            display: flex;
+            justify-content: flex-end;
+        }
+    </style>
+
+</head>
+<body>
+<div class="title-div">
+    <h1 >Que Proccess</h1>
+</div>
+
+<section>
+    <div class="container">
+        <div class="start-div">
+            <div id="b1" class="box"></div>
+        </div>
+        <hr>
+        <div class="center-div">
+            <div id="b2" class="box"></div>
+            <div id="b3" class="box"></div>
+            <div id="b4" class="box"></div>
+            <div id="b5" class="box"></div>
+        </div>
+        <hr>
+        <div class="end-div">
+            <div id="b6" class="box"></div>
+        </div>
+    </div>
+</section>
 
 <script src="../../CSS%20Frameworks/BootstrapPOS/Assets/jQuery/jquery-3.6.0.min.js"></script>
+
+
 <script>
+    var boxId = [$('#b1'),$('#b2'),$('#b3'),$('#b4'),$('#b5'),$('#b6')];
+    var color = ["beige", "lightpink", "red", "green", "blue", "yellow"];
 
+    setInterval(assignColor,"300");
 
-    let queueColor=["#f60707","#0f6f02","#041e9a","#ece700","#ec9c9c","#9105c6"];
-    let index=0;
-    function color() {
-
-        if(index==12){
-            index=0;
+    function mixArray() {
+        var tempColor=new Array();
+        tempColor.push(color[5]);
+        for (let i = 0; i < boxId.length; i++) {
+            tempColor.push(color[i]);
         }
-        $("#box1").css('background-color',queueColor[index]);
-        $("#box2").css('background-color',queueColor[index-1]);
-        $("#box3").css('background-color',queueColor[index-2]);
-        $("#box4").css('background-color',queueColor[index-3]);
-        $("#box5").css('background-color',queueColor[index-4]);
-        $("#box6").css('background-color',queueColor[index-5]);
-        index++;
-
-
-
+        color = tempColor;
     }
-    setInterval(color,200);
+
+    function assignColor() {
+        mixArray();
+        for (let index = 0; index < boxId.length; index++) {
+            boxId[index].css('background-color', color[index]);
+        }
+    }
 </script>
 </body>
 </html>

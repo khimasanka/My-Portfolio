@@ -50,20 +50,22 @@
                     <div class="col">
                         Order Date:
                         <form>
-                            <input class="form-control " type="text">
+                            <input type="date" class="form-control" id="iDate">
                         </form>
                     </div>
 
                 </div>
                 <div class="row">
                     <div class="col">
-                        Customer:
-                        <form>
-                            <input class="form-control " type="text">
-                        </form>
+                        Customer ID:
+                        <select class="form-select" id="cmbCustomerIDS">
+                            <option value="1">C001</option>
+                            <option value="2">C002</option>
+                            <option value="3">C003</option>
+                        </select>
                     </div>
                     <div class="col">
-                        Customer_ID:
+                        Salary:
                         <form>
                             <input class="form-control " type="text">
                         </form>
@@ -73,12 +75,6 @@
                 <div class="row">
                     <div class="col">
                         Name:
-                        <form>
-                            <input class="form-control " type="text">
-                        </form>
-                    </div>
-                    <div class="col">
-                        Salary:
                         <form>
                             <input class="form-control " type="text">
                         </form>
@@ -102,9 +98,11 @@
                     <div class="bg-dark text-white mb-3 p-2"><h4>Item Select</h4></div>
                     <div class="col">
                         Item:
-                        <form>
-                            <input class="form-control " type="text">
-                        </form>
+                        <select class="form-select" id="cmbItemIds">
+                            <option value="1">I001</option>
+                            <option value="2">I002</option>
+                            <option value="3">I003</option>
+                        </select>
                     </div>
                     <div class="col">
                         Item Code:

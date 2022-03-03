@@ -7,26 +7,22 @@
 </head>
 <body>
 <!-----------------------nav bar---------------------->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg p-2" id="navbar">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg p-2 position-fixed top-0 w-100" id="navbar">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">SPA App</a>
-        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse ms-5" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a aria-current="page" class="nav-link active" href="#order" id="btnOrder">Order</a>
                 </li>
                 <li class="nav-item">
-                    <a aria-current="page" class="nav-link active" href="#item" id="btnItem">Item</a>
-                </li>
-                <li class="nav-item">
                     <a aria-current="page" class="nav-link active" href="#customer" id="btnCustomer">Customer</a>
                 </li>
                 <li class="nav-item">
-                    <a aria-current="page" class="nav-link active" href="#item" id="btnDetails">Details</a>
+                    <a aria-current="page" class="nav-link active" href="#item" id="btnItem">Item</a>
+                </li>
+                <li class="nav-item">
+                    <a aria-current="page" class="nav-link active" href="#details" id="btnDetails">Details</a>
                 </li>
             </ul>
             <ul class="navbar-nav">
@@ -188,7 +184,7 @@
             </section>
         </div>
     </div>
-    <div>
+    <div style="height: 260px; overflow: scroll">
         <table class="table table-dark table-striped">
             <thead>
             <tr>
@@ -207,6 +203,7 @@
                 <td>2</td>
                 <td>1050</td>
             </tr>
+
             </tbody>
         </table>
     </div>
@@ -214,12 +211,12 @@
 
 <!-----------------------Item page -------------->
 
-<section class="p-2" id="item" style="display: block;">
+<section class="p-2" id="item" style="display: block; margin-top: 40px">
     <div>
 
         <!----------------title bar---------------->
         <div class="row mt-3">
-            <div class="col-1"><img alt="customer" src="../../../assets/css/fonts/svgs/solid/shopping-cart.svg"
+            <div class="col-1"><img alt="Item" src="../../../assets/css/fonts/svgs/solid/shopping-cart.svg"
                                     style="width: 50px"></div>
             <h3 class="col">Items</h3>
 
@@ -231,15 +228,15 @@
         </div>
 
         <div class="col-12 bg-dark mt-3">
-            <h1 class="text-light fs-7 text-center mt-5">Add/ Delete / Update Item</h1>
+            <h1 class="text-light fs-7 text-center mt-4">Add/ Delete / Update Item</h1>
         </div>
 
         <!--text field-->
 
         <div class="mt-5 row">
-            <label class="col-sm-1 col-form-label fw-bold" for="code">Id</label>
+            <label class=" col-sm-1 col-form-label fw-bold" for="itemId">Id</label>
             <div class="col-sm-5">
-                <input aria-label="default input example" class="form-control bg-light" id="code"
+                <input aria-label="default input example" class="form-control bg-light" id="itemId"
                        placeholder="I-001"
                        type="text">
             </div>
@@ -293,7 +290,7 @@
             <tbody>
             <tr>
                 <th scope="row">I-001</th>
-                <td>Keeri samba 5kg</td>
+                <td>Nipuna samba 5kg</td>
                 <td>1200</td>
                 <td>100</td>
             </tr>
@@ -305,7 +302,7 @@
             </tr>
             <tr>
                 <th scope="row">I-003</th>
-                <td>Candos Milk chocolate</td>
+                <td>Bubbles Milk chocolate</td>
                 <td>100</td>
                 <td>20</td>
             </tr>
@@ -315,6 +312,154 @@
     </div>
 </section>
 
+<!-----------------------customer page------------->
+
+<section class="p-2" id="customer" style="display: block; margin-top: 40px">
+    <div>
+
+        <!----------------title bar---------------->
+        <div class="row mt-3" style="margin-top: 20px">
+            <div class="col-1"><img alt="customer" src="../../../assets/css/fonts/svgs/solid/shopping-cart.svg"
+                                    style="width: 50px"></div>
+            <h3 class="col">Customers</h3>
+
+            <form class="d-flex col-4">
+                <input aria-label="Search" class="form-control me-2 rounded-pill" placeholder="Search Customers"
+                       type="search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+
+        <div class="col-12 bg-dark mt-3">
+            <h1 class="text-light fs-7 text-center mt-4">Add/ Delete / Update Customer</h1>
+        </div>
+
+        <!--text field-->
+
+        <div class="mt-5 row">
+            <label class=" col-sm-1 col-form-label fw-bold" for="CId">Id</label>
+            <div class="col-sm-5">
+                <input aria-label="default input example" class="form-control bg-light" id="CId"
+                       placeholder="C00-001"
+                       type="text">
+            </div>
+
+            <label class="col-sm-1 col-form-label fw-bold" for="CName">Item name</label>
+            <div class="col-sm-5">
+                <input aria-label="default input example" class="form-control bg-light" id="CName"
+                       placeholder="Jesse Pinkman "
+                       type="text">
+            </div>
+        </div>
+
+        <div class="mt-2 row">
+            <label class="col-sm-1 col-form-label fw-bold" for="address">Address</label>
+            <div class="col-sm-5">
+                <input aria-label="default input example" class="form-control bg-light" id="address"
+                       placeholder="NO.44 , Panadura"
+                       type="text">
+            </div>
+
+            <label class="col-sm-1 col-form-label fw-bold" for="salary">Salary</label>
+            <div class="col-sm-5">
+                <input aria-label="default input example" class="form-control bg-light" id="salary"
+                       placeholder="100000"
+                       type="text">
+            </div>
+        </div>
+
+        <!--button bar-->
+
+        <div aria-label="Basic mixed styles example" class="col-12 btn-group my-4" role="group">
+            <button class="btn btn-danger mx-5 rounded-pill" type="button">Delete</button>
+            <button class="btn btn-warning mx-5 rounded-pill" type="button">Update</button>
+            <button class="btn btn-success mx-5 rounded-pill" type="button">Save</button>
+        </div>
+
+    </div>
+
+    <!--table-->
+
+    <div class="mt-3" style="height: 270px; overflow: scroll">
+        <table class="table table-bordered table-dark table-striped table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Customer name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Salary</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">C00-001</th>
+                <td>Kasun Kalhara</td>
+                <td>Colombo 7</td>
+                <td>100000</td>
+            </tr>
+            <tr>
+                <th scope="row">C00-002</th>
+                <td>Nipun Udana</td>
+                <td>Kaluthara </td>
+                <td>25000</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!----------------------details page-------------->
+
+<section class="mt-5" id="details" style="height: 91vh; display: block;">
+
+    <div class="container w-100">
+        <div class="row bg-light ">
+            <div class="row mt-5">
+                <div class="col-1"><img alt="Details" src="../../../assets/css/fonts/svgs/solid/th-list.svg" style="width: 50px"></div>
+                <h3 class="col">Details</h3>
+
+                <form class="d-flex col-4">
+                    <input aria-label="Search" class="form-control me-2 rounded-pill" placeholder="Search" type="search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            <div class="mt-3" style="height: 70vh; overflow: scroll">
+                <table class="table table-bordered table-dark table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">order Id</th>
+                        <th scope="col">Item Id</th>
+                        <th scope="col">Customer Id</th>
+                        <th scope="col">Order Date</th>
+                        <th scope="col">Order Time</th>
+                        <th scope="col">QTY</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">O-001</th>
+                        <td>I-001</td>
+                        <td>C-001</td>
+                        <td>20-01-2022</td>
+                        <td>11.11AM</td>
+                        <td>2</td>
+                        <td>220</td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
 <script src="../../CSS%20Frameworks/BootstrapPOS/Assets/bootstrap/js/bootstrap.esm.min.js"></script>
+<script src="../../CSS%20Frameworks/BootstrapPOS/Assets/jQuery/jquery-3.6.0.min.js"></script>
+<script src="controller/indexController.js"></script>
 </body>
 </html>

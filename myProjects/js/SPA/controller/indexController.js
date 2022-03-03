@@ -10,7 +10,8 @@ $("#btnCustomer").click(function () {
     $("#customer").css("display","block");
     $("#item").css("display","none");
     $("#details").css("display","none");
-});
+
+  });
 
 $("#btnItem").click(function () {
     $("#order").css("display","none");

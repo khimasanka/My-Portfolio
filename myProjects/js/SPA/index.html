@@ -6,7 +6,7 @@
     <link href="../../CSS%20Frameworks/BootstrapPOS/Assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        body{
+        body {
             overflow-x: hidden;
             overflow-y: hidden;
         }
@@ -242,32 +242,32 @@
         <!--text field-->
 
         <div class="mt-5 row">
-            <label class=" col-sm-1 col-form-label fw-bold" for="itemId">Id</label>
+            <label class=" col-sm-1 col-form-label fw-bold" for="txtItemId">Id</label>
             <div class="col-sm-5">
-                <input aria-label="default input example" class="form-control bg-light" id="itemId"
+                <input aria-label="default input example" class="form-control bg-light" id="txtItemId"
                        placeholder="I-001"
                        type="text">
             </div>
 
-            <label class="col-sm-1 col-form-label fw-bold" for="iName">Item name</label>
+            <label class="col-sm-1 col-form-label fw-bold" for="txtItemName">Item name</label>
             <div class="col-sm-5">
-                <input aria-label="default input example" class="form-control bg-light" id="iName"
+                <input aria-label="default input example" class="form-control bg-light" id="txtItemName"
                        placeholder="Lemon puff"
                        type="text">
             </div>
         </div>
 
         <div class="mt-2 row">
-            <label class="col-sm-1 col-form-label fw-bold" for="price">Price</label>
+            <label class="col-sm-1 col-form-label fw-bold" for="txtItemPrice">Price</label>
             <div class="col-sm-5">
-                <input aria-label="default input example" class="form-control bg-light" id="price"
+                <input aria-label="default input example" class="form-control bg-light" id="txtItemPrice"
                        placeholder="120.00"
                        type="text">
             </div>
 
-            <label class="col-sm-1 col-form-label fw-bold" for="qty">Qty</label>
+            <label class="col-sm-1 col-form-label fw-bold" for="txtItemQty">Qty</label>
             <div class="col-sm-5">
-                <input aria-label="default input example" class="form-control bg-light" id="qty"
+                <input aria-label="default input example" class="form-control bg-light" id="txtItemQty"
                        placeholder="45"
                        type="text">
             </div>
@@ -276,9 +276,9 @@
         <!--button bar-->
 
         <div aria-label="Basic mixed styles example" class="col-12 btn-group my-4" role="group">
-            <button class="btn btn-danger mx-5 rounded-pill" type="button">Delete</button>
-            <button class="btn btn-warning mx-5 rounded-pill" type="button">Update</button>
-            <button class="btn btn-success mx-5 rounded-pill" type="button">Save</button>
+            <button class="btn btn-danger mx-5 rounded-pill" id="btnDeleteItem" type="button">Delete</button>
+            <button class="btn btn-warning mx-5 rounded-pill" id="btnUpdateItem" type="button">Update</button>
+            <button class="btn btn-success mx-5 rounded-pill" id="btnSaveItem" type="button">Save</button>
         </div>
 
     </div>
@@ -295,26 +295,7 @@
                 <th scope="col">qty</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <th scope="row">I-001</th>
-                <td>Nipuna samba 5kg</td>
-                <td>1200</td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <th scope="row">I-002</th>
-                <td>Happy cow cheese</td>
-                <td>375</td>
-                <td>25</td>
-            </tr>
-            <tr>
-                <th scope="row">I-003</th>
-                <td>Bubbles Milk chocolate</td>
-                <td>100</td>
-                <td>20</td>
-            </tr>
-
+            <tbody id="tblItem">
             </tbody>
         </table>
     </div>
@@ -345,32 +326,32 @@
         <!--text field-->
 
         <div class="mt-5 row">
-            <label class=" col-sm-1 col-form-label fw-bold" for="CId">Id</label>
+            <label class=" col-sm-1 col-form-label fw-bold" for="txtCId">Id</label>
             <div class="col-sm-5">
-                <input aria-label="default input example" class="form-control bg-light" id="CId"
+                <input aria-label="default input example" class="form-control bg-light" id="txtCId"
                        placeholder="C00-001"
                        type="text">
             </div>
 
-            <label class="col-sm-1 col-form-label fw-bold" for="CName">Item name</label>
+            <label class="col-sm-1 col-form-label fw-bold" for="txtCName">Name</label>
             <div class="col-sm-5">
-                <input aria-label="default input example" class="form-control bg-light" id="CName"
+                <input aria-label="default input example" class="form-control bg-light" id="txtCName"
                        placeholder="Jesse Pinkman "
                        type="text">
             </div>
         </div>
 
         <div class="mt-2 row">
-            <label class="col-sm-1 col-form-label fw-bold" for="address">Address</label>
+            <label class="col-sm-1 col-form-label fw-bold" for="txtAddress">Address</label>
             <div class="col-sm-5">
-                <input aria-label="default input example" class="form-control bg-light" id="address"
+                <input aria-label="default input example" class="form-control bg-light" id="txtAddress"
                        placeholder="NO.44 , Panadura"
                        type="text">
             </div>
 
-            <label class="col-sm-1 col-form-label fw-bold" for="salary">Salary</label>
+            <label class="col-sm-1 col-form-label fw-bold" for="txtSalary">Salary</label>
             <div class="col-sm-5">
-                <input aria-label="default input example" class="form-control bg-light" id="salary"
+                <input aria-label="default input example" class="form-control bg-light" id="txtSalary"
                        placeholder="100000"
                        type="text">
             </div>
@@ -379,14 +360,14 @@
         <!--button bar-->
 
         <div aria-label="Basic mixed styles example" class="col-12 btn-group my-4" role="group">
-            <button class="btn btn-danger mx-5 rounded-pill" type="button">Delete</button>
-            <button class="btn btn-warning mx-5 rounded-pill" type="button">Update</button>
-            <button class="btn btn-success mx-5 rounded-pill" type="button">Save</button>
+            <button class="btn btn-danger mx-5 rounded-pill" id="btnDeleteCustomer" type="button">Delete</button>
+            <button class="btn btn-warning mx-5 rounded-pill" id="btnUpdateCustomer" type="button">Update</button>
+            <button class="btn btn-success mx-5 rounded-pill" id="btnSaveCustomer" type="button">Save</button>
         </div>
 
     </div>
 
-    <!--table-->
+    <!--------------------table----------------------->
 
     <div class="mt-3" style="height: 270px; overflow: scroll">
         <table class="table table-bordered table-dark table-striped table-hover">
@@ -398,19 +379,7 @@
                 <th scope="col">Salary</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <th scope="row">C00-001</th>
-                <td>Kasun Kalhara</td>
-                <td>Colombo 7</td>
-                <td>100000</td>
-            </tr>
-            <tr>
-                <th scope="row">C00-002</th>
-                <td>Nipun Udana</td>
-                <td>Kaluthara </td>
-                <td>25000</td>
-            </tr>
+            <tbody id="tblCustomer">
             </tbody>
         </table>
     </div>
@@ -423,11 +392,13 @@
     <div class="container w-100">
         <div class="row bg-light ">
             <div class="row mt-5">
-                <div class="col-1"><img alt="Details" src="../../../assets/css/fonts/svgs/solid/th-list.svg" style="width: 50px"></div>
+                <div class="col-1"><img alt="Details" src="../../../assets/css/fonts/svgs/solid/th-list.svg"
+                                        style="width: 50px"></div>
                 <h3 class="col">Details</h3>
 
                 <form class="d-flex col-4">
-                    <input aria-label="Search" class="form-control me-2 rounded-pill" placeholder="Search" type="search">
+                    <input aria-label="Search" class="form-control me-2 rounded-pill" placeholder="Search"
+                           type="search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
@@ -468,5 +439,6 @@
 <script src="../../CSS%20Frameworks/BootstrapPOS/Assets/bootstrap/js/bootstrap.esm.min.js"></script>
 <script src="../../CSS%20Frameworks/BootstrapPOS/Assets/jQuery/jquery-3.6.0.min.js"></script>
 <script src="controller/indexController.js"></script>
+<script src="controller/customerController.js"></script>
 </body>
 </html>

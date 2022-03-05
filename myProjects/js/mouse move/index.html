@@ -14,11 +14,29 @@
 <h1>Hello Java Script</h1>
 <script src="../../CSS%20Frameworks/BootstrapPOS/Assets/jQuery/jquery-3.6.0.min.js"></script>
 <script>
+    $("h1").css("position","relative");
+
     $(window).on("mousemove",function (e) {
-        $("h1").css("position","relative");
         $("h1").css("left",e.pageX);
         $("h1").css("top",e.pageY);
     })
+
+    let text = $("h1").text();
+
+    var position = 0;
+
+    function animateText(){
+        let potPut = text.substr(0,position);
+        position++;
+        $("h1").text(potPut);
+
+        if (position== text.length){
+            position=0;
+        }
+    }
+
+    setInterval(animateText,100);
+
 </script>
 </body>
 </html>

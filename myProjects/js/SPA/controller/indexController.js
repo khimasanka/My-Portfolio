@@ -33,3 +33,9 @@ $("#btnOrder").click(function () {
     $("#item").css("display","none");
     $("#details").css("display","none");
 });
+
+year = new Date().getFullYear();
+month = new Date().getMonth();
+date = new Date().getDate();
+
+$("#currentDate").text(`${year} - ${month} - ${date}`);

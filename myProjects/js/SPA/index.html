@@ -313,9 +313,9 @@
             <h3 class="col">Customers</h3>
 
             <form class="d-flex col-4">
-                <input aria-label="Search" class="form-control me-2 rounded-pill" placeholder="Search Customers"
+                <input aria-label="Search" id="txtSearchCusID" class="form-control me-2 rounded-pill" placeholder="Search Customers"
                        type="search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <button class="btn btn-outline-success" type="submit" id="btnSearchCustomer">Search</button>
             </form>
         </div>
 
@@ -331,6 +331,7 @@
                 <input aria-label="default input example" class="form-control bg-light" id="txtCId"
                        placeholder="C00-001"
                        type="text">
+                <small class="text-danger" id="lblCusIdError"></small>
             </div>
 
             <label class="col-sm-1 col-form-label fw-bold" for="txtCName">Name</label>
@@ -438,6 +439,7 @@
 
 <script src="../../CSS%20Frameworks/BootstrapPOS/Assets/bootstrap/js/bootstrap.esm.min.js"></script>
 <script src="../../CSS%20Frameworks/BootstrapPOS/Assets/jQuery/jquery-3.6.0.min.js"></script>
+<script src="db/dataBase.js"></script>
 <script src="controller/indexController.js"></script>
 <script src="controller/customerController.js"></script>
 </body>

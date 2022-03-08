@@ -1,8 +1,12 @@
 $("#btnSaveCustomer").click(function () {
-    saveCustomer();
-    clearAll();
-    loadAllCustomers();
-    generateCusId();
+    if (confirm("Are You sure, you want to Save")){
+        saveCustomer();
+        clearAll();
+        loadAllCustomers();
+        generateCusId();
+    }else{
+    }
+
 });
 
 $("#btnDeleteCustomer").click(function () {

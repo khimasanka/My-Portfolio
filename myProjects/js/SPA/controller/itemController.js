@@ -18,6 +18,7 @@ $("#btnSaveItem").click(function () {
         loadAllItems();
         clearItemField();
         generateItemId();
+        $("#btnSaveItem").attr('disabled', true);
     }else{
     }
 });
@@ -94,15 +95,7 @@ $("#btnDeleteItem").click(function () {
     generateItemId();
 });
 
-function clearItemField(){
-    $("#txtItemId,#txtItemName,#txtItemPrice,#txtItemQty").val("");
-    $("#txtItemId,#txtItemName,#txtItemPrice,#txtItemQty").css('border','2px solid #ced4da');
-    $("#txtItemName").focus();
-    $("#btnSaveItem").attr('disable',true);
-    loadAllItems();
-    $("#lblItemId,#lblItemName,#lblPrice,#lblQTY").text("");
-    generateItemId();
-}
+
 
 function generateItemId(){
     try{
@@ -151,3 +144,130 @@ $("#btnSearchItem").click(function () {
     }
 });
 
+//============================validations=======================
+
+const itemNameRegEx = /^[A-z/0-9 ]{2,20}$/;
+const qtyRegEx = /^[0-9]{1,}$/;
+const priceRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+
+
+$('#txtItemId,#txtItemName,#txtItemPrice,#txtItemQty').on('keydown', function (eventOb) {
+    if (eventOb.key == "Tab") {
+        eventOb.preventDefault(); // stop execution of the button
+    }
+});
+
+$('#txtItemId,#txtItemName,#txtItemPrice,#txtItemQty').on('blur', function () {
+    formValidItem();
+});
+
+//focusing events
+$("#txtItemId").on('keyup', function (eventOb) {
+    setButtonItem();
+});
+
+$("#txtItemName").on('keyup', function (eventOb) {
+    setButtonItem();
+    if (eventOb.key == "Enter") {
+        checkIfItemValid();
+    }
+});
+
+$("#txtItemPrice").on('keyup', function (eventOb) {
+    setButtonItem();
+    if (eventOb.key == "Enter") {
+        checkIfItemValid();
+    }
+});
+
+$("#txtItemQty").on('keyup', function (eventOb) {
+    setButtonItem();
+    if (eventOb.key == "Enter") {
+        checkIfItemValid();
+    }
+});
+// focusing events end
+$("#btnSaveItem").attr('disabled', true);
+
+function clearItemField(){
+    $("#txtItemId,#txtItemName,#txtItemPrice,#txtItemQty").val("");
+    $("#txtItemId,#txtItemName,#txtItemPrice,#txtItemQty").css('border','2px solid #ced4da');
+    $("#txtItemName").focus();
+    $("#btnSaveItem").attr('disable',true);
+    loadAllItems();
+    $("#lblItemId,#lblItemName,#lblPrice,#lblQTY").text("");
+    generateItemId();
+}
+
+function formValidItem() {
+    var Name = $("#txtItemName").val();
+    if (itemNameRegEx.test(Name)) {
+        $("#txtItemName").css('border', '2px solid green');
+        $("#lblItemName").text("");
+        var price = $("#txtItemPrice").val();
+        if (priceRegEx.test(price)) {
+            var qty = $("#txtItemQty").val();
+            var qtyReg = qtyRegEx.test(qty);
+            $("#txtItemPrice").css('border', '2px solid green');
+            $("#lblPrice").text("");
+            if (qtyReg ) {
+                $("#txtItemQty").css('border', '2px solid green');
+                $("#lblQTY").text("");
+                return true;
+            } else {
+                $("#txtItemQty").css('border', '2px solid red');
+                $("#lblQTY").text("Item Price is a required field : Pattern 100.00 or 100");
+                return false;
+            }
+        } else {
+            $("#txtItemPrice").css('border', '2px solid red');
+            $("#lblPrice").text("Item Qty is a required field : Only Number");
+            return false;
+        }
+    } else {
+        $("#txtItemName").css('border', '2px solid red');
+        $("#lblItemName").text("Item Name is a required field : Mimimum 2, Max 20, Spaces Allowed");
+        return false;
+    }
+}
+
+function checkIfItemValid() {
+    $("#txtItemName").focus();
+    var Name = $("#txtItemName").val();
+    if (itemNameRegEx.test(Name)) {
+        $("#txtItemPrice").focus();
+        var qty = $("#txtItemPrice").val();
+        if (priceRegEx.test(qty)) {
+            $("#txtItemQty").focus();
+            var price = $("#txtItemQty").val();
+            var r = qtyRegEx.test(price);
+            if (r) {
+                let res = confirm("Do you really need to add this Item..?");
+                if (res) {
+                    saveItem();
+                    clearItemField();
+                }
+            } else {
+                $("#txtItemQty").focus();
+            }
+        } else {
+            $("#txtItemPrice").focus();
+        }
+    } else {
+        $("#txtItemName").focus();
+    }
+
+}
+
+function setButtonItem() {
+    let b = formValidItem();
+    if (b) {
+        $("#btnSaveItem").attr('disabled', false);
+    } else {
+        $("#btnSaveItem").attr('disabled', true);
+    }
+}
+
+$('#btnSaveItem').click(function () {
+    checkIfItemValid();
+});

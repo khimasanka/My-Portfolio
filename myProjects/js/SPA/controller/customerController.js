@@ -114,6 +114,15 @@ function loadAllCustomers() {
         let row = `<tr><td>${i.getCustomerId()}</td><td>${i.getCustomerName()}</td><td>${i.getAddress()}</td><td>${i.getSalary()}</td></tr>`;
         /*select the table body and append the row */
         $("#tblCustomer").append(row);
+
+        $("#tblCustomer>tr").dblclick(function () {
+
+            //set values for the input field
+            $("#txtCId").val($(this).children(":eq(0)").text());
+            $("#txtCName").val($(this).children(":eq(1)").text());
+            $("#txtAddress").val($(this).children(":eq(2)").text());
+            $("#txtSalary").val($(this).children(":eq(3)").text());
+        });
     }
 }
 

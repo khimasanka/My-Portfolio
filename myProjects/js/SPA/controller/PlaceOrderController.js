@@ -101,8 +101,8 @@ function qtyUpdate() {
 
 
 $("#btnAddToCart").click(function () {
-    let qty=parseInt($('#txtQTYONHand').val());
-    let Oqty=parseInt($('#txtOrderQty').val());
+    let qty=parseInt($("#txtQTYONHand").val());
+    let Oqty=parseInt($("#txtOrderQty").val());
     console.log(qty,Oqty);
     if($('#txtOrderQty').val()!=""){
         if(qty<Oqty){
@@ -124,7 +124,7 @@ $("#btnAddToCart").click(function () {
 });
 function addToCart() {
     let oId=$("#txtOrderId").val();
-    let iID=$("#cmbItemIds").val();
+    let iID=$("#txtItemIDForOrder").val();
     let iName=$("#txtItemNameForOrder").val();
     let iPrice=$("#txtItemPriceForOrder").val();
     let orderQty=$("#txtOrderQty").val();
@@ -145,10 +145,10 @@ function addToCart() {
     cartDB.push(new CartDTO(oId,iID,iName,iPrice,orderQty,total));
 }
 function loadCart() {
-    $("#tb").empty();
-    for (var i of cartDb){
-        let row=`<tr><td>${i.getCartOID()}</td><td>${i.getcartCName()}</td><td>${i.getcartICode()}</td><td>${i.getcartIName()}</td><td>${i.getcartIPrice()}</td><td>${i.getcartOQty()}</td><td>${i.getTotal()}</td></tr>`;
-        $("#addToCartTable").append(row);
+    $("#tblCart").empty();
+    for (var i of cartDB){
+        let row=`<tr><td>${i.getCartOID()}</td><td>${i.getcartICode()}</td><td>${i.getcartIName()}</td><td>${i.getcartIPrice()}</td><td>${i.getcartOQty()}</td><td>${i.getTotal()}</td></tr>`;
+        $("#tblCart").append(row);
     }
 }
 

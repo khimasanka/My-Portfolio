@@ -76,7 +76,7 @@
                     <div class="col">
                         Salary:
                         <form>
-                            <input class="form-control " type="text">
+                            <input class="form-control" id="txtCusSalaryForOrder" type="text">
                         </form>
                     </div>
 
@@ -85,7 +85,7 @@
                     <div class="col">
                         Name:
                         <form>
-                            <input class="form-control " type="text">
+                            <input class="form-control " id="txtCusNameForOrder" type="text">
                         </form>
                     </div>
 
@@ -94,7 +94,7 @@
                     <div class="col">
                         Address:
                         <form>
-                            <input class="form-control " type="text">
+                            <input class="form-control " id="txtAddressForOrder" type="text">
                         </form>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
                     <div class="col">
                         Item Code:
                         <form>
-                            <input class="form-control " type="text">
+                            <input class="form-control " id="txtItemIDForOrder" type="text">
                         </form>
                     </div>
                 </div>
@@ -124,19 +124,19 @@
                     <div class="col">
                         Item Name:
                         <form>
-                            <input class="form-control " type="text">
+                            <input class="form-control " id="txtItemNameForOrder" type="text">
                         </form>
                     </div>
                     <div class="col">
                         Item Price:
                         <form>
-                            <input class="form-control " type="text">
+                            <input class="form-control " id="txtItemPriceForOrder" type="text">
                         </form>
                     </div>
                     <div class="col">
                         QtyOnH:
                         <form>
-                            <input class="form-control " type="text">
+                            <input class="form-control " id="txtQTYForOrder" type="text">
                         </form>
                     </div>
                 </div>
@@ -144,32 +144,32 @@
                     <div class="col">
                         Order QTY:
                         <form>
-                            <input class="form-control " type="text">
+                            <input class="form-control "  id="txtOrderQty" type="text">
                         </form>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <button class="btn btn-primary mt-4">Add Item</button>
+                        <button class="btn btn-primary mt-4"id="btnAddToCart">Add Item</button>
                     </div>
                 </div>
             </section>
         </div>
         <div class="col bg-white m-4 pb-4">
-            <h4 class="text-dark p-2">Total: 1050.00</h4>
-            <h4 class="text-danger p-2">Sub Total: 945.00</h4>
+            <h4 class="text-dark p-2" id="total">Total : <span>0</span></h4>
+            <h4 class="text-danger p-2" id="subtotal">Sub Total :<span>0</span></h4>
             <section class="container">
                 <div class="row">
                     <div class="col">
                         Cash:
                         <form>
-                            <input class="form-control " type="text">
+                            <input class="form-control " id="txtCash" type="text">
                         </form>
                     </div>
                     <div class="col">
                         Discount:
                         <form>
-                            <input class="form-control " type="text">
+                            <input class="form-control "id="txtDiscount" type="text">
                         </form>
                     </div>
                 </div>
@@ -178,14 +178,14 @@
                     <div class="col">
                         Balance:
                         <form>
-                            <input class="form-control " type="text">
+                            <input class="form-control " id="txtBalance" type="text">
                         </form>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col">
-                        <button class="btn btn-outline-dark mt-4" type="button">Purchase</button>
+                        <button class="btn btn-outline-dark mt-4" type="button" id="btnPurchase">Purchase</button>
                     </div>
                 </div>
             </section>

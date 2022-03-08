@@ -211,13 +211,12 @@ $("#btnPurchase").click(function () {
     $('#tblCart').empty();
     $("#txtItemNameForOrder,#txtItemPriceForOrder,#txtQTYONHand,#txtOrderQty,#txtCusSalaryForOrder,#txtCusNameForOrder,#txtAddressForOrder").val("")
 });
+
 $("#txtCash").on('keyup', function (eventOb) {
     if (eventOb.key == "Enter") {
-        let cash=parseFloat($('#txtCash').val());
-        let total=$('#subtotal>span').text();
-        console.log(cash,total)
+        let cash=parseFloat($("#txtCash").val());
+        let total=$("#subtotal>span").text();
         let balance=cash - total;
-
-        $('#txtBalance').val(balance);
+        $("#txtBalance").val(balance);
     }
 });

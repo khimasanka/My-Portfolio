@@ -31,7 +31,7 @@
                     <a aria-current="page" class="nav-link active" href="#item" id="btnItem" onclick="generateItemId()">Item</a>
                 </li>
                 <li class="nav-item">
-                    <a aria-current="page" class="nav-link active" href="#details" id="btnDetails">Details</a>
+                    <a aria-current="page" class="nav-link active" href="#details" onclick="loadingOrder()" id="btnDetails">Details</a>
                 </li>
             </ul>
             <ul class="navbar-nav">
@@ -463,6 +463,7 @@
 <script src="controller/customerController.js"></script>
 <script src="controller/itemController.js"></script>
 <script src="controller/PlaceOrderController.js"></script>
+<script src="controller/OrderController.js"></script>
 <script src="db/dataBase.js"></script>
 <script src="model/CustomerDTO.js"></script>
 <script src="model/ItemDTO.js"></script>

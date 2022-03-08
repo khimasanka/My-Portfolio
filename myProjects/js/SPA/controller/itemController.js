@@ -14,6 +14,7 @@ function saveItem() {
 
 $("#btnSaveItem").click(function () {
     saveItem();
+    loadAllItems();
 });
 
 function updateItem(){
@@ -32,3 +33,12 @@ function updateItem(){
 $("#btnUpdateItem").click(function () {
     updateItem();
 });
+
+function loadAllItems(){
+    $("#tblItem").empty();
+
+    for (var i of itemDB){
+        let row = `<tr><td>${i.getItemId()}</td><td>${i.getItemName()}</td><td>${i.getUnitPrice()}</td><td>${i.getItemQty()}</td></tr>`;
+        $("#tblItem").append(row);
+    }
+}

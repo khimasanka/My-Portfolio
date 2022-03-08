@@ -1,4 +1,4 @@
-function ItemDTO(itemId, itemName, itemQTY, unitPrice) {
+function ItemDTO(itemId, itemName, unitPrice, itemQTY) {
     var __itemId = itemId;
     var __itemName = itemName;
     var __itemQTY = itemQTY;
@@ -16,16 +16,17 @@ function ItemDTO(itemId, itemName, itemQTY, unitPrice) {
     this.setItemName = function (setName) {
         __itemName = setName;
     }
-    this.getItemQty = function () {
-        return __itemQTY;
-    }
-    this.setItemQTY = function (setQTY) {
-        __itemQTY = setQTY;
-    }
     this.getUnitPrice = function () {
         return __unitPrice;
     }
     this.setUnitPrice = function (setPrice) {
         __unitPrice = setPrice;
     }
+    this.getItemQty = function () {
+        return __itemQTY;
+    }
+    this.setItemQTY = function (setQTY) {
+        __itemQTY = setQTY;
+    }
+
 }

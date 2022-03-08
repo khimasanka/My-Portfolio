@@ -60,13 +60,13 @@ $("#btnSaveCustomer").click(function () {
 $("#btnDeleteCustomer").click(function () {
     let id = $("#txtCId").val();
     let option = confirm(`Do you want to delete ID:${id}`);
-    if (option){
+    if (option) {
         let remove = deleteCustomer(id);
-        if (remove){
+        if (remove) {
             alert("Customer Deleted");
             clearAll();
             generateCusId();
-        }else {
+        } else {
             alert("Something Went Wrong , Try Again");
         }
     }
@@ -97,7 +97,7 @@ $("#btnSearchCustomer").click(function () {
         $("#txtCName").val(response.name);
         $("#txtAddress").val(response.address);
         $("#txtSalary").val(response.salary);
-    }else{
+    } else {
         clearAll();
         alert("No Such a Customer");
     }
@@ -131,7 +131,7 @@ function saveCustomer() {
         address: customerAddress,
         salary: customerSalary
     };*/
-    var customer = new CustomerDTO(customerID,customerName,customerAddress,customerSalary);
+    var customer = new CustomerDTO(customerID, customerName, customerAddress, customerSalary);
 
     customerDB.push(customer);
 }
@@ -144,56 +144,58 @@ function searchCustomer(id) {
     }
 }
 
-function generateCusId(){
-    try{
+function generateCusId() {
+    try {
         let lastCusId = customerDB[customerDB.length - 1].getCustomerId();
-        let newCusId = parseInt(lastCusId.substring(1,4)) + 1;
-        if (newCusId < 10){
-            $("#txtCId").val("C00-"+ newCusId);
-        }else{
-            $("#txtCId").val("C00-1");
+        let newCusId = parseInt(lastCusId.substring(1, 4)) + 1;
+        if (newCusId < 10) {
+            $("#txtCId").val("C00" + newCusId);
+        } else if (newCusId < 100) {
+            $("#txtCId").val("C0" + newCusId);
+        } else {
+            $("#txtCId").val("C" + newCusId);
         }
-    }catch (e) {
-        $("#txtCId").val("C00-1")
+    } catch (e) {
+        $("#txtCId").val("C001");
     }
 }
 
-function OpenLoadFunction(){
+function OpenLoadFunction() {
     generateCusId();
 }
 
-function deleteCustomer( id){
+function deleteCustomer(id) {
     let customer;
-    if (id!=null){
-        for (var i=0; i<customerDB.length; i++){
-            if (id==customerDB[i].getCustomerId()){
-                customer=customerDB[i];
+    if (id != null) {
+        for (var i = 0; i < customerDB.length; i++) {
+            if (id == customerDB[i].getCustomerId()) {
+                customer = customerDB[i];
             }
         }
         let index = customerDB.indexOf(customer);
-        customerDB.splice(index,i);
+        customerDB.splice(index, i);
         return true;
-    }else{
+    } else {
         return false;
     }
 }
 
-$("#btnUpdateCustomer").click(function (){
+$("#btnUpdateCustomer").click(function () {
     //alert("hello");
-    let id  = $("#txtCId").val();
+    let id = $("#txtCId").val();
     console.log(id);
 
-    if(confirm("Are you sure, you want to update this customer ")){
-        for(var j = 0; j < customerDB.length; j++){
-            if(id == customerDB[j].id()){
+    if (confirm("Are you sure, you want to update this customer ")) {
+        for (var j = 0; j < customerDB.length; j++) {
+            if (id == customerDB[j].id()) {
                 customerDB[j].name($("#txtCName").val());
                 customerDB[j].address($("#txtAddress").val());
                 customerDB[j].salary($("#txtSalary").val());
             }
         }
-       loadAllCustomers();
+        loadAllCustomers();
 
-    }else {
+    } else {
 
     }
 })
@@ -203,7 +205,8 @@ $("#btnUpdateCustomer").click(function (){
 
 //validation started
 // customer regular expressions
-const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;;
+const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;
+
 const cusNameRegEx = /^[A-z ]{5,20}$/;
 const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
 const cusSalaryRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
@@ -264,83 +267,72 @@ $("#btnSaveCustomer").attr('disabled', true);
 function clearAll() {
     $('#txtCId,#txtCName,#txtAddress,#txtSalary').val("");
     $('#txtCId,#txtCName,#txtAddress,#txtSalary').css('border', '2px solid #ced4da');
-    $('#txtCId').focus();
+    $('#txtCName').focus();
     $("#btnSaveCustomer").attr('disabled', true);
     loadAllCustomers();
+    generateCusId();
     $("#lblcusid,#lblcusname,#lblcusaddress,#lblcussalary").text("");
 }
 
 function formValid() {
-    var cusID = $("#txtCId").val();
-    $("#txtCId").css('border', '2px solid green');
-    $("#lblCusIdError").text("");
-    if (cusIDRegEx.test(cusID)) {
-        var cusName = $("#txtCName").val();
-        if (cusNameRegEx.test(cusName)) {
-            $("#txtCName").css('border', '2px solid green');
-            $("#lblcusname").text("");
-            var cusAddress = $("#txtAddress").val();
-            if (cusAddressRegEx.test(cusAddress)) {
-                var cusSalary = $("#txtSalary").val();
-                var resp = cusSalaryRegEx.test(cusSalary);
-                $("#txtAddress").css('border', '2px solid green');
-                $("#lblcusaddress").text("");
-                if (resp) {
-                    $("#txtSalary").css('border', '2px solid green');
-                    $("#lblcussalary").text("");
-                    return true;
-                } else {
-                    $("#txtSalary").css('border', '2px solid red');
-                     $("#lblcussalary").text("Wrong format : Pattern 100.00 or 100");
-                    return false;
-                }
+    var cusName = $("#txtCName").val();
+    if (cusNameRegEx.test(cusName)) {
+        $("#txtCName").css('border', '2px solid green');
+        $("#lblcusname").text("");
+        var cusAddress = $("#txtAddress").val();
+        if (cusAddressRegEx.test(cusAddress)) {
+            var cusSalary = $("#txtSalary").val();
+            var resp = cusSalaryRegEx.test(cusSalary);
+            $("#txtAddress").css('border', '2px solid green');
+            $("#lblcusaddress").text("");
+            if (resp) {
+                $("#txtSalary").css('border', '2px solid green');
+                $("#lblcussalary").text("");
+                return true;
             } else {
-                $("#txtAddress").css('border', '2px solid red');
-                $("#lblcusaddress").text("Wrong Format: Minimum 7");
+                $("#txtSalary").css('border', '2px solid red');
+                $("#lblcussalary").text("Wrong format : Pattern 100.00 or 100");
                 return false;
             }
         } else {
-            $("#txtCName").css('border', '2px solid red');
-            $("#lblcusname").text("Wrong format : Minimum 5, Max 20, Spaces Allowed");
+            $("#txtAddress").css('border', '2px solid red');
+            $("#lblcusaddress").text("Wrong Format: Minimum 7");
             return false;
         }
     } else {
-        $("#txtCId").css('border', '2px solid red');
-        $("#lblcusid").text("Wrong format : C00-000");
+        $("#txtCName").css('border', '2px solid red');
+        $("#lblcusname").text("Wrong format : Minimum 5, Max 20, Spaces Allowed");
         return false;
     }
 }
 
 function checkIfValid() {
-    var cusID = $("#txtCId").val();
-    if (cusIDRegEx.test(cusID)) {
-        $("#txtCName").focus();
-        var cusName = $("#txtCName").val();
-        if (cusNameRegEx.test(cusName)) {
-            $("#txtAddress").focus();
-            var cusAddress = $("#txtAddress").val();
-            if (cusAddressRegEx.test(cusAddress)) {
-                $("#txtSalary").focus();
-                var cusSalary = $("#txtSalary").val();
-                var resp = cusSalaryRegEx.test(cusSalary);
-                if (resp) {
-                    let res = confirm("Do you really need to add this Customer..?");
-                    if (res) {
-                        saveCustomer();
-                        clearAll();
-                    }
-                } else {
-                    $("#txtSalary").focus();
+
+    $("#txtCName").focus();
+    var cusName = $("#txtCName").val();
+    if (cusNameRegEx.test(cusName)) {
+        $("#txtAddress").focus();
+        var cusAddress = $("#txtAddress").val();
+        if (cusAddressRegEx.test(cusAddress)) {
+            $("#txtSalary").focus();
+            var cusSalary = $("#txtSalary").val();
+            var resp = cusSalaryRegEx.test(cusSalary);
+            if (resp) {
+                let res = confirm("Do you really need to add this Customer..?");
+                if (res) {
+                    saveCustomer();
+                    clearAll();
                 }
             } else {
-                $("#txtAddress").focus();
+                $("#txtSalary").focus();
             }
         } else {
-            $("#txtCName").focus();
+            $("#txtAddress").focus();
         }
     } else {
-        $("#txtCId").focus();
+        $("#txtCName").focus();
     }
+
 }
 
 function setButton() {

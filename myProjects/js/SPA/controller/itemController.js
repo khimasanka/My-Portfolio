@@ -9,5 +9,26 @@ function saveItem() {
 
     var item = new ItemDTO(itemId, itemName, price, qty);
 
-    customerDB.push(item);
+    itemDB.push(item);
 }
+
+$("#btnSaveItem").click(function () {
+    saveItem();
+});
+
+function updateItem(){
+    let itemId = $("#txtItemId").val();
+    let item;
+    for (var i=0; i <itemDB.length; i++){
+        if (itemId == itemDB[i].getItemId()){
+            item=itemDB[i];
+            item.setItemName($("#txtItemName").val());
+            item.setItemQTY($("#txtItemQty").val());
+            item.setUnitPrice($("#txtItemPrice").val());
+        }
+    }
+}
+
+$("#btnUpdateItem").click(function () {
+    updateItem();
+});

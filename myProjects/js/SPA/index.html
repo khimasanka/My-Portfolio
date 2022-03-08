@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse ms-5" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item ">
-                    <a aria-current="page" class="nav-link active" href="#order" onclick="generateOrderId()" id="btnOrder">Order</a>
+                    <a aria-current="page" class="nav-link active" href="#order" onclick="forOrder()" id="btnOrder">Order</a>
                 </li>
                 <li class="nav-item">
                     <a aria-current="page" class="nav-link active" href="#customer" id="btnCustomer"
@@ -108,9 +108,6 @@
                     <div class="col">
                         Item:
                         <select class="form-select" id="cmbItemIds">
-                            <option value="1">I001</option>
-                            <option value="2">I002</option>
-                            <option value="3">I003</option>
                         </select>
                     </div>
                     <div class="col">
@@ -136,7 +133,7 @@
                     <div class="col">
                         QtyOnH:
                         <form>
-                            <input class="form-control " id="txtQTYForOrder" type="text">
+                            <input class="form-control " id="txtQTYONHand" type="text">
                         </form>
                     </div>
                 </div>
@@ -203,7 +200,7 @@
                 <th scope="col">Total</th>
             </tr>
             </thead>
-            <tbody id="tblOrder">
+            <tbody id="tblCart">
             </tbody>
         </table>
     </div>

@@ -173,7 +173,7 @@ function deleteCustomer(id) {
             }
         }
         let index = customerDB.indexOf(customer);
-        customerDB.splice(index, i);
+        customerDB.splice(index, 1);
         return true;
     } else {
         return false;

@@ -17,6 +17,7 @@ $("#btnSaveItem").click(function () {
         saveItem();
         loadAllItems();
         clearItemField();
+        generateItemId();
     }else{
     }
 });
@@ -39,6 +40,7 @@ $("#btnUpdateItem").click(function () {
         updateItem();
         loadAllItems();
         clearItemField();
+        generateItemId();
     }else{
     }
 });
@@ -89,6 +91,7 @@ $("#btnDeleteItem").click(function () {
     }
     loadAllItems();
     clearItemField();
+    generateItemId();
 });
 
 function clearItemField(){
@@ -98,5 +101,53 @@ function clearItemField(){
     $("#btnSaveItem").attr('disable',true);
     loadAllItems();
     $("#lblItemId,#lblItemName,#lblPrice,#lblQTY").text("");
-
+    generateItemId();
 }
+
+function generateItemId(){
+    try{
+        let lastItemId = itemDB[itemDB.length-1].getItemId();
+        let newItemCode = parseInt(lastItemId.substring(1,4))+1;
+        if (newItemCode < 10){
+            $("#txtItemId").val("I00" + newItemCode);
+        }else if (newItemCode < 100){
+            $("#txtItemId").val("I0"+ newItemCode);
+        }else{
+            $("#txtItemId").val("I" + newItemCode);
+        }
+    }catch (e) {
+        $("#txtItemId").val("I001");
+    }
+}
+
+function searchItem(id){
+    for (let i = 0; i < itemDB.length; i++) {
+        if (itemDB[i].getItemId() === id) {
+            return itemDB[i];
+        }
+    }
+    /*for (var i =0; itemDB.length; i++){
+        if ($("#txtSearchItem").val()==itemDB[i].getItemId()){
+            $("#txtItemId").val(itemDB[i].getItemId());
+            $("#txtItemName").val(itemDB[i].getItemName());
+            $("#txtItemPrice").val(itemDB[i].getUnitPrice());
+            $("#txtItemQty").val(itemDB[i].getItemQty());
+        }
+    }*/
+}
+
+$("#btnSearchItem").click(function () {
+    var searchID = $("#txtSearchItem").val();
+
+    var response = searchItem(searchID);
+    if (response) {
+        $("#txtItemId").val(response.getItemId());
+        $("#txtItemName").val(response.getItemName());
+        $("#txtItemPrice").val(response.getUnitPrice());
+        $("#txtItemQty").val(response.getItemQty());
+    } else {
+        clearItemField();
+        alert("No Such a Item");
+    }
+});
+

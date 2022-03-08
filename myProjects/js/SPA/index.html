@@ -27,7 +27,7 @@
                     <a aria-current="page" class="nav-link active" href="#customer" onclick="OpenLoadFunction()" id="btnCustomer">Customer</a>
                 </li>
                 <li class="nav-item">
-                    <a aria-current="page" class="nav-link active" href="#item" id="btnItem">Item</a>
+                    <a aria-current="page" class="nav-link active" href="#item" onclick="generateItemId()" id="btnItem">Item</a>
                 </li>
                 <li class="nav-item">
                     <a aria-current="page" class="nav-link active" href="#details" id="btnDetails">Details</a>
@@ -229,9 +229,9 @@
             <h3 class="col">Items</h3>
 
             <form class="d-flex col-4">
-                <input aria-label="Search" class="form-control me-2 rounded-pill" placeholder="Search items"
+                <input aria-label="Search" id="txtSearchItem" class="form-control me-2 rounded-pill" placeholder="Search items"
                        type="search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <button class="btn btn-outline-success" id="btnSearchItem" type="submit">Search</button>
             </form>
         </div>
 

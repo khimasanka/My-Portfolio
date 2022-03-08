@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse ms-5" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item ">
-                    <a aria-current="page" class="nav-link active" href="#order" id="btnOrder">Order</a>
+                    <a aria-current="page" class="nav-link active" href="#order" onclick="generateOrderId()" id="btnOrder">Order</a>
                 </li>
                 <li class="nav-item">
                     <a aria-current="page" class="nav-link active" href="#customer" id="btnCustomer"
@@ -55,13 +55,13 @@
                     <div class="col">
                         Order ID:
                         <form>
-                            <input class="form-control " type="text">
+                            <input class="form-control " id="txtOrderId" type="text">
                         </form>
                     </div>
                     <div class="col">
                         Order Date:
                         <form>
-                            <input class="form-control" id="iDate" type="date">
+                            <input class="form-control" id="txtOrderDate" type="date">
                         </form>
                     </div>
 
@@ -70,9 +70,7 @@
                     <div class="col">
                         Customer ID:
                         <select class="form-select" id="cmbCustomerIDS">
-                            <option value="1">C001</option>
-                            <option value="2">C002</option>
-                            <option value="3">C003</option>
+
                         </select>
                     </div>
                     <div class="col">
@@ -467,8 +465,12 @@
 <script src="controller/indexController.js"></script>
 <script src="controller/customerController.js"></script>
 <script src="controller/itemController.js"></script>
+<script src="controller/PlaceOrderController.js"></script>
 <script src="db/dataBase.js"></script>
 <script src="model/CustomerDTO.js"></script>
 <script src="model/ItemDTO.js"></script>
+<script src="model/CartDTO.js"></script>
+<script src="model/OrderDTO.js"></script>
+<script src="model/OrderDetailsDTO.js"></script>
 </body>
 </html>

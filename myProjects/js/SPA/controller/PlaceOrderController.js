@@ -109,7 +109,6 @@ $("#btnAddToCart").click(function () {
         if(qty<Oqty){
             alert("Not Available This QTY");
         }else{
-
             qtyUpdate();
             addToCart();
             loadCart();
@@ -159,7 +158,7 @@ function getTotal() {
         tot = tot + parseFloat($($(this).children().get(5)).text());
         $('#total>span').text(tot).append('.00');
 
-        if($('#txtDiscount').val()==""){
+        if($("#txtDiscount").val()===""){
 
             $('#subtotal>span').text(tot).append('.00');
         }
@@ -168,18 +167,14 @@ function getTotal() {
 
 }
 $('#txtDiscount').on('keyup', function () {
-    if ($('#txtDiscount').val() == '') {
+    if ($("#txtDiscount").val() === "") {
         $('#subtotal>span').text('0.00');
     } else {
         let tot = parseFloat(t);
-        let dis = tot/100 * parseFloat($('#txtDiscount').val());
+        let dis = tot/100 * parseFloat($("#txtDiscount").val());
 
         $('#subtotal>span').text(tot - dis).append('.00');
     }
-});
-
-$("#tblCart>tr").click(function () {
-    console.log($(this).val());
 });
 
 
@@ -190,7 +185,7 @@ function placeOrder() {
             orderDetailsDB.push(new OrderDetailsDTO(i.getCartOID(),i.getcartICode(),i.getcartIPrice(),i.getcartOQty(),i.getTotal()));
 
         }
-        alert("Successfull")
+        alert("Successful")
     }
 
 }
@@ -214,10 +209,11 @@ $("#btnPurchase").click(function () {
 });
 
 $("#txtCash").on('keyup', function (eventOb) {
-    if (eventOb.key == "Enter") {
-        let cash=parseFloat($("#txtCash").val());
+    if (eventOb.key === "Enter") {
+        let cash=$("#txtCash").val();
         let total=$("#subtotal>span").text();
-        let balance=cash - total;
+        let balance= cash - total;
+
         $("#txtBalance").val(balance);
     }
 });

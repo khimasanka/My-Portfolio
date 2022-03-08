@@ -1,55 +1,3 @@
-/*$("#btnSaveCustomer").click(function () {
-
-    //remove all the row click events
-    $("#tblCustomer>tr").off("click");
-
-    let cID = $("#txtCId").val();
-    let CName =$("#txtCName").val();
-    let address =$("#txtAddress").val();
-    let salary =$("#txtSalary").val();
-
-    $("#tblCustomer").append(`<tr><th>${cID}</th><td>${CName}</td><td>${address}</td><td>${salary}</td></tr>`);
-
-    $("#tblCustomer>tr").dblclick(function () {
-
-        //gather customer information
-        let cusTblId = $(this).children(":eq(0)").text();
-        let cusTblName = $(this).children(":eq(1)").text();
-        let cusTblAddress= $(this).children(":eq(2)").text();
-        let cusTblSalary = $(this).children(":eq(3)").text();
-
-        //set values for the input field
-        $("#txtCId").val(cusTblId);
-        $("#txtCName").val(cusTblName);
-        $("#txtAddress").val(cusTblAddress);
-        $("#txtSalary").val(cusTblSalary);
-
-    });
-
-    /!*$("#tblCustomer>tr").dblclick(function () {
-       $(this).remove();
-    })*!/
-
-
-});*/
-
-/*
-var regex = /^(C00-)[0-9]{3,4}$/;
-
-$("#txtCId").keyup(function () {
-    let input = $("#txtCId").val();
-    if (regex.test(input)){
-        $("#txtCId").css('border','2px solid green');
-        $("#lblCusIdError").text("");
-    }else{
-        $("#txtCId").css('border','2px solid red');
-        $("#lblCusIdError").text("Wrong format : C00-000");
-    }
-});
-
-
-*/
-
 $("#btnSaveCustomer").click(function () {
     saveCustomer();
     clearAll();
@@ -71,19 +19,7 @@ $("#btnDeleteCustomer").click(function () {
         }
     }
     loadAllCustomers();
-    /*if(confirm("Are you sure, you want to delete this customer")){
-        let id  = $("#txtCId").val();
-        /!*for(var i = 0; i < customerDB.length; i++){
-            if(id == customerDB[i].id){
-                customerDB.splice(id,1);
-            }
-        }*!/
-        var deleteId = searchCustomer(id);
-        customerDB.splice(deleteId,1);
-        loadAllCustomers();
-        clearAll();
-    }else{
-    }*/
+
 });
 
 
@@ -134,12 +70,7 @@ function saveCustomer() {
     let customerSalary = $("#txtSalary").val();
 
     //create Object
-    /*var customerObject = {
-        id: customerID,
-        name: customerName,
-        address: customerAddress,
-        salary: customerSalary
-    };*/
+
     var customer = new CustomerDTO(customerID, customerName, customerAddress, customerSalary);
 
     customerDB.push(customer);
@@ -204,24 +135,6 @@ function updateCustomer(){
 }
 
 $("#btnUpdateCustomer").click(function () {
-    //alert("hello");
-    /*let id = $("#txtCId").val();
-    console.log(id);
-
-    if (confirm("Are you sure, you want to update this customer ")) {
-        for (var j = 0; j < customerDB.length; j++) {
-            if (id == customerDB[j].id()) {
-                customerDB[j].name($("#txtCName").val());
-                customerDB[j].address($("#txtAddress").val());
-                customerDB[j].salary($("#txtSalary").val());
-            }
-        }
-        loadAllCustomers();
-
-    } else {
-
-    }
-*/
     if (confirm("Are You sure, you want to update this customer")){
         updateCustomer();
         loadAllCustomers();
@@ -258,19 +171,6 @@ $('#txtCId,#txtCName,#txtAddress,#txtSalary').on('blur', function () {
 //focusing events
 $("#txtCId").on('keyup', function (eventOb) {
     setButton();
-    if (eventOb.key == "Enter") {
-        checkIfValid();
-    }
-
-    if (eventOb.key == "Control") {
-        var typedCustomerID = $("#txtCId").val();
-        var srcCustomer = searchCustomerFromID(typedCustomerID);
-        $("#txtCId").val(srcCustomer.getCustomerID());
-        $("#txtCName").val(srcCustomer.getCustomerName());
-        $("#txtAddress").val(srcCustomer.getCustomerAddress());
-        $("#txtSalary").val(srcCustomer.getCustomerSalary());
-    }
-
 
 });
 

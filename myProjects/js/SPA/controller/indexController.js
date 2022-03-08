@@ -38,4 +38,4 @@ year = new Date().getFullYear();
 month = new Date().getMonth();
 date = new Date().getDate();
 
-$("#currentDate").text(`${year} - ${month} - ${date}`);
+$("#currentDate").text(`${year} - ${month+1} - ${date}`);

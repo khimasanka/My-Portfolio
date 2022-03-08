@@ -93,10 +93,10 @@ $("#btnSearchCustomer").click(function () {
 
     var response = searchCustomer(searchID);
     if (response) {
-        $("#txtCId").val(response.id);
-        $("#txtCName").val(response.name);
-        $("#txtAddress").val(response.address);
-        $("#txtSalary").val(response.salary);
+        $("#txtCId").val(response.getCustomerId());
+        $("#txtCName").val(response.getCustomerName());
+        $("#txtAddress").val(response.getAddress());
+        $("#txtSalary").val(response.getSalary());
     } else {
         clearAll();
         alert("No Such a Customer");
@@ -138,7 +138,7 @@ function saveCustomer() {
 
 function searchCustomer(id) {
     for (let i = 0; i < customerDB.length; i++) {
-        if (customerDB[i].id == id) {
+        if (customerDB[i].getCustomerId() == id) {
             return customerDB[i];
         }
     }
@@ -180,9 +180,23 @@ function deleteCustomer(id) {
     }
 }
 
+function updateCustomer(){
+    let cName = $("#txtCName").val();
+    let cAddress = $("#txtAddress").val();
+    let cSalary = $("#txtSalary").val();
+    for (var i=0; i<customerDB.length; i++){
+        if (customerDB[i].getCustomerId()==$("#txtCId").val()){
+            var customer =customerDB[i];
+            customer.setCustomerName(cName);
+            customer.setCustomerAddress(cAddress);
+            customer.setCustomerSalary(cSalary);
+        }
+    }
+}
+
 $("#btnUpdateCustomer").click(function () {
     //alert("hello");
-    let id = $("#txtCId").val();
+    /*let id = $("#txtCId").val();
     console.log(id);
 
     if (confirm("Are you sure, you want to update this customer ")) {
@@ -198,6 +212,16 @@ $("#btnUpdateCustomer").click(function () {
     } else {
 
     }
+*/
+    if (confirm("Are You sure, you want to update this customer")){
+        updateCustomer();
+        loadAllCustomers();
+        clearAll();
+        generateCusId();
+    }else{
+
+    }
+
 })
 
 // CRUD OPERATIONS ENDED

@@ -56,6 +56,24 @@ $("#btnSaveCustomer").click(function () {
     loadAllCustomers();
 });
 
+$("#btnDeleteCustomer").click(function () {
+
+    if(confirm("Are you sure, you want to delete this customer")){
+        let id  = $("#txtCId").val();
+        /*for(var i = 0; i < customerDB.length; i++){
+            if(id == customerDB[i].id){
+                customerDB.splice(id,1);
+            }
+        }*/
+        var deleteId = searchCustomer(id);
+        customerDB.splice(deleteId,1);
+        loadAllCustomers();
+        clearAll();
+    }else{
+    }
+});
+
+
 // search customer
 $("#btnSearchCustomer").click(function () {
     var searchID = $("#txtSearchCusID").val();
@@ -112,13 +130,29 @@ function searchCustomer(id) {
     }
 }
 
-function deleteCustomer(){
-    //write the code
+function deleteCustomer( id){
+    customerDB.slice(id,1);
 }
 
-function updateCustomer(){
-    //write the code
-}
+$("#btnUpdateCustomer").click(function (){
+    //alert("hello");
+    let id  = $("#txtCId").val();
+    console.log(id);
+
+    if(confirm("Are you sure, you want to update this customer ")){
+        for(var j = 0; j < customerDB.length; j++){
+            if(id == customerDB[j].id()){
+                customerDB[j].name($("#txtCName").val());
+                customerDB[j].address($("#txtAddress").val());
+                customerDB[j].salary($("#txtSalary").val());
+            }
+        }
+       loadAllCustomers();
+
+    }else {
+
+    }
+})
 
 // CRUD OPERATIONS ENDED
 
@@ -189,7 +223,7 @@ function clearAll() {
     $('#txtCId').focus();
     $("#btnSaveCustomer").attr('disabled', true);
     loadAllCustomers();
-    // $("#lblcusid,#lblcusname,#lblcusaddress,#lblcussalary").text("");
+    $("#lblcusid,#lblcusname,#lblcusaddress,#lblcussalary").text("");
 }
 
 function formValid() {
@@ -200,35 +234,35 @@ function formValid() {
         var cusName = $("#txtCName").val();
         if (cusNameRegEx.test(cusName)) {
             $("#txtCName").css('border', '2px solid green');
-            // $("#lblcusname").text("");
+            $("#lblcusname").text("");
             var cusAddress = $("#txtAddress").val();
             if (cusAddressRegEx.test(cusAddress)) {
                 var cusSalary = $("#txtSalary").val();
                 var resp = cusSalaryRegEx.test(cusSalary);
                 $("#txtAddress").css('border', '2px solid green');
-                // $("#lblcusaddress").text("");
+                $("#lblcusaddress").text("");
                 if (resp) {
                     $("#txtSalary").css('border', '2px solid green');
-                    // $("#lblcussalary").text("");
+                    $("#lblcussalary").text("");
                     return true;
                 } else {
                     $("#txtSalary").css('border', '2px solid red');
-                    // $("#lblcussalary").text("Cus Salary is a required field : Pattern 100.00 or 100");
+                     $("#lblcussalary").text("Wrong format : Pattern 100.00 or 100");
                     return false;
                 }
             } else {
                 $("#txtAddress").css('border', '2px solid red');
-               // $("#lblcusaddress").text("Cus Name is a required field : Mimum 7");
+                $("#lblcusaddress").text("Wrong Format: Minimum 7");
                 return false;
             }
         } else {
             $("#txtCName").css('border', '2px solid red');
-            //$("#lblcusname").text("Cus Name is a required field : Mimimum 5, Max 20, Spaces Allowed");
+            $("#lblcusname").text("Wrong format : Minimum 5, Max 20, Spaces Allowed");
             return false;
         }
     } else {
         $("#txtCId").css('border', '2px solid red');
-        //$("#lblcusid").text("Cus ID is a required field : Pattern C00-000");
+        $("#lblcusid").text("Wrong format : C00-000");
         return false;
     }
 }

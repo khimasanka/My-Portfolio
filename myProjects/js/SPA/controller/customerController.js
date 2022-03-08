@@ -54,23 +54,36 @@ $("#btnSaveCustomer").click(function () {
     saveCustomer();
     clearAll();
     loadAllCustomers();
+    generateCusId();
 });
 
 $("#btnDeleteCustomer").click(function () {
-
-    if(confirm("Are you sure, you want to delete this customer")){
+    let id = $("#txtCId").val();
+    let option = confirm(`Do you want to delete ID:${id}`);
+    if (option){
+        let remove = deleteCustomer(id);
+        if (remove){
+            alert("Customer Deleted");
+            clearAll();
+            generateCusId();
+        }else {
+            alert("Something Went Wrong , Try Again");
+        }
+    }
+    loadAllCustomers();
+    /*if(confirm("Are you sure, you want to delete this customer")){
         let id  = $("#txtCId").val();
-        /*for(var i = 0; i < customerDB.length; i++){
+        /!*for(var i = 0; i < customerDB.length; i++){
             if(id == customerDB[i].id){
                 customerDB.splice(id,1);
             }
-        }*/
+        }*!/
         var deleteId = searchCustomer(id);
         customerDB.splice(deleteId,1);
         loadAllCustomers();
         clearAll();
     }else{
-    }
+    }*/
 });
 
 
@@ -98,7 +111,7 @@ function loadAllCustomers() {
     $("#tblCustomer").empty();
     for (var i of customerDB) {
         /*create a html row*/
-        let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.address}</td><td>${i.salary}</td></tr>`;
+        let row = `<tr><td>${i.getCustomerId()}</td><td>${i.getCustomerName()}</td><td>${i.getAddress()}</td><td>${i.getSalary()}</td></tr>`;
         /*select the table body and append the row */
         $("#tblCustomer").append(row);
     }
@@ -112,14 +125,15 @@ function saveCustomer() {
     let customerSalary = $("#txtSalary").val();
 
     //create Object
-    var customerObject = {
+    /*var customerObject = {
         id: customerID,
         name: customerName,
         address: customerAddress,
         salary: customerSalary
-    };
+    };*/
+    var customer = new CustomerDTO(customerID,customerName,customerAddress,customerSalary);
 
-    customerDB.push(customerObject);
+    customerDB.push(customer);
 }
 
 function searchCustomer(id) {
@@ -130,8 +144,38 @@ function searchCustomer(id) {
     }
 }
 
+function generateCusId(){
+    try{
+        let lastCusId = customerDB[customerDB.length - 1].getCustomerId();
+        let newCusId = parseInt(lastCusId.substring(1,4)) + 1;
+        if (newCusId < 10){
+            $("#txtCId").val("C00-"+ newCusId);
+        }else{
+            $("#txtCId").val("C00-1");
+        }
+    }catch (e) {
+        $("#txtCId").val("C00-1")
+    }
+}
+
+function OpenLoadFunction(){
+    generateCusId();
+}
+
 function deleteCustomer( id){
-    customerDB.slice(id,1);
+    let customer;
+    if (id!=null){
+        for (var i=0; i<customerDB.length; i++){
+            if (id==customerDB[i].getCustomerId()){
+                customer=customerDB[i];
+            }
+        }
+        let index = customerDB.indexOf(customer);
+        customerDB.splice(index,i);
+        return true;
+    }else{
+        return false;
+    }
 }
 
 $("#btnUpdateCustomer").click(function (){
@@ -159,7 +203,7 @@ $("#btnUpdateCustomer").click(function (){
 
 //validation started
 // customer regular expressions
-const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;
+const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;;
 const cusNameRegEx = /^[A-z ]{5,20}$/;
 const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
 const cusSalaryRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;

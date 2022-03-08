@@ -155,7 +155,7 @@ function loadCart() {
 function getTotal() {
     let tot = 0;
     $('#tblCart>tr').each(function () {
-        tot = tot + parseFloat($($(this).children().get(6)).text());
+        tot = tot + parseFloat($($(this).children().get(5)).text());
         $('#total>span').text(tot).append('.00');
 
         if($('#txtDiscount').val()==""){

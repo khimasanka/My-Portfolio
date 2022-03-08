@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse ms-5" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item ">
-                    <a aria-current="page" class="nav-link active" href="#order" onclick="forOrder()" id="btnOrder">Order</a>
+                    <a aria-current="page" class="nav-link active" href="#order" id="btnOrder" onclick="forOrder()">Order</a>
                 </li>
                 <li class="nav-item">
                     <a aria-current="page" class="nav-link active" href="#customer" id="btnCustomer"
@@ -31,7 +31,8 @@
                     <a aria-current="page" class="nav-link active" href="#item" id="btnItem" onclick="generateItemId()">Item</a>
                 </li>
                 <li class="nav-item">
-                    <a aria-current="page" class="nav-link active" href="#details" onclick="loadingOrder()" id="btnDetails">Details</a>
+                    <a aria-current="page" class="nav-link active" href="#details" id="btnDetails"
+                       onclick="loadingOrder()">Details</a>
                 </li>
             </ul>
             <ul class="navbar-nav">
@@ -141,13 +142,13 @@
                     <div class="col">
                         Order QTY:
                         <form>
-                            <input class="form-control "  id="txtOrderQty" type="text">
+                            <input class="form-control " id="txtOrderQty" type="text">
                         </form>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <button class="btn btn-primary mt-4"id="btnAddToCart">Add Item</button>
+                        <button class="btn btn-primary mt-4" id="btnAddToCart">Add Item</button>
                     </div>
                 </div>
             </section>
@@ -166,7 +167,7 @@
                     <div class="col">
                         Discount:
                         <form>
-                            <input class="form-control "id="txtDiscount" type="text">
+                            <input class="form-control " id="txtDiscount" type="text">
                         </form>
                     </div>
                 </div>
@@ -182,7 +183,7 @@
 
                 <div class="row">
                     <div class="col">
-                        <button class="btn btn-outline-dark mt-4" type="button" id="btnPurchase">Purchase</button>
+                        <button class="btn btn-outline-dark mt-4" id="btnPurchase" type="button">Purchase</button>
                     </div>
                 </div>
             </section>
@@ -420,39 +421,43 @@
                 <br><br>
                 <h1 class="text-center">Orders</h1>
                 <br><br>
-                <table class="table table-bordered table-dark table-striped table-hover" id="order-Tabele">
-                    <thead>
-                    <tr>
-                        <th>Order ID</th>
-                        <th>Customer Name</th>
-                        <th>Total</th>
-                        <th>Date</th>
-                    </tr>
-                    </thead>
-                    <tbody id="orderTable">
+                <div style="overflow: scroll; height: 200px">
+                    <table class="table table-bordered table-dark table-striped table-hover" id="order-Tabele">
+                        <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer Name</th>
+                            <th>Total</th>
+                            <th>Date</th>
+                        </tr>
+                        </thead>
+                        <tbody id="orderTable">
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="col-11 mx-5">
             <br><br>
             <h1 class="text-center">Orders Details</h1>
             <br><br>
-            <table class="table table-bordered table-dark table-striped table-hover" id="orderDetails-Tabele">
-                <thead>
-                <tr>
-                    <th>Order ID</th>
-                    <th>Item Code</th>
-                    <th>Price</th>
-                    <th>Qty</th>
-                    <th>Total</th>
-                </tr>
-                </thead>
-                <tbody id="orderDetailsTable">
+            <div style="overflow: scroll; height: 200px">
+                <table class="table table-bordered table-dark table-striped table-hover" id="orderDetails-Tabele">
+                    <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Item Code</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Total</th>
+                    </tr>
+                    </thead>
+                    <tbody id="orderDetailsTable">
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 </section>

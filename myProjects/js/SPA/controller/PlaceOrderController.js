@@ -1,4 +1,3 @@
-let fullTotal;
 function generateOrderID() {
     try {
         let lastOId = orderDB[orderDB.length - 1].getOrderID();
@@ -20,6 +19,8 @@ function forOrder(){
     loadCustIDs();
     loadItemIds();
 }
+
+let fullTotal;
 /*-------Customer Details---------------*/
 function loadCustIDs(){
     $("#cmbCustomerIDS").empty();

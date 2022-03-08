@@ -78,7 +78,7 @@ function saveCustomer() {
 
 function searchCustomer(id) {
     for (let i = 0; i < customerDB.length; i++) {
-        if (customerDB[i].getCustomerId() == id) {
+        if (customerDB[i].getCustomerId() === id) {
             return customerDB[i];
         }
     }

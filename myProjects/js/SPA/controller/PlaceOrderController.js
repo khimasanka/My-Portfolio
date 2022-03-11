@@ -23,7 +23,7 @@ function forOrder(){
 let fullTotal;
 /*-------Customer Details---------------*/
 function loadCustIDs(){
-    $("#cmbCustomerIDS").empty();
+    // $("#cmbCustomerIDS").empty();
     var customer=getCustomers();
     var ids=document.getElementById("cmbCustomerIDS");
     for (var i in customer){
@@ -104,7 +104,6 @@ function qtyUpdate() {
 $("#btnAddToCart").click(function () {
     let qty=parseInt($("#txtQTYONHand").val());
     let Oqty=parseInt($("#txtOrderQty").val());
-    console.log(qty,Oqty);
     if($('#txtOrderQty').val()!=""){
         if(qty<Oqty){
             alert("Not Available This QTY");
@@ -132,7 +131,7 @@ function addToCart() {
     fullTotal=total+fullTotal;
 
     for (let i=0;i<cartDB.length;i++){
-        if(cartDB[i].getcartICode()==iID){
+        if(cartDB[i].getcartICode()===iID){
             var newQty=+cartDB[i].getcartOQty() + +orderQty;
             let newTotal=iPrice*newQty;
             cartDB[i].setcartOQty(newQty);
@@ -164,8 +163,8 @@ function getTotal() {
         }
     });
     t = tot;
-
 }
+
 $('#txtDiscount').on('keyup', function () {
     if ($("#txtDiscount").val() === "") {
         $('#subtotal>span').text('0.00');
@@ -192,11 +191,8 @@ function placeOrder() {
 function saveOrder() {
     let oId=$("#txtOrderId").val();
     let cName=$("#txtCusNameForOrder").val();
-    let iPrice=$("#txtItemPriceForOrder").val();
-    let orderQty=$("#txtOrderQty").val();
     let fullTotal=$("#total").text();
-    let  date=$("#date").val();
-    console.log(oId,cName,fullTotal,date);
+    let  date=$("#txtOrderDate").val();
 
     return orderDB.push(new OrderDTO(oId,cName,fullTotal,date));
 }
@@ -208,12 +204,23 @@ $("#btnPurchase").click(function () {
     $("#txtItemNameForOrder,#txtItemPriceForOrder,#txtQTYONHand,#txtOrderQty,#txtCusSalaryForOrder,#txtCusNameForOrder,#txtAddressForOrder").val("")
 });
 
-$("#txtCash").on('keyup', function (eventOb) {
+/*$("#txtCash").on('keyup', function (eventOb) {
     if (eventOb.key === "Enter") {
         let cash=$("#txtCash").val();
         let total=$("#subtotal>span").text();
+        let balane= cash - total;
+
+        $("#txtBalance").val(balane);
+    }
+});*/
+
+$("#txtCash").on('keyup', function (eventOb) {
+    if (eventOb.key == "Enter") {
+        let cash=parseInt($("#txtCash").val());
+        let total=parseInt($("#subtot").text());
         let balance= cash - total;
 
         $("#txtBalance").val(balance);
+        console.log(balance);
     }
 });

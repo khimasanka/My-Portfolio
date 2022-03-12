@@ -23,7 +23,7 @@ function forOrder(){
 let fullTotal;
 /*-------Customer Details---------------*/
 function loadCustIDs(){
-    // $("#cmbCustomerIDS").empty();
+     $("#cmbCustomerIDS").empty();
     var customer=getCustomers();
     var ids=document.getElementById("cmbCustomerIDS");
     for (var i in customer){
@@ -142,6 +142,7 @@ function addToCart() {
         }
     }
     cartDB.push(new CartDTO(oId,iID,iName,iPrice,orderQty,total));
+    $("#txtBalance,#txtCash,#txtDiscount").val("");
 }
 function loadCart() {
     $("#tblCart").empty();
@@ -165,6 +166,19 @@ function getTotal() {
     t = tot;
 }
 
+
+$("#txtCash").on('keyup', function () {
+    let cash=parseFloat($("#txtCash").val());
+    let tot = $("#total>span").text();
+
+    if ($(cash>tot)) {
+        let total=parseFloat($("#subtot").text());
+        let balance= cash - total;
+        $("#txtBalance").val(balance);
+
+    }
+});
+
 $('#txtDiscount').on('keyup', function () {
     if ($("#txtDiscount").val() === "") {
         $('#subtotal>span').text('0.00');
@@ -173,6 +187,10 @@ $('#txtDiscount').on('keyup', function () {
         let dis = tot/100 * parseFloat($("#txtDiscount").val());
 
         $('#subtotal>span').text(tot - dis).append('.00');
+
+        let cash = parseFloat($("#txtCash").val());
+        let subTot = parseFloat($("#subtot").text());
+        $("#txtBalance").val(cash-subTot);
     }
 });
 
@@ -182,7 +200,6 @@ function placeOrder() {
     if(saveOrder()){
         for (var i of cartDB){
             orderDetailsDB.push(new OrderDetailsDTO(i.getCartOID(),i.getcartICode(),i.getcartIPrice(),i.getcartOQty(),i.getTotal()));
-
         }
         alert("Successful")
     }
@@ -201,7 +218,7 @@ $("#btnPurchase").click(function () {
     generateOrderID();
     cartDB.splice(0,cartDB.length);
     $('#tblCart').empty();
-    $("#txtItemNameForOrder,#txtItemPriceForOrder,#txtQTYONHand,#txtOrderQty,#txtCusSalaryForOrder,#txtCusNameForOrder,#txtAddressForOrder").val("")
+    $("#txtItemNameForOrder,#txtItemPriceForOrder,#txtQTYONHand,#txtOrderQty,#txtCusSalaryForOrder,#txtCusNameForOrder,#txtCash,#txtAddressForOrder").val("")
     $("#total > span,#subtot").text("00");
 });
 
@@ -215,12 +232,4 @@ $("#btnPurchase").click(function () {
     }
 });*/
 
-$("#txtCash").on('keyup', function (eventOb) {
-    if (eventOb.key == "Enter") {
-        let cash=parseFloat($("#txtCash").val());
-        let total=parseFloat(("#subtot").text());
-        let balance= cash - total;
 
-        $("#txtBalance").val(balance);
-    }
-});

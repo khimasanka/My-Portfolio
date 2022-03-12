@@ -202,6 +202,7 @@ $("#btnPurchase").click(function () {
     cartDB.splice(0,cartDB.length);
     $('#tblCart').empty();
     $("#txtItemNameForOrder,#txtItemPriceForOrder,#txtQTYONHand,#txtOrderQty,#txtCusSalaryForOrder,#txtCusNameForOrder,#txtAddressForOrder").val("")
+    $("#total > span,#subtot").text("00");
 });
 
 /*$("#txtCash").on('keyup', function (eventOb) {
@@ -216,11 +217,10 @@ $("#btnPurchase").click(function () {
 
 $("#txtCash").on('keyup', function (eventOb) {
     if (eventOb.key == "Enter") {
-        let cash=parseInt($("#txtCash").val());
-        let total=parseInt($("#subtot").text());
+        let cash=parseFloat($("#txtCash").val());
+        let total=parseFloat(("#subtot").text());
         let balance= cash - total;
 
         $("#txtBalance").val(balance);
-        console.log(balance);
     }
 });

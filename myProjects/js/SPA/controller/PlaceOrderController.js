@@ -209,7 +209,13 @@ function saveOrder() {
     let oId=$("#txtOrderId").val();
     let cName=$("#txtCusNameForOrder").val();
     let fullTotal=$("#total").text();
-    let  date=$("#txtOrderDate").val();
+    let date;
+    if ($("#txtOrderDate").val()===""){
+        date = $("#currentDate").text();
+    }else{
+        date = $("#txtOrderDate").val();
+    }
+
 
     return orderDB.push(new OrderDTO(oId,cName,fullTotal,date));
 }

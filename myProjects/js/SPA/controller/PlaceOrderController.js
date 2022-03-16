@@ -14,14 +14,16 @@ function generateOrderID() {
     }
 
 }
+
 function forOrder(){
     generateOrderID();
     loadCustIDs();
     loadItemIds();
+    $("#btnPurchase").attr('disabled',true);
 }
 
 let fullTotal;
-/*-------Customer Details---------------*/
+//-------Customer Details---------------
 function loadCustIDs(){
      $("#cmbCustomerIDS").empty();
     var customer=getCustomers();
@@ -33,6 +35,7 @@ function loadCustIDs(){
         ids.appendChild(opt);
     }
 }
+
 $("#cmbCustomerIDS").click(function () {
     let cus=searchCustomerId($('#cmbCustomerIDS').val());
     if(cus!=null){
@@ -41,6 +44,7 @@ $("#cmbCustomerIDS").click(function () {
         $('#txtCusSalaryForOrder').val(cus.getSalary());
     }
 });
+
 function searchCustomerId(id) {
     for (var i in customerDB){
         if(customerDB[i].getCustomerId()==id) return customerDB[i];
@@ -48,6 +52,7 @@ function searchCustomerId(id) {
     }
     return null;
 }
+
 function getCustomers() {
     return customerDB;
 }
@@ -64,6 +69,7 @@ function loadItemIds(){
         ids.appendChild(opt);
     }
 }
+
 $("#cmbItemIds").click(function () {
     let item=searchItemCode($('#cmbItemIds').val());
     if(item!=null){
@@ -74,6 +80,7 @@ $("#cmbItemIds").click(function () {
         $('#txtItemPriceForOrder').val(item.getUnitPrice());
     }
 });
+
 function searchItemCode(id) {
     for (var i in itemDB){
         if(itemDB[i].getItemId()==id) return itemDB[i];
@@ -81,6 +88,7 @@ function searchItemCode(id) {
     }
     return null;
 }
+
 function getItems() {
     return itemDB;
 }
@@ -100,7 +108,6 @@ function qtyUpdate() {
     }
 }
 
-
 $("#btnAddToCart").click(function () {
     let qty=parseInt($("#txtQTYONHand").val());
     let Oqty=parseInt($("#txtOrderQty").val());
@@ -112,15 +119,14 @@ $("#btnAddToCart").click(function () {
             addToCart();
             loadCart();
             getTotal();
+            $("#btnPurchase").attr('disabled',false);
             $("#txtItemIDForOrder,#txtItemNameForOrder,#txtQTYONHand,#txtOrderQty,#txtItemPriceForOrder").val("")
         }
     }else{
         alert("Please Enter Order Qty");
     }
-
-
-
 });
+
 function addToCart() {
     let oId=$("#txtOrderId").val();
     let iID=$("#txtItemIDForOrder").val();
@@ -144,6 +150,7 @@ function addToCart() {
     cartDB.push(new CartDTO(oId,iID,iName,iPrice,orderQty,total));
     $("#txtBalance,#txtCash,#txtDiscount").val("");
 }
+
 function loadCart() {
     $("#tblCart").empty();
     for (var i of cartDB){
@@ -194,7 +201,6 @@ $('#txtDiscount').on('keyup', function () {
     }
 });
 
-
 function placeOrder() {
 
     if(saveOrder()){
@@ -203,8 +209,8 @@ function placeOrder() {
         }
         alert("Successful")
     }
-
 }
+
 function saveOrder() {
     let oId=$("#txtOrderId").val();
     let cName=$("#txtCusNameForOrder").val();
@@ -219,11 +225,13 @@ function saveOrder() {
 
     return orderDB.push(new OrderDTO(oId,cName,fullTotal,date));
 }
+
 $("#btnPurchase").click(function () {
     placeOrder();
     generateOrderID();
     cartDB.splice(0,cartDB.length);
     $('#tblCart').empty();
+    $("#btnPurchase").attr('disabled',true);
     $("#txtItemNameForOrder,#txtItemPriceForOrder,#txtQTYONHand,#txtOrderQty,#txtCusSalaryForOrder,#txtCusNameForOrder,#txtCash,#txtBalance,#txtDiscount,#txtAddressForOrder").val("")
     $("#total > span,#subtot").text("00");
 });

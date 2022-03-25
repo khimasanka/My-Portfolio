@@ -7,5 +7,6 @@
     <orderEntry type="library" name="swiper" level="application" />
     <orderEntry type="library" name="widget.prod" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="line" level="application" />
   </component>
 </module>
